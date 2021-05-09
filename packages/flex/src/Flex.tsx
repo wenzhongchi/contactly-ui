@@ -1,8 +1,8 @@
 import styled, { StyledComponentProps } from "styled-components";
 import { FlexboxProps } from "styled-system";
 
-import { Box, BoxProps } from "@components/Box";
-import { AnyObject } from "@type/types";
+import { AnyObject } from "@contactly-ui/system";
+import { Box, BoxProps } from "@contactly-ui/box";
 
 type StyledFlexProps = BoxProps & FlexboxProps;
 

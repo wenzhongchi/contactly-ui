@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Flex } from "../Flex/Flex";
+import { Flex } from "../flex/src/Flex";
 import { Tab } from "./Tab";
 
 export default {

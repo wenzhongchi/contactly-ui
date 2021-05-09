@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Flex } from "../flex/Flex";
+import { Flex } from "../flex/src/Flex";
 import IconInfo from "../../icons/Info";
 import { ProgressBar } from "./ProgressBar";
 

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Flex } from "../Flex/Flex";
+import { Flex } from "../flex/src/Flex";
 import IconUser from "../../icons/User";
 
 import { Badge } from "./Badge";

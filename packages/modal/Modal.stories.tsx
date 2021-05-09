@@ -4,7 +4,7 @@ import React from "react";
 
 import { Text } from "../Text/Text";
 import { Button } from "../Button/Button";
-import { Flex } from "../Flex/Flex";
+import { Flex } from "../flex/src/Flex";
 import { Modal } from "./Modal";
 import { ContentModal } from "./ContentModal";
 import { InfoModal } from "./InfoModal";

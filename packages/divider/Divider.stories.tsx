@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Divider } from "../Divider/Divider";
-import { Flex } from "../Flex/Flex";
+import { Flex } from "../flex/src/Flex";
 
 export default {
     title: "Components/Divider",

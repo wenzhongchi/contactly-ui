@@ -2,7 +2,7 @@ import React from "react";
 
 import { Text } from "@components/Text";
 
-import { Box } from "../src/Box";
+import { Box } from "../src";
 
 export default {
     title: "Components/Box",

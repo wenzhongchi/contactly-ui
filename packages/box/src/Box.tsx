@@ -1,9 +1,8 @@
 import React, { forwardRef } from "react";
 import styled, { StyledComponentProps } from "styled-components";
-import { compose, space, layout, flexbox, border, position, color, shadow } from "styled-system";
 import { css as customCSS, SystemStyleObject } from "@styled-system/css";
 
-import { AnyObject, StyledSystemProps } from "@contactly-ui/system";
+import { AnyObject, composedSystem, StyledSystemProps } from "@contactly-ui/system";
 
 type StyledBoxProps = StyledSystemProps & {
     css?: SystemStyleObject;
@@ -16,7 +15,7 @@ const StyledBox = styled.div<BoxProps>(
         boxSizing: "border-box",
     },
     ({ css }) => customCSS(css),
-    compose(space, color, layout, flexbox, border, position, shadow),
+    composedSystem,
 );
 
 export const Box: React.FC<BoxProps> = forwardRef<HTMLDivElement, BoxProps>(

@@ -33,7 +33,7 @@ export const getRollupConfig = (pwd) => {
             ...PLUGINS,
             babel({
                 babelHelpers: "bundled",
-                configFile: path.resolve(__dirname, ".babelrc"),
+                configFile: path.resolve(SOURCE_DIR, "../../.babelrc"),
             }),
         ],
     };
@@ -45,7 +45,7 @@ export const getRollupConfig = (pwd) => {
             ...PLUGINS,
             babel({
                 babelHelpers: "bundled",
-                configFile: path.resolve(__dirname, ".babelrc"),
+                configFile: path.resolve(SOURCE_DIR, "../../.babelrc"),
             }),
         ],
     };

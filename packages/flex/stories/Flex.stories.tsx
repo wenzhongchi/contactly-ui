@@ -2,7 +2,7 @@ import React from "react";
 
 import { Text } from "@components/Text";
 
-import { Flex } from "./Flex";
+import { Flex } from "../src/Flex";
 
 export default {
     title: "Components/Flex",
