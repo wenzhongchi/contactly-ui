@@ -1,0 +1,2 @@
+# This file help avoid bug with yarn publish and copy file from dist folder https://github.com/yarnpkg/yarn/issues/3145
+

@@ -1,0 +1,39 @@
+name: UIKit Package
+on:
+    push:
+        branches:
+            - master
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            # Setup .npmrc file to publish to GitHub Packages
+            - uses: actions/setup-node@v2
+              with:
+                  node-version: "12.x"
+                  registry-url: "https://npm.pkg.github.com"
+                  # Defaults to the user or organization that owns the workflow file
+                  scope: "@BrooklynessInc"
+            - name: "Bump version"
+              uses: "phips28/gh-action-bump-version@master"
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              with:
+                  minor-wording: "MINOR"
+                  major-wording: "MAJOR,RELEASE"
+                  patch-wording: "PATCH,BUGFIX"
+            - run: npm install
+            - run: npm run build
+            - run: npm publish
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            - run: npm run build-storybook
+            - name: Deploy storybook
+              uses: JamesIves/github-pages-deploy-action@3.6.2
+              with:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  BRANCH: storybook
+                  FOLDER: .out
+                  CLEAN: true
+                  TARGET_FOLDER: docs

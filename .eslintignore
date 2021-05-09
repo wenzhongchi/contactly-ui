@@ -1,0 +1,10 @@
+**/*.d.ts
+
+svgr-template.js
+svgr-index-template.js
+svgr-replace.js
+
+**/*.log
+**/*.env
+
+rollup.config.js
