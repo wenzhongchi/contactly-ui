@@ -6,7 +6,7 @@ const zIndices = {
     base: 0,
     dropdown: 1000,
     sticky: 1100,
-    fixed: 1200,
+    banner: 1200,
     overlay: 1300,
     drawer: 1400,
     modal: 1500,

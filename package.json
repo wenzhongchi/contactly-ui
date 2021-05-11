@@ -1,15 +1,13 @@
 {
-    "name": "@contantly-ui/repo",
+    "name": "@contantly-ui/react",
     "version": "1.0.0",
     "description": "contactly frontend design system",
     "license": "MIT",
     "author": "Rick Chi",
-    "module": "dist/index.js",
-    "sideEffects": false,
-    "typings": "dist/index.d.ts",
-    "files": [
-        "dist"
-    ],
+    "main": "dist/system.cjs.js",
+    "module": "dist/system.esm.js",
+    "types": "dist/types/index.d.ts",
+    "typings": "dist/types/index.d.ts",
     "publishConfig": {
         "access": "public"
     },

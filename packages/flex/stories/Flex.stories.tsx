@@ -1,8 +1,8 @@
 import React from "react";
 
-import { Text } from "@components/Text";
+import { Box } from "@contactly-ui/box";
 
-import { Flex } from "../src/Flex";
+import { Flex } from "../src";
 
 export default {
     title: "Components/Flex",
@@ -11,13 +11,13 @@ export default {
 
 export const Center: React.FC = () => (
     <Flex justifyContent="center">
-        <Text variant="h1">Heading Text</Text>
+        <Box bg="green" width="40px" height="40px" />
     </Flex>
 );
 
 export const Between: React.FC = () => (
     <Flex flexGrow={1} justifyContent="space-between" alignItems="center">
-        <Text variant="h1">Left Text</Text>
-        <Text variant="h1">Right Text</Text>
+        <Box bg="green" width="40px" height="40px" />
+        <Box bg="red" width="40px" height="40px" />
     </Flex>
 );

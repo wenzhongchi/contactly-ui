@@ -1,8 +1,8 @@
 import React from "react";
 
-import { Flex } from "@components/Flex";
+import { Flex } from "@contanctly-ui/flex";
 
-import { Text } from "./Text";
+import { Text } from "../src/Text";
 
 export default {
     title: "Components/Text",

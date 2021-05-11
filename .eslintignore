@@ -1,10 +1,11 @@
 **/*.d.ts
 
-svgr-template.js
-svgr-index-template.js
-svgr-replace.js
+exports-template.js
+generate.js
+stories-template.js
+template.js
+rullup.js
 
 **/*.log
 **/*.env
 
-rollup.config.js

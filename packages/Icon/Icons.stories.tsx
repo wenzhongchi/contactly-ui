@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Flex } from "../flex/src/Flex";
-import { Text } from "../Text/Text";
+import { Text } from "../text/src/Text";
 import { Box } from "../box/src/Box";
 
 import { IconActivity } from "../../icons";

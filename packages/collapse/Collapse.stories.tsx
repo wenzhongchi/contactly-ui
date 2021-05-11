@@ -4,7 +4,7 @@ import React from "react";
 
 import { Box } from "../box/src/Box";
 import { Button } from "../Button/Button";
-import { Text } from "../text/Text";
+import { Text } from "../text/src/Text";
 import { Collapse } from "./Collapse";
 
 export default {
