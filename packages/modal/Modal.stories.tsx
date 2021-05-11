@@ -3,7 +3,7 @@
 import React from "react";
 
 import { Text } from "../text/src/Text";
-import { Button } from "../Button/Button";
+import { Button } from "../button/src/Button";
 import { Flex } from "../flex/src/Flex";
 import { Modal } from "./Modal";
 import { ContentModal } from "./ContentModal";

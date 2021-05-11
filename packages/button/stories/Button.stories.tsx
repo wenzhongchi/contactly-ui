@@ -6,7 +6,7 @@ import _get from "lodash/get";
 
 import * as ICONS from "@icon/index";
 
-import { Button, ButtonComponentProps } from "./Button";
+import { Button, ButtonComponentProps } from "../src/Button";
 
 export default {
     title: "Components/Button",

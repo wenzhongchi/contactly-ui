@@ -1,5 +1,5 @@
 {
-  "name": "@contactly-ui/button",
+  "name": "@contactly-ui/text",
   "version": "1.0.0",
   "description": "",
   "main": "dist/system.cjs.js",
@@ -39,6 +39,6 @@
     "styled-components": "^5.3.0",
     "styled-system": "^5.1.5"
   },
-  "component": "Button",
+  "component": "Text",
   "homepage": ""
 }

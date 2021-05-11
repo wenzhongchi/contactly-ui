@@ -1,8 +1,11 @@
 import { Colors } from "@contactly-ui/system";
 
 export type TextColors = {
+    default: string;
     primary: string;
     secondary: string;
+    tertiary: string;
+    disabled: string;
 };
 
 export type TextTheme = {
@@ -12,11 +15,17 @@ export type TextTheme = {
 
 export const getTextColors = (colors: Colors): TextTheme => ({
     light: {
-        primary: colors.gray[800],
-        secondary: colors.gray[600],
+        default: colors.gray[700],
+        primary: colors.gray[900],
+        secondary: colors.gray[800],
+        tertiary: colors.gray[600],
+        disabled: colors.gray[80],
     },
     dark: {
-        primary: colors.gray[800],
-        secondary: colors.gray[600],
+        default: colors.gray[700],
+        primary: colors.gray[900],
+        secondary: colors.gray[800],
+        tertiary: colors.gray[600],
+        disabled: colors.gray[80],
     },
 });

@@ -5,7 +5,7 @@ import _delay from "lodash/delay";
 
 import { useToggle } from "../../hooks/useToggle";
 
-import { Button } from "../Button/Button";
+import { Button } from "../button/src/Button";
 import { Text } from "../text/src/Text";
 import { Drawer } from "./Drawer";
 import { HeaderDrawer } from "./HeaderDrawer";
