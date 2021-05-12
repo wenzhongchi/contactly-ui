@@ -1,15 +1,20 @@
 import path from "path";
-import type { StorybookConfig } from "@storybook/core/types";
+import { StorybookConfig } from "@storybook/core/types";
 
 const tsconfig = path.resolve(__dirname, "../tsconfig.json");
 
 const storybookConfig: StorybookConfig = {
     stories: [
         "../stories/**/*.stories.mdx",
-        "../src/**/*.stories.mdx",
-        "../src/**/*.stories.@(js|jsx|ts|tsx)",
+        "../packages/**/*.stories.mdx",
+        "../packages/**/*.stories.@(js|jsx|ts|tsx)",
     ],
-    addons: ["storybook-dark-mode", "@storybook/addon-essentials", "@storybook/addon-links"],
+    addons: [
+        "storybook-dark-mode",
+        "@storybook/addon-essentials",
+        "@storybook/addon-links",
+        "@storybook/addon-postcss",
+    ],
     typescript: {
         check: true,
         checkOptions: { tsconfig },
@@ -35,12 +40,6 @@ const storybookConfig: StorybookConfig = {
             ...config.resolve,
             alias: {
                 ...config.resolve?.alias,
-                "@components": path.resolve(__dirname, "../src/components"),
-                "@utils": path.resolve(__dirname, "../src/utils"),
-                "@hooks": path.resolve(__dirname, "../src/hooks"),
-                "@theme": path.resolve(__dirname, "../src/theme"),
-                "@type": path.resolve(__dirname, "../src/types"),
-                "@icon": path.resolve(__dirname, "../src/icons"),
             },
         },
     }),

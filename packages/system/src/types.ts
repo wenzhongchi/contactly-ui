@@ -10,6 +10,12 @@ import {
 } from "styled-system";
 
 export type AnyObject = typeof Object;
+export type AnyStringObject = {
+    [name: string]: any; // eslint-disable-line
+};
+export type StringObject = {
+    [name: string]: string;
+};
 
 export type StyledSystemProps = SpaceProps &
     ColorProps &

@@ -4,18 +4,22 @@ import { variant } from "styled-system";
 
 import { AnyObject, StyledSystemTextProps, composedTextSystem } from "@contactly-ui/system";
 
-type StyledTextProps = StyledSystemTextProps & {
+export type TextVariant =
+    | "display-xl"
+    | "display-lg"
+    | "display-md"
+    | "display-sm"
+    | "heading"
+    | "caption"
+    | "subheading"
+    | "body";
+
+type TextComponentProps = {
     as?: "p" | "span";
-    variant?:
-        | "display-xl"
-        | "display-lg"
-        | "display-md"
-        | "display-sm"
-        | "heading"
-        | "caption"
-        | "subheading"
-        | "body";
+    variant?: TextVariant;
 };
+
+type StyledTextProps = StyledSystemTextProps & TextComponentProps;
 
 const textVariants = variant({
     variants: {

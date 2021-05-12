@@ -1,5 +1,9 @@
 import { variant } from "styled-system";
 
+import { AnyStringObject } from "@contactly-ui/system";
+
+import { ButtonOrientation } from "./ButtonGroup";
+
 const sharedStyles = {
     display: "flex",
     alignItems: "center",
@@ -127,3 +131,29 @@ export const sizeVariants = variant({
         },
     },
 });
+
+export const getButtonGroupStyle = (
+    orientation: ButtonOrientation = "horizontal",
+): AnyStringObject => {
+    const horizontalStyle = {
+        "&:not(:first-of-type)": {
+            borderTopLeftRadius: 0,
+            borderBottomLeftRadius: 0,
+        },
+        "&:not(:last-of-type)": {
+            borderTopRightRadius: 0,
+            borderBottomRightRadius: 0,
+        },
+    };
+    const verticalStyle = {
+        "&:not(:first-of-type)": {
+            borderTopLeftRadius: 0,
+            borderTopRightRadius: 0,
+        },
+        "&:not(:last-of-type)": {
+            borderBottomLeftRadius: 0,
+            borderBottomRightRadius: 0,
+        },
+    };
+    return orientation === "horizontal" ? horizontalStyle : verticalStyle;
+};

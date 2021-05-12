@@ -5,9 +5,11 @@ import pluginPeerDepsExternal from "rollup-plugin-peer-deps-external";
 import pluginTypescript from "rollup-plugin-typescript2";
 import pluginCommonjs from "@rollup/plugin-commonjs";
 import pluginNodeResolve from "@rollup/plugin-node-resolve";
+import pluginClean from "rollup-plugin-clean";
 import { babel } from "@rollup/plugin-babel";
 
 const PLUGINS = [
+    pluginClean(),
     pluginPeerDepsExternal(),
     pluginTypescript({
         rollupCommonJSResolveHack: true,

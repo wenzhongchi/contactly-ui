@@ -1,10 +1,13 @@
 import React, { forwardRef } from "react";
 import styled, { StyledComponentProps } from "styled-components";
+import { css as customCSS, SystemStyleObject } from "@styled-system/css";
 
-import { AnyObject, composeSystem, StyledSystemProps } from "@contactly-ui/system";
-import { Text } from "@contactly-ui/text";
+import { AnyObject, composedSystem, StyledSystemProps } from "@contactly-ui/system";
+import { Text, TextVariant } from "@contactly-ui/text";
+import { Box } from "@contactly-ui/box";
 
-import { sizeVariants, styleVariants } from "./styles";
+import { getButtonGroupStyle, sizeVariants, styleVariants } from "./styles";
+import { useButtonGroup } from "./ButtonContext";
 
 export type ButtonSize = "sm" | "md" | "lg";
 
@@ -17,37 +20,49 @@ export type ButtonVariant =
     | "error"
     | "text";
 
-export type ButtonComponentProps = {
+type ButtonComponentProps = {
     label?: string;
     size?: ButtonSize;
     variant?: ButtonVariant;
-    leftIcon?: React.ReactElement;
-    rightIcon: React.ReactElement;
+    leftIcon?: React.ReactNode;
+    rightIcon?: React.ReactNode;
     isDisabled?: boolean;
+    css?: SystemStyleObject;
 };
 
 type StyledButtonProps = StyledSystemProps & ButtonComponentProps;
 
 export type ButtonProps = StyledComponentProps<"button", AnyObject, StyledButtonProps, never>;
 
-const StyledButton = styled.button<ButtonProps>(
+export const StyledButton = styled.button<ButtonProps>(
     ({ theme: { colors }, isDisabled }) => {
         if (isDisabled)
             return {
                 backgroundColor: colors.button.transparent,
             };
     },
+    ({ css }) => customCSS(css),
     styleVariants,
     sizeVariants,
-    composeSystem,
+    composedSystem,
 );
 
 export const Button: React.FC<ButtonProps> = forwardRef<HTMLButtonElement, ButtonProps>(
-    (props, ref) => {
-        const { label, variant = "default", size = "sm", icon, isDisabled, ...restProps } = props;
+    (
+        { label, variant = "default", size = "sm", leftIcon, rightIcon, isDisabled, ...restProps },
+        ref,
+    ) => {
+        const {
+            variant: groupVariant,
+            size: groupSize,
+            orientation: groupOrientation,
+        } = useButtonGroup();
+
+        const selectedVariant = groupVariant ?? variant;
+        const selectedSize = groupSize ?? size;
 
         const getFontColor = () => {
-            switch (variant) {
+            switch (selectedVariant) {
                 case "default":
                     return isDisabled ? "text.disabled" : "text.default";
                 case "primary":
@@ -65,8 +80,8 @@ export const Button: React.FC<ButtonProps> = forwardRef<HTMLButtonElement, Butto
             }
         };
 
-        const getFontVariant = () => {
-            switch (size) {
+        const getFontVariant = (): TextVariant => {
+            switch (selectedSize) {
                 case "sm":
                     return "body";
                 case "md":
@@ -76,27 +91,27 @@ export const Button: React.FC<ButtonProps> = forwardRef<HTMLButtonElement, Butto
             }
         };
 
-        const getIconColor = () => {
-            switch (variant) {
-                case "default":
-                    return isDisabled ? "text.disabled" : "text.default";
-                case "primary":
-                    return "text.white";
-                case "secondary":
-                    return "text.white";
-                case "success":
-                    return "text.white";
-                case "warning":
-                    return "text.white";
-                case "error":
-                    return "text.white";
-                case "text":
-                    return isDisabled ? "text.disabled" : "text.default";
-            }
-        };
+        // const getIconColor = () => {
+        //     switch (selectedVariant) {
+        //         case "default":
+        //             return isDisabled ? "text.disabled" : "text.default";
+        //         case "primary":
+        //             return "text.white";
+        //         case "secondary":
+        //             return "text.white";
+        //         case "success":
+        //             return "text.white";
+        //         case "warning":
+        //             return "text.white";
+        //         case "error":
+        //             return "text.white";
+        //         case "text":
+        //             return isDisabled ? "text.disabled" : "text.default";
+        //     }
+        // };
 
         const getIconSize = () => {
-            switch (size) {
+            switch (selectedSize) {
                 case "sm":
                     return 12;
                 case "md":
@@ -107,7 +122,7 @@ export const Button: React.FC<ButtonProps> = forwardRef<HTMLButtonElement, Butto
         };
 
         const getIconMargin = () => {
-            switch (size) {
+            switch (selectedSize) {
                 case "sm":
                     return 8;
                 case "md":
@@ -117,12 +132,28 @@ export const Button: React.FC<ButtonProps> = forwardRef<HTMLButtonElement, Butto
         };
 
         return (
-            <StyledButton ref={ref} isDisabled={isDisabled} size={size} {...restProps}>
-                {icon}
+            <StyledButton
+                ref={ref}
+                isDisabled={isDisabled}
+                size={selectedSize}
+                variant={selectedVariant}
+                css={groupOrientation ? getButtonGroupStyle(groupOrientation) : {}}
+                {...restProps}
+            >
+                {leftIcon && (
+                    <Box width={getIconSize()} height={getIconSize()} mr={getIconMargin()}>
+                        {leftIcon}
+                    </Box>
+                )}
                 {label && (
                     <Text variant={getFontVariant()} color={getFontColor()}>
                         {label}
                     </Text>
+                )}
+                {rightIcon && (
+                    <Box width={getIconSize()} height={getIconSize()} ml={getIconMargin()}>
+                        {rightIcon}
+                    </Box>
                 )}
             </StyledButton>
         );
