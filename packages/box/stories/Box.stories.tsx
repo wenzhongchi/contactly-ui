@@ -1,7 +1,5 @@
 import React from "react";
 
-import { Text } from "@components/Text";
-
 import { Box } from "../src";
 
 export default {
@@ -9,11 +7,7 @@ export default {
     component: Box,
 };
 
-export const Basic: React.FC = () => (
-    <Box>
-        <Text variant="h1">Put Something in the Box</Text>
-    </Box>
-);
+export const Basic: React.FC = () => <Box>Put Something in the Box</Box>;
 
 export const Advanced: React.FC = () => (
     <Box
@@ -24,6 +18,6 @@ export const Advanced: React.FC = () => (
             },
         }}
     >
-        <Text variant="h1">Hover over me</Text>
+        Hover over me
     </Box>
 );

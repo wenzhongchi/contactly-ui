@@ -7,7 +7,7 @@ import IconUser from "@icon/User";
 import IconArrowDown from "@icon/ArrowDown";
 
 import { Menu } from "./Menu";
-import { HoverMenu } from "./HoverMenu";
+import { HoverMenu } from "../src/HoverMenu";
 import { MenuItem } from "./MenuItem";
 
 export default {

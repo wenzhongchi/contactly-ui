@@ -5,6 +5,7 @@ export declare type TextColors = {
     secondary: string;
     tertiary: string;
     disabled: string;
+    white: string;
 };
 export declare type TextTheme = {
     light: TextColors;

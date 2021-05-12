@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Toggle } from "./Toggle";
+import { Toggle } from "../src/Toggle";
 
 export default {
     title: "Components/Toggle",

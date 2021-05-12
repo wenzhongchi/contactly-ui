@@ -1,4 +1,4 @@
-declare const colors: {
+export declare const colors: {
     transparent: string;
     black: string;
     white: string;
@@ -78,4 +78,3 @@ declare const colors: {
     };
 };
 export declare type Colors = typeof colors;
-export default colors;

@@ -2,10 +2,10 @@
 
 import React from "react";
 
-import { Box } from "../box/src/Box";
-import { Button } from "../button/src/Button";
-import { Text } from "../text/src/Text";
-import { Collapse } from "./Collapse";
+import { Box } from "../../box/src/Box";
+import { Button } from "../../button/src/Button";
+import { Text } from "../../text/src/Text";
+import { Collapse } from "../src/Collapse";
 
 export default {
     title: "Components/Collapse",

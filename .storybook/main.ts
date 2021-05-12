@@ -1,13 +1,15 @@
 import path from "path";
-import { StorybookConfig } from "@storybook/core/types";
 
 const tsconfig = path.resolve(__dirname, "../tsconfig.json");
 
-const storybookConfig: StorybookConfig = {
+const storybookConfig = {
     stories: [
-        "../stories/**/*.stories.mdx",
         "../packages/**/*.stories.mdx",
-        "../packages/**/*.stories.@(js|jsx|ts|tsx)",
+        "../packages/**/Box.stories.@(js|jsx|ts|tsx)",
+        "../packages/**/Flex.stories.@(js|jsx|ts|tsx)",
+        "../packages/**/Text.stories.@(js|jsx|ts|tsx)",
+        "../packages/**/Button.stories.@(js|jsx|ts|tsx)",
+        // "../packages/**/*.stories.@(js|jsx|ts|tsx)",
     ],
     addons: [
         "storybook-dark-mode",
@@ -27,7 +29,10 @@ const storybookConfig: StorybookConfig = {
                     return false;
                 }
                 if (prop.parent) {
-                    return !prop.parent.fileName.includes("node_modules");
+                    return (
+                        !prop.parent.fileName.includes("node_modules") ||
+                        !prop.parent.fileName.includes("dist")
+                    );
                 }
 
                 return true;

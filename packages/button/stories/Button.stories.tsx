@@ -1,12 +1,7 @@
-/* eslint-disable no-console, react/jsx-no-bind */
-
 import React from "react";
 import { Story } from "@storybook/react";
-import _get from "lodash/get";
 
-import * as ICONS from "@icon/index";
-
-import { Button, ButtonComponentProps } from "../src/Button";
+import { Button, ButtonProps } from "../src/Button";
 
 export default {
     title: "Components/Button",
@@ -16,7 +11,7 @@ export default {
         variant: {
             control: {
                 type: "select",
-                options: ["default", "success", "error", "warning", "disabled", "transparent"],
+                options: ["default", "primary", "secondary", "success", "warning", "error", "text"],
             },
         },
         size: {
@@ -26,21 +21,15 @@ export default {
             },
         },
         leftIcon: {
-            control: {
-                type: "select",
-                options: ["undefined", ...Object.keys(ICONS)],
-            },
+            type: "string",
         },
         rightIcon: {
-            control: {
-                type: "select",
-                options: ["undefined", ...Object.keys(ICONS)],
-            },
+            type: "string",
         },
         label: {
             type: "string",
         },
-        outlined: {
+        disabled: {
             control: {
                 type: "select",
                 options: [true, false],
@@ -49,19 +38,10 @@ export default {
     },
 };
 
-export const Basic: Story<ButtonComponentProps> = ({
-    leftIcon,
-    rightIcon,
-    ...restProps
-}: ButtonComponentProps) => {
-    const LeftIcon = _get(ICONS, `${leftIcon}`, "div"); // eslint-disable-line
-    const RightIcon = _get(ICONS, `${rightIcon}`, "div"); // eslint-disable-line
-    return <Button leftIcon={<LeftIcon />} rightIcon={<RightIcon />} {...restProps} />;
-};
+export const Basic: Story<ButtonProps> = (props) => <Button {...props} />;
 
 Basic.args = {
     variant: "default",
     size: "sm",
     label: "Click Me",
-    outlined: false,
 };

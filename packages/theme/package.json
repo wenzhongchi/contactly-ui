@@ -32,7 +32,8 @@
   },
   "dependencies": {
     "@contactly-ui/system": "^1.0.0",
-    "@contactly-ui/text": "^1.0.0"
+    "@contactly-ui/text": "^1.0.0",
+    "@contactly-ui/button": "^1.0.0"
   },
   "peerDependencies": {
     "react": "^17.0.2",

@@ -1,8 +1,8 @@
 import React from "react";
 
-import { Flex } from "../flex/src/Flex";
-import { Selector } from "./Selector";
-import { Text } from "../text/src/Text";
+import { Flex } from "../../flex/src/Flex";
+import { Selector } from "../src/Selector";
+import { Text } from "../../text/src/Text";
 
 export default {
     title: "Components/Selector",

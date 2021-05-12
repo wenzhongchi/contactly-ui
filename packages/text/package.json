@@ -1,9 +1,9 @@
 {
-  "name": "@contactly-ui/button",
+  "name": "@contactly-ui/text",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/system.cjs.js",
-  "module": "dist/system.esm.js",
+  "main": "dist/text.cjs.js",
+  "module": "dist/text.esm.js",
   "types": "dist/types/index.d.ts",
   "typings": "dist/types/index.d.ts",
   "scripts": {
@@ -31,7 +31,8 @@
     "url": "https://github.com/wenzhongchi/contactly-ui/issues"
   },
   "dependencies": {
-    "@contactly-ui/system": "^1.0.0"
+    "@contactly-ui/system": "^1.0.0",
+    "@contactly-ui/flex": "^1.0.0"
   },
   "peerDependencies": {
     "react": "^17.0.2",
@@ -39,6 +40,6 @@
     "styled-components": "^5.3.0",
     "styled-system": "^5.1.5"
   },
-  "component": "Button",
+  "component": "Text",
   "homepage": ""
 }

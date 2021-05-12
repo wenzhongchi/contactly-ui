@@ -1,10 +1,39 @@
 import { Colors } from "@contactly-ui/system";
-export declare type TextColors = {
+export declare type ButtonColors = {
+    default: string;
     primary: string;
     secondary: string;
+    success: string;
+    warning: string;
+    error: string;
+    text: string;
+    "border-default-default": string;
+    "border-default-hover": string;
+    "border-default-focus": string;
+    "border-default-disabled": string;
+    "border-primary-default": string;
+    "border-primary-hover": string;
+    "border-primary-focus": string;
+    "border-primary-disabled": string;
+    "border-secondary-default": string;
+    "border-secondary-hover": string;
+    "border-secondary-focus": string;
+    "border-secondary-disabled": string;
+    "border-success-default": string;
+    "border-success-hover": string;
+    "border-success-focus": string;
+    "border-success-disabled": string;
+    "border-warning-default": string;
+    "border-warning-hover": string;
+    "border-warning-focus": string;
+    "border-warning-disabled": string;
+    "border-error-default": string;
+    "border-error-hover": string;
+    "border-error-focus": string;
+    "border-error-disabled": string;
 };
-export declare type TextTheme = {
-    light: TextColors;
-    dark: TextColors;
+export declare type ButtonTheme = {
+    light: ButtonColors;
+    dark: ButtonColors;
 };
-export declare const getTextColors: (colors: Colors) => TextTheme;
+export declare const getButtonColors: (colors: Colors) => ButtonTheme;

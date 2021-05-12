@@ -1,22 +1,172 @@
 import { Colors } from "@contactly-ui/system";
 
-export type TextColors = {
+export type ButtonColors = {
+    default: string;
     primary: string;
     secondary: string;
+    success: string;
+    warning: string;
+    error: string;
+    text: string;
+    "border-default-default": string;
+    "border-default-hover": string;
+    "border-default-focus": string;
+    "border-default-disabled": string;
+    "border-primary-default": string;
+    "border-primary-hover": string;
+    "border-primary-focus": string;
+    "border-primary-disabled": string;
+    "border-secondary-default": string;
+    "border-secondary-hover": string;
+    "border-secondary-focus": string;
+    "border-secondary-disabled": string;
+    "border-success-default": string;
+    "border-success-hover": string;
+    "border-success-focus": string;
+    "border-success-disabled": string;
+    "border-warning-default": string;
+    "border-warning-hover": string;
+    "border-warning-focus": string;
+    "border-warning-disabled": string;
+    "border-error-default": string;
+    "border-error-hover": string;
+    "border-error-focus": string;
+    "border-error-disabled": string;
+    "hover-default": string;
+    "hover-primary": string;
+    "hover-secondary": string;
+    "hover-success": string;
+    "hover-warning": string;
+    "hover-error": string;
+    "hover-text": string;
+    "focus-default": string;
+    "focus-primary": string;
+    "focus-secondary": string;
+    "focus-success": string;
+    "focus-warning": string;
+    "focus-error": string;
+    "focus-text": string;
+    "disabled-default": string;
+    "disabled-primary": string;
+    "disabled-secondary": string;
+    "disabled-success": string;
+    "disabled-warning": string;
+    "disabled-error": string;
+    "disabled-text": string;
 };
 
-export type TextTheme = {
-    light: TextColors;
-    dark: TextColors;
+export type ButtonTheme = {
+    light: ButtonColors;
+    dark: ButtonColors;
 };
 
-export const getTextColors = (colors: Colors): TextTheme => ({
+export const getButtonColors = (colors: Colors): ButtonTheme => ({
     light: {
-        primary: colors.gray[800],
-        secondary: colors.gray[600],
+        default: `linear-gradient(180deg, ${colors.white} 0%, ${colors.gray[20]} 100%)`,
+        primary: colors.blue[300],
+        secondary: colors.teal[300],
+        success: colors.green[300],
+        warning: colors.yellow[300],
+        error: colors.red[300],
+        text: colors.transparent,
+        "border-default-default": colors.gray[40],
+        "border-default-hover": colors.gray[50],
+        "border-default-focus": colors.blue[300],
+        "border-default-disabled": colors.gray[40],
+        "border-primary-default": colors.gray[40],
+        "border-primary-hover": colors.gray[50],
+        "border-primary-focus": colors.blue[500],
+        "border-primary-disabled": colors.gray[40],
+        "border-secondary-default": colors.gray[40],
+        "border-secondary-hover": colors.gray[50],
+        "border-secondary-focus": colors.teal[500],
+        "border-secondary-disabled": colors.gray[40],
+        "border-success-default": colors.gray[40],
+        "border-success-hover": colors.green[500],
+        "border-success-focus": colors.green[500],
+        "border-success-disabled": colors.gray[40],
+        "border-warning-default": colors.gray[40],
+        "border-warning-hover": colors.gray[50],
+        "border-warning-focus": colors.yellow[500],
+        "border-warning-disabled": colors.gray[40],
+        "border-error-default": colors.gray[40],
+        "border-error-hover": colors.gray[50],
+        "border-error-focus": colors.red[500],
+        "border-error-disabled": colors.gray[40],
+        "hover-default": colors.gray[30],
+        "hover-primary": colors.blue[400],
+        "hover-secondary": colors.teal[400],
+        "hover-success": colors.green[400],
+        "hover-warning": colors.yellow[400],
+        "hover-error": colors.red[400],
+        "hover-text": colors.gray[20],
+        "focus-default": colors.blue[300],
+        "focus-primary": colors.blue[300],
+        "focus-secondary": colors.teal[300],
+        "focus-success": colors.green[300],
+        "focus-warning": colors.yellow[300],
+        "focus-error": colors.red[300],
+        "focus-text": colors.white,
+        "disabled-default": `linear-gradient(180deg, ${colors.white} 0%, ${colors.gray[20]} 100%)`,
+        "disabled-primary": colors.blue[75],
+        "disabled-secondary": colors.teal[75],
+        "disabled-success": colors.green[75],
+        "disabled-warning": colors.yellow[75],
+        "disabled-error": colors.red[75],
+        "disabled-text": colors.white,
     },
     dark: {
-        primary: colors.gray[800],
-        secondary: colors.gray[600],
+        default: `linear-gradient(180deg, ${colors.white} 0%, ${colors.gray[20]} 100%)`,
+        primary: colors.blue[300],
+        secondary: colors.blue[300],
+        success: colors.blue[300],
+        warning: colors.blue[300],
+        error: colors.blue[300],
+        text: colors.blue[300],
+        "border-default-default": colors.gray[40],
+        "border-default-hover": colors.gray[50],
+        "border-default-focus": colors.blue[300],
+        "border-default-disabled": colors.gray[40],
+        "border-primary-default": colors.gray[40],
+        "border-primary-hover": colors.gray[50],
+        "border-primary-focus": colors.blue[500],
+        "border-primary-disabled": colors.gray[40],
+        "border-secondary-default": colors.gray[40],
+        "border-secondary-hover": colors.gray[50],
+        "border-secondary-focus": colors.teal[500],
+        "border-secondary-disabled": colors.gray[40],
+        "border-success-default": colors.gray[40],
+        "border-success-hover": colors.green[500],
+        "border-success-focus": colors.green[500],
+        "border-success-disabled": colors.gray[40],
+        "border-warning-default": colors.gray[40],
+        "border-warning-hover": colors.gray[50],
+        "border-warning-focus": colors.yellow[500],
+        "border-warning-disabled": colors.gray[40],
+        "border-error-default": colors.gray[40],
+        "border-error-hover": colors.gray[50],
+        "border-error-focus": colors.red[500],
+        "border-error-disabled": colors.gray[40],
+        "hover-default": colors.gray[30],
+        "hover-primary": colors.blue[400],
+        "hover-secondary": colors.teal[400],
+        "hover-success": colors.green[400],
+        "hover-warning": colors.yellow[400],
+        "hover-error": colors.red[400],
+        "hover-text": colors.gray[20],
+        "focus-default": colors.blue[300],
+        "focus-primary": colors.blue[300],
+        "focus-secondary": colors.teal[300],
+        "focus-success": colors.green[300],
+        "focus-warning": colors.yellow[300],
+        "focus-error": colors.red[300],
+        "focus-text": colors.white,
+        "disabled-default": `linear-gradient(180deg, ${colors.white} 0%, ${colors.gray[20]} 100%)`,
+        "disabled-primary": colors.blue[75],
+        "disabled-secondary": colors.teal[75],
+        "disabled-success": colors.green[75],
+        "disabled-warning": colors.yellow[75],
+        "disabled-error": colors.red[75],
+        "disabled-text": colors.white,
     },
 });

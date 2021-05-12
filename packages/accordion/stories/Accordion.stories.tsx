@@ -1,8 +1,8 @@
 import React from "react";
 
-import { Flex } from "../flex/src/Flex";
-import { Text } from "../text/src/Text";
-import { Accordion } from "./Accordion";
+import { Flex } from "../../flex/src/Flex";
+import { Text } from "../../text/src/Text";
+import { Accordion } from "../src/Accordion";
 import { AccordionButton } from "./AccordionButton";
 import { AccordionItem } from "./AccordionItem";
 import { AccordionPanel } from "./AccordionPanel";

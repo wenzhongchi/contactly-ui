@@ -2,14 +2,14 @@
 
 import React from "react";
 
-import { Text } from "../text/src/Text";
-import { Button } from "../button/src/Button";
-import { Flex } from "../flex/src/Flex";
+import { Text } from "../../text/src/Text";
+import { Button } from "../../button/src/Button";
+import { Flex } from "../../flex/src/Flex";
 import { Modal } from "./Modal";
-import { ContentModal } from "./ContentModal";
+import { ContentModal } from "../src/ContentModal";
 import { InfoModal } from "./InfoModal";
 
-import { useToggle } from "../../hooks/useToggle";
+import { useToggle } from "../../../hooks/useToggle";
 
 export default {
     title: "Components/Modal",

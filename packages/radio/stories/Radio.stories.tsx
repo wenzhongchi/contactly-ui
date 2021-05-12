@@ -1,7 +1,7 @@
 import React from "react";
 import { Story } from "@storybook/react";
 
-import { Radio, RadioComponentProps } from "./Radio";
+import { Radio, RadioComponentProps } from "../src/Radio";
 
 export default {
     title: "Components/Radio",

@@ -4,7 +4,7 @@ import _get from "lodash/get";
 
 import * as ICONS from "@icon/index";
 
-import { Alert, AlertComponentProps } from "./Alert";
+import { Alert, AlertComponentProps } from "../src/Alert";
 
 export default {
     title: "Components/Alert",

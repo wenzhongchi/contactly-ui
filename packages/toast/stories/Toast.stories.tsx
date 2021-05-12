@@ -5,7 +5,7 @@ import { Button } from "@components/Button";
 import { useToast } from "@hooks/useToast";
 import IconVolume2 from "@icon/Volume2";
 
-import { Toast } from "./Toast";
+import { Toast } from "../src/Toast";
 
 export default {
     title: "Components/Toasts",

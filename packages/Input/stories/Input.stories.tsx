@@ -1,7 +1,7 @@
 import React from "react";
 import { Story } from "@storybook/react";
 
-import { Input, InputComponentProps } from "./Input";
+import { Input, InputComponentProps } from "../src/Input";
 import { TextInput, TextInputProps } from "./TextInput";
 import { PasswordInput, PasswordInputProps } from "./PasswordInput";
 

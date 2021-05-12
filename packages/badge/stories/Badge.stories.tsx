@@ -1,9 +1,9 @@
 import React from "react";
 
-import { Flex } from "../flex/src/Flex";
+import { Flex } from "../../flex/src/Flex";
 import IconUser from "../../icons/User";
 
-import { Badge } from "./Badge";
+import { Badge } from "../src/Badge";
 
 export default {
     title: "Components/Badge",

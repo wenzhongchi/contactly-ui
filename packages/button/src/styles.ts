@@ -20,64 +20,102 @@ const sharedStyles = {
 };
 
 const defaultStyles = {
-    borderColor: "border.default",
+    bg: "button.default",
+    borderColor: "button.border-default-default",
     cursor: "pointer",
     "&:hover": {
-        bg: "highlight.light",
+        bg: "button.hover-default",
+        borderColor: "button.border-default-hover",
     },
     "&:focus": {
-        outline: "none",
+        bg: "button.hover-default",
+        borderColor: "button.border-default-focus",
+        borderWidth: 2,
     },
 };
 
 const primaryStyles = {
-    borderColor: "border.default",
+    bg: "button.primary",
+    borderColor: "button.border-primary-default",
     cursor: "pointer",
     "&:hover": {
-        bg: "highlight.light",
+        bg: "button.hover-primary",
+        borderColor: "button.border-primary-hover",
     },
     "&:focus": {
-        outline: "none",
+        bg: "button.hover-default",
+        borderColor: "button.border-primary-focus",
+        borderWidth: 2,
     },
 };
 
 const secondaryStyles = {
-    borderColor: "border.default",
+    bg: "button.secondary",
+    borderColor: "button.border-secondary-default",
     cursor: "pointer",
     "&:hover": {
         bg: "highlight.light",
+        borderColor: "button.border-secondary-hover",
+    },
+    "&:focus": {
+        bg: "button.hover-default",
+        borderColor: "button.border-secondary-focus",
+        borderWidth: 2,
     },
 };
 
 const successStyles = {
-    borderColor: "border.success",
+    bg: "button.success",
+    borderColor: "button.border-success-default",
     cursor: "pointer",
     "&:hover": {
         bg: "highlight.success",
+        borderColor: "button.border-success-hover",
     },
-};
-
-const errorStyles = {
-    borderColor: "border.error",
-    cursor: "pointer",
-    "&:hover": {
-        bg: "highlight.error",
+    "&:focus": {
+        bg: "button.hover-success",
+        borderColor: "button.border-success-focus",
+        borderWidth: 2,
     },
 };
 
 const warningStyles = {
-    borderColor: "border.secondary",
+    bg: "button.warning",
+    borderColor: "button.border-warning-default",
     cursor: "pointer",
     "&:hover": {
         bg: "highlight.warning",
+        borderColor: "button.border-warning-hover",
+    },
+    "&:focus": {
+        bg: "button.hover-default",
+        borderColor: "button.border-warning-focus",
+        borderWidth: 2,
     },
 };
 
-const transparentStyles = {
-    borderColor: "border.transparent",
+const errorStyles = {
+    bg: "button.error",
+    borderColor: "button.border-error-default",
     cursor: "pointer",
     "&:hover": {
-        bg: "highlight.light",
+        bg: "highlight.error",
+        borderColor: "button.border-error-hover",
+    },
+    "&:focus": {
+        bg: "button.hover-default",
+        borderColor: "button.border-error-focus",
+        borderWidth: 2,
+    },
+};
+
+const textStyles = {
+    bg: "button.text",
+    borderColor: "button.text",
+    cursor: "pointer",
+    "&:focus": {
+        borderColor: "button.border-text-focus",
+        borderWidth: 2,
     },
 };
 
@@ -107,9 +145,9 @@ export const styleVariants = variant({
             ...sharedStyles,
             ...warningStyles,
         },
-        transparent: {
+        text: {
             ...sharedStyles,
-            ...transparentStyles,
+            ...textStyles,
         },
     },
 });
@@ -118,16 +156,16 @@ export const sizeVariants = variant({
     prop: "size",
     variants: {
         sm: {
-            height: "28px",
-            padding: "0px 8px",
+            height: "34px",
+            padding: "8px 12px",
         },
         md: {
-            height: "32px",
-            padding: "0px 16px",
+            height: "48px",
+            padding: "12px 14px",
         },
         lg: {
-            height: "38px",
-            padding: "0px 16px",
+            height: "60px",
+            padding: "18px 18px",
         },
     },
 });

@@ -1,8 +1,8 @@
 import React from "react";
 
-import { Flex } from "../flex/src/Flex";
+import { Flex } from "../../flex/src/Flex";
 import IconInfo from "../../icons/Info";
-import { ProgressBar } from "./ProgressBar";
+import { ProgressBar } from "../src/ProgressBar";
 
 export default {
     title: "Components/ProgressBar",

@@ -2,8 +2,8 @@
   "name": "@contactly-ui/button",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/system.cjs.js",
-  "module": "dist/system.esm.js",
+  "main": "dist/button.cjs.js",
+  "module": "dist/button.esm.js",
   "types": "dist/types/index.d.ts",
   "typings": "dist/types/index.d.ts",
   "scripts": {

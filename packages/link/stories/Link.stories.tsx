@@ -1,7 +1,7 @@
 import React from "react";
 import { Story } from "@storybook/react";
 
-import { Link, LinkProps } from "./Link";
+import { Link, LinkProps } from "../src/Link";
 
 export default {
     title: "Components/Link",

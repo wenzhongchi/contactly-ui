@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Skeleton } from "./Skeleton";
+import { Skeleton } from "../src/Skeleton";
 
 export default {
     title: "Components/Skeleton",

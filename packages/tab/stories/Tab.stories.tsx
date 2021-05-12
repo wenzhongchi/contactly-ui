@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Flex } from "../flex/src/Flex";
-import { Tab } from "./Tab";
+import { Flex } from "../../flex/src/Flex";
+import { Tab } from "../src/Tab";
 
 export default {
     title: "Components/Tab",

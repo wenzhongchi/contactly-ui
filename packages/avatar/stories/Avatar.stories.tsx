@@ -1,7 +1,7 @@
 import React from "react";
 import { Story } from "@storybook/react";
 
-import { Avatar, AvatarComponentProps } from "./Avatar";
+import { Avatar, AvatarComponentProps } from "../src/Avatar";
 
 export default {
     title: "Components/Avatar",

@@ -4,7 +4,7 @@ import _get from "lodash/get";
 
 import * as ICONS from "@icon/index";
 
-import { Tag, TagComponentProps } from "./Tag";
+import { Tag, TagComponentProps } from "../src/Tag";
 
 export default {
     title: "Components/Tag",
