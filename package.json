@@ -6,8 +6,8 @@
     "author": "Rick Chi",
     "main": "dist/system.cjs.js",
     "module": "dist/system.esm.js",
-    "types": "dist/types/index.d.ts",
-    "typings": "dist/types/index.d.ts",
+    "types": "dist/index.d.ts",
+    "typings": "dist/index.d.ts",
     "publishConfig": {
         "access": "public"
     },
@@ -21,12 +21,13 @@
         "type-check": "tsc --noEmit",
         "lint": "eslint './src/**/*.{ts,tsx}'",
         "lint:fix": "eslint './src/**/*.{ts,tsx}' --fix",
+        "lint:icons:fix": "eslint './icons/{src,stories}/**/*.{ts,tsx}' --fix",
         "format": "prettier --write './src/**/*.{ts,tsx,js,md,json}'",
         "pre-push": "yarn lint && yarn type-check",
         "clear": "rm -rf dist && rm -rf build && rm -rf yarn.lock && rm -rf node_modules && yarn install",
         "storybook": "start-storybook -p 6006",
         "build-storybook": "build-storybook -o .out",
-        "build:icons": "./scripts/icons/generate.js -o src/icon/src src/assets/icons && yarn lint:fix && yarn prettier -w --loglevel=warn ./src/icons/src"
+        "build:icons": "./icons/scripts/generate.js -o ./icons/src -i ./icons/assets && yarn lint:icons:fix && yarn prettier -w --loglevel=warn ./icons/src"
     },
     "husky": {
         "hooks": {
@@ -41,9 +42,8 @@
         "lodash": "^4.17.21",
         "react-animate-height": "^2.0.23",
         "react-popper": "^2.2.5",
-        "styled-system": "^5.1.5",
         "styled-components": "^5.3.0",
-        "zustand": "^3.5.1"
+        "styled-system": "^5.1.5"
     },
     "peerDependencies": {
         "react": "^17.0.2",

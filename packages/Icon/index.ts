@@ -1,3 +1,3 @@
-import { SvgProps } from "./src/BaseSvg";
+import { SvgProps } from "../../icons/base/BaseSvg";
 
 export type IconProps = SvgProps;

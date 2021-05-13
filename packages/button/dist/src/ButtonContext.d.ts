@@ -1,7 +1,6 @@
 /// <reference types="react" />
 import { ButtonGroupProps } from "./ButtonGroup";
-declare type ButtonGroupContextProps = ButtonGroupProps;
-declare const ButtonGroupContext: import("react").Context<Partial<ButtonGroupProps>>;
-declare const ButtonGroupProvider: import("react").Provider<Partial<ButtonGroupProps>>;
-declare const useButtonGroup: () => Partial<ButtonGroupContextProps>;
-export { ButtonGroupContext, ButtonGroupProvider, useButtonGroup };
+export declare type ButtonGroupContextProps = ButtonGroupProps;
+export declare const ButtonGroupContext: import("react").Context<Partial<ButtonGroupProps>>;
+export declare const ButtonGroupProvider: import("react").Provider<Partial<ButtonGroupProps>>;
+export declare const useButtonGroup: () => Partial<ButtonGroupContextProps>;

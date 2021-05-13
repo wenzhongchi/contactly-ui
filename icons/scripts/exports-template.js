@@ -1,5 +1,5 @@
-module.exports = ({ iconsMeta }) =>
-    `\n${iconsMeta
+module.exports = ({ icons }) =>
+    `\n${icons
         .map(
             ({ fileName, componentName }) =>
                 `export { default as ${componentName} } from "./${fileName}";`,

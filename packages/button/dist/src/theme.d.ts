@@ -31,6 +31,27 @@ export declare type ButtonColors = {
     "border-error-hover": string;
     "border-error-focus": string;
     "border-error-disabled": string;
+    "hover-default": string;
+    "hover-primary": string;
+    "hover-secondary": string;
+    "hover-success": string;
+    "hover-warning": string;
+    "hover-error": string;
+    "hover-text": string;
+    "focus-default": string;
+    "focus-primary": string;
+    "focus-secondary": string;
+    "focus-success": string;
+    "focus-warning": string;
+    "focus-error": string;
+    "focus-text": string;
+    "disabled-default": string;
+    "disabled-primary": string;
+    "disabled-secondary": string;
+    "disabled-success": string;
+    "disabled-warning": string;
+    "disabled-error": string;
+    "disabled-text": string;
 };
 export declare type ButtonTheme = {
     light: ButtonColors;

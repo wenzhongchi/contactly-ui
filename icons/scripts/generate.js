@@ -37,21 +37,20 @@ const colorReplacements = [
 
 const isSvg = (() => {
     const svgRegexp = /\.svg$/;
-
     return (fileName) => svgRegexp.test(fileName);
 })();
 
-const getIconsMetaByType = (iconsTypePath) =>
+const getIconsByType = (iconsTypePath) =>
     fs.readdir(iconsTypePath).then((files) =>
         Promise.all(
-            files.reduce((acc, fileName) => {
+            files.reduce((icons, fileName) => {
                 if (isSvg(fileName)) {
-                    acc.push({
+                    icons.push({
                         fileName,
                         filePath: path.join(iconsTypePath, fileName),
                     });
                 }
-                return acc;
+                return icons;
             }, []),
         ).then(_.flatten),
     );
@@ -85,14 +84,13 @@ const getSvgContent = (svgPath) =>
 
 const generateIconFilename = (fileName) => {
     const baseName = path.basename(fileName, path.extname(fileName));
-
     return _.startCase(baseName).replace(/\s/g, "");
 };
 
 const generateIconComponentName = (fileName) => `Icon${fileName}`;
 
-const getIconTemplateData = (iconMeta) => {
-    const iconFileName = generateIconFilename(iconMeta.fileName);
+const getIconTemplate = (iconData) => {
+    const iconFileName = generateIconFilename(iconData.fileName);
 
     return {
         fileName: iconFileName,
@@ -100,52 +98,52 @@ const getIconTemplateData = (iconMeta) => {
     };
 };
 
-const generateIcon = (cwd, iconMeta, outputPath) =>
-    getSvgContent(iconMeta.filePath).then(({ content, options, svgProps }) => {
+const generateIcon = (cwd, iconData, outputPath) =>
+    getSvgContent(iconData.filePath).then(({ content, options, svgProps }) => {
         const outputFolderPath = outputPath;
-        const templateData = getIconTemplateData(iconMeta);
-        const outputFilePath = path.join(outputFolderPath, `${templateData.fileName}.tsx`);
+        const template = getIconTemplate(iconData);
+        const outputFilePath = path.join(outputFolderPath, `${template.fileName}.tsx`);
 
         return mkdirp(outputFolderPath)
             .then(() =>
                 fs.writeFile(
                     outputFilePath,
-                    iconTemplate({ ...templateData, svgProps, content, options }),
+                    iconTemplate({ ...template, svgProps, content, options }),
                 ),
             )
             .then(() => {
                 console.log(
-                    `${iconMeta.filePath.replace(cwd, "")} -> ${outputFilePath.replace(cwd, "")}`,
+                    `${iconData.filePath.replace(cwd, "")} -> ${outputFilePath.replace(cwd, "")}`,
                 );
             });
     });
 
-const generateIconsComponents = (cwd, iconsTypePath, outputPath, iconsMeta) =>
-    Promise.all(iconsMeta.map((meta) => generateIcon(cwd, meta, outputPath))).then(() =>
+const generateIconsComponents = (cwd, iconsTypePath, outputPath, icons) =>
+    Promise.all(icons.map((data) => generateIcon(cwd, data, outputPath))).then(() =>
         console.log(`\nAll icons from "${iconsTypePath}" were successfully generated`),
     );
 
-const generateIconsStories = (outputPath, iconsMeta) => {
-    const storyFilePath = path.join(outputPath.replace("Icons", ""), `Icons.stories.tsx`);
+const generateIconsStories = (outputPath, icons) => {
+    const storyFilePath = path.join(outputPath.replace("src", "stories"), `Icons.stories.tsx`);
 
     return fs
         .writeFile(
             storyFilePath,
             storiesTemplate({
-                iconsMeta: iconsMeta.map(getIconTemplateData),
+                icons: icons.map(getIconTemplate),
             }),
         )
         .then(() => console.log(`\nStories file was successfully generated`));
 };
 
-const generateIconsExports = (outputPath, iconsMeta) => {
+const generateIconsExports = (outputPath, icons) => {
     const outputFolderPath = outputPath;
     const outputFilePath = path.join(outputFolderPath, `index.ts`);
 
     return mkdirp(outputFolderPath).then(() =>
         fs.writeFile(
             outputFilePath,
-            exportsTemplate({ iconsMeta: iconsMeta.map(getIconTemplateData) }),
+            exportsTemplate({ icons: icons.map(getIconTemplate) }),
         ),
     );
 };
@@ -155,25 +153,26 @@ const run = () => {
     const argv = minimist(process.argv.slice(2));
 
     if (!argv.o) {
-        console.error("You must specify output directory!");
+        console.error("You must enter output folder");
         return;
     }
 
-    if (!argv._.length) {
-        console.error("You must specify icons type input directory!");
+    if (!argv.i) {
+        console.error("You must enter input folder");
         return;
     }
 
-    const iconsPath = argv._[0];
+    const iconsPath = argv.i;
     const outputPath = path.join(cwd, argv.o);
 
-    console.log(`Gathering all icons meta from "${iconsPath}"\n`);
-    getIconsMetaByType(path.join(cwd, iconsPath))
-        .then((iconsMeta) =>
+    console.log(`Gathering all icons from "${path.join(cwd, iconsPath)}"\n`);
+
+    getIconsByType(path.join(cwd, iconsPath))
+        .then((icons) =>
             Promise.all([
-                generateIconsComponents(cwd, iconsPath, outputPath, iconsMeta),
-                generateIconsStories(outputPath, iconsMeta),
-                generateIconsExports(outputPath, iconsMeta),
+                generateIconsComponents(cwd, iconsPath, outputPath, icons),
+                generateIconsStories(outputPath, icons),
+                generateIconsExports(outputPath, icons),
             ]),
         )
         .catch((err) => {
