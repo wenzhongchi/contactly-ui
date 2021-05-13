@@ -1,27 +1,31 @@
-import React, { forwardRef } from "react";
-import styled, { StyledComponentProps } from "styled-components";
-import {
-    compose,
-    space,
-    layout,
-    flexbox,
-    position,
-    SpaceProps,
-    LayoutProps,
-    FlexboxProps,
-    PositionProps,
-} from "styled-system";
+import React, { forwardRef, useMemo } from "react";
 
-import { AnyObject } from "@type/types";
+import { Flex } from "@contactly-ui/flex";
 
-type StyledInputGroupProps = SpaceProps & LayoutProps & FlexboxProps & PositionProps;
+import { InputSize, InputVariant } from "./Input";
+import { InputGroupProvider } from "./InputContext";
 
-export type InputGroupProps = StyledComponentProps<"div", AnyObject, StyledInputGroupProps, never>;
-
-const StyledInputGroup = styled.div<InputGroupProps>`
-    ${compose(space, layout, flexbox, position)}
-`;
+export type InputGroupProps = {
+    variant?: InputVariant;
+    size?: InputSize;
+};
 
 export const InputGroup: React.FC<InputGroupProps> = forwardRef<HTMLDivElement, InputGroupProps>(
-    ({ ...props }, ref) => <StyledInputGroup ref={ref} {...props} />,
+    ({ children, variant = "default", size = "sm", ...restProps }, ref) => {
+        const state = useMemo<InputGroupProps>(
+            () => ({
+                variant,
+                size,
+            }),
+            [variant, size],
+        );
+
+        return (
+            <InputGroupProvider value={state}>
+                <Flex ref={ref} display="inline-flex" flexDirection="row" {...restProps}>
+                    {children}
+                </Flex>
+            </InputGroupProvider>
+        );
+    },
 );

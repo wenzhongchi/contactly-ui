@@ -2,8 +2,7 @@ import React from "react";
 import { Story } from "@storybook/react";
 
 import { Input, InputComponentProps } from "../src/Input";
-import { TextInput, TextInputProps } from "./TextInput";
-import { PasswordInput, PasswordInputProps } from "./PasswordInput";
+import { LabelInput, LabelInputProps } from "../src/LabelInput";
 
 export default {
     title: "Components/Input",
@@ -12,7 +11,7 @@ export default {
         variant: {
             control: {
                 type: "select",
-                options: ["default", "error", "success", "warning", "disabled", "dark"],
+                options: ["default", "error", "success", "warning", "text"],
             },
         },
         inputSize: {
@@ -39,9 +38,9 @@ Basic.args = {
     inputSize: "sm",
 };
 
-export const Text: Story<TextInputProps> = (props: TextInputProps) => <TextInput {...props} />;
+export const Label: Story<LabelInputProps> = (props: LabelInputProps) => <LabelInput {...props} />;
 
-Text.argTypes = {
+Label.argTypes = {
     statusVariant: {
         control: {
             type: "select",
@@ -62,41 +61,11 @@ Text.argTypes = {
     },
 };
 
-Text.args = {
+Label.args = {
     variant: "default",
     inputSize: "sm",
     statusVariant: "success",
     statusLabel: "success input check",
     placeholder: "Please enter your email",
     title: "Email",
-};
-
-export const Password: Story<PasswordInputProps> = (props: PasswordInputProps) => (
-    <PasswordInput {...props} />
-);
-
-Password.argTypes = {
-    variant: {
-        control: {
-            type: "select",
-            options: ["default", "error", "success", "warning", "disabled", "dark"],
-        },
-    },
-    inputSize: {
-        control: {
-            type: "select",
-            options: ["sm", "md", "lg"],
-        },
-    },
-    title: {
-        type: "string",
-    },
-};
-
-Password.args = {
-    variant: "default",
-    placeholder: "Please enter your password",
-    title: "Password",
-    showHint: true,
-    hasProgress: true,
 };

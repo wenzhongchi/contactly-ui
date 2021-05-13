@@ -9,6 +9,7 @@ const storybookConfig = {
         "../packages/**/Flex.stories.@(js|jsx|ts|tsx)",
         "../packages/**/Text.stories.@(js|jsx|ts|tsx)",
         "../packages/**/Button.stories.@(js|jsx|ts|tsx)",
+        "../packages/**/Input.stories.@(js|jsx|ts|tsx)",
         // "../packages/**/*.stories.@(js|jsx|ts|tsx)",
     ],
     addons: [

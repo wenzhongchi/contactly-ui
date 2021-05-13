@@ -2,12 +2,11 @@ import { createContext, useContext } from "react";
 
 import { ButtonGroupProps } from "./ButtonGroup";
 
-type ButtonGroupContextProps = ButtonGroupProps;
+export type ButtonGroupContextProps = ButtonGroupProps;
 
-const ButtonGroupContext = createContext<Partial<ButtonGroupContextProps>>({});
+export const ButtonGroupContext = createContext<Partial<ButtonGroupContextProps>>({});
 
-const ButtonGroupProvider = ButtonGroupContext.Provider;
+export const ButtonGroupProvider = ButtonGroupContext.Provider;
 
-const useButtonGroup = (): Partial<ButtonGroupContextProps> => useContext(ButtonGroupContext);
-
-export { ButtonGroupContext, ButtonGroupProvider, useButtonGroup };
+export const useButtonGroup = (): Partial<ButtonGroupContextProps> =>
+    useContext(ButtonGroupContext);
