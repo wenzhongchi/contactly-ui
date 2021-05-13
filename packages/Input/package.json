@@ -4,8 +4,8 @@
   "description": "",
   "main": "dist/input.cjs.js",
   "module": "dist/input.esm.js",
-  "types": "dist/types/index.d.ts",
-  "typings": "dist/types/index.d.ts",
+  "types": "dist/index.d.ts",
+  "typings": "dist/index.d.ts",
   "scripts": {
     "build": "npx rollup -c",
     "watch": "npx rollup -c -w",

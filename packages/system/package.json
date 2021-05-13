@@ -4,8 +4,11 @@
   "description": "",
   "main": "dist/system.cjs.js",
   "module": "dist/system.esm.js",
-  "types": "dist/types/index.d.ts",
-  "typings": "dist/types/index.d.ts",
+  "types": "dist/index.d.ts",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "npx rollup -c",
     "watch": "npx rollup -c -w",

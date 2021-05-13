@@ -1,6 +1,6 @@
 # dependencies
 /node_modules
-/.pnp
+.pnp
 .pnp.js
 
 # testing
@@ -23,4 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 
 build-storybook.log*
+
+.yalc
 
