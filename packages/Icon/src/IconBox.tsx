@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Box, BoxProps } from "@components/Box/Box";
+import { Box, BoxProps } from "@contactly-ui/box";
 
 type IconBoxProps = BoxProps & {
     animate?: boolean;

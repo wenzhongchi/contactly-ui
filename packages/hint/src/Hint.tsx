@@ -4,6 +4,12 @@ import { StyledComponentProps } from "styled-components";
 import { AnyObject, StyledSystemProps } from "@contactly-ui/system";
 import { Flex } from "@contactly-ui/flex";
 import { Text } from "@contactly-ui/text";
+import {
+    IconAlertCircle,
+    IconCheckCircle,
+    IconCloseCircle,
+    IconAlertTriangle,
+} from "@contactly-ui/icons";
 
 export type HintVariant = "default" | "success" | "error" | "warning";
 
@@ -29,15 +35,13 @@ const renderIcon = (variant?: HintVariant) => {
 
     switch (variant) {
         case "default":
-            return <IconCheck color={getIconColor()} />;
+            return <IconAlertCircle color={getIconColor()} size={12} />;
         case "success":
-            return <IconCheck color={getIconColor()} />;
+            return <IconCheckCircle color={getIconColor()} size={12} />;
         case "error":
-            return <IconCheck color={getIconColor()} />;
-        case "default":
-            return <IconCheck color={getIconColor()} />;
+            return <IconCloseCircle color={getIconColor()} size={12} />;
         case "warning":
-            return <IconAlertCircle color={getIconColor()} />;
+            return <IconAlertTriangle color={getIconColor()} size={12} />;
     }
 };
 
@@ -45,16 +49,14 @@ export const Hint: React.FC<HintProps> = forwardRef<HTMLDivElement, HintProps>(
     ({ variant = "default", label, ...restProps }, ref) => {
         const getTextColor = () => {
             switch (variant) {
-                case "loading":
-                    return "text.primary";
+                case "default":
+                    return "text.secondary";
                 case "error":
                     return "text.error";
                 case "warning":
-                    return "text.warning";
+                    return "text.secondary";
                 case "success":
-                    return "text.success";
-                case "default":
-                    return "text.primary";
+                    return "text.secondary";
             }
         };
 

@@ -4,12 +4,14 @@ const tsconfig = path.resolve(__dirname, "../tsconfig.json");
 
 const storybookConfig = {
     stories: [
+        "../icons/**/Icons.stories.@(js|jsx|ts|tsx)",
         "../packages/**/*.stories.mdx",
         "../packages/**/Box.stories.@(js|jsx|ts|tsx)",
         "../packages/**/Flex.stories.@(js|jsx|ts|tsx)",
         "../packages/**/Text.stories.@(js|jsx|ts|tsx)",
         "../packages/**/Button.stories.@(js|jsx|ts|tsx)",
         "../packages/**/Input.stories.@(js|jsx|ts|tsx)",
+        "../packages/**/Hint.stories.@(js|jsx|ts|tsx)",
         // "../packages/**/*.stories.@(js|jsx|ts|tsx)",
     ],
     addons: [
@@ -30,10 +32,7 @@ const storybookConfig = {
                     return false;
                 }
                 if (prop.parent) {
-                    return (
-                        !prop.parent.fileName.includes("node_modules") ||
-                        !prop.parent.fileName.includes("dist")
-                    );
+                    return !prop.parent.fileName.includes("node_modules");
                 }
 
                 return true;

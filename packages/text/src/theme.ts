@@ -6,6 +6,7 @@ export type TextColors = {
     secondary: string;
     tertiary: string;
     disabled: string;
+    error: string;
     white: string;
 };
 
@@ -21,6 +22,7 @@ export const getTextColors = (colors: Colors): TextTheme => ({
         secondary: colors.gray[800],
         tertiary: colors.gray[600],
         disabled: colors.gray[80],
+        error: colors.red[500],
         white: colors.white,
     },
     dark: {
@@ -29,6 +31,7 @@ export const getTextColors = (colors: Colors): TextTheme => ({
         secondary: colors.gray[800],
         tertiary: colors.gray[600],
         disabled: colors.gray[80],
+        error: colors.red[500],
         white: colors.white,
     },
 });

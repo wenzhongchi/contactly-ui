@@ -3,6 +3,7 @@ import { Theme } from "styled-system";
 import { colors } from "@contactly-ui/system";
 import { getTextColors } from "@contactly-ui/text";
 import { getButtonColors } from "@contactly-ui/button";
+import { getIconColors } from "@contactly-ui/icon";
 
 import { fonts, fontSizes, fontWeights, lineHeights, letterSpacings } from "./base/typography";
 import space from "./base/spaces";
@@ -31,6 +32,7 @@ const light: Theme = {
     colors: {
         text: getTextColors(colors).light,
         button: getButtonColors(colors).light,
+        icon: getIconColors(colors).light,
     },
     breakpoints,
 };
@@ -40,6 +42,7 @@ const dark: Theme = {
     colors: {
         text: getTextColors(colors).dark,
         button: getButtonColors(colors).dark,
+        icon: getIconColors(colors).dark,
     },
     breakpoints,
 };

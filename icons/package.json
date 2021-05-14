@@ -1,9 +1,9 @@
 {
-  "name": "@contactly-ui/icon",
+  "name": "@contactly-ui/icons",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/icon.cjs.js",
-  "module": "dist/icon.esm.js",
+  "main": "dist/icons.cjs.js",
+  "module": "dist/icons.esm.js",
   "types": "dist/index.d.ts",
   "typings": "dist/index.d.ts",
   "scripts": {
@@ -31,13 +31,15 @@
     "url": "https://github.com/wenzhongchi/contactly-ui/issues"
   },
   "dependencies": {
-    "@contactly-ui/system": "^1.0.0",
+    "@contactly-ui/system": "file:.yalc/@contactly-ui/system",
+    "@contactly-ui/theme": "file:.yalc/@contactly-ui/theme",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "@contactly-ui/flex": "^1.0.0",
-    "@contactly-ui/box": "^1.0.0",
-    "@contactly-ui/text": "^1.0.0"
+    "@contactly-ui/box": "file:.yalc/@contactly-ui/box",
+    "@contactly-ui/flex": "file:.yalc/@contactly-ui/flex",
+    "@contactly-ui/text": "file:.yalc/@contactly-ui/text",
+    "@types/uuid": "^8.3.0"
   },
   "peerDependencies": {
     "react": "^17.0.2",
@@ -45,6 +47,6 @@
     "styled-components": "^5.3.0",
     "styled-system": "^5.1.5"
   },
-  "component": "Icon",
+  "component": "Icons",
   "homepage": ""
 }

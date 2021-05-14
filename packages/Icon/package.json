@@ -1,0 +1,45 @@
+{
+  "name": "@contactly-ui/icon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/icon.cjs.js",
+  "module": "dist/icon.esm.js",
+  "types": "dist/index.d.ts",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "npx rollup -c",
+    "watch": "npx rollup -c -w",
+    "test": "jest"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": "https://github.com/wenzhongchi/contactly-ui",
+  "keywords": [
+    "design-system",
+    "react",
+    "styled-components",
+    "styled-system",
+    "ui-library",
+    "ui",
+    "ux",
+    "contantly"
+  ],
+  "author": "Rick Chi <wenzhongchi@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wenzhongchi/contactly-ui/issues"
+  },
+  "dependencies": {
+    "@contactly-ui/box": "file:.yalc/@contactly-ui/box",
+    "@contactly-ui/system": "file:.yalc/@contactly-ui/system"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.0",
+    "styled-system": "^5.1.5"
+  },
+  "component": "Icon",
+  "homepage": ""
+}

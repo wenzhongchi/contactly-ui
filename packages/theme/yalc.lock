@@ -1,0 +1,21 @@
+{
+  "version": "v1",
+  "packages": {
+    "@contactly-ui/system": {
+      "signature": "237aa54c3cf5185c53af40417be9e23c",
+      "file": true
+    },
+    "@contactly-ui/button": {
+      "signature": "2bf4e9d7eeedb2f84a6a93f1b725d965",
+      "file": true
+    },
+    "@contactly-ui/text": {
+      "signature": "84171766952c6af634cd05b5cbd7e779",
+      "file": true
+    },
+    "@contactly-ui/icon": {
+      "signature": "31a31559684ad429ce4549bb9a4c9c0d",
+      "file": true
+    }
+  }
+}

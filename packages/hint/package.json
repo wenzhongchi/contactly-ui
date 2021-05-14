@@ -6,6 +6,9 @@
   "module": "dist/hint.esm.js",
   "types": "dist/index.d.ts",
   "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "npx rollup -c",
     "watch": "npx rollup -c -w",
@@ -31,9 +34,11 @@
     "url": "https://github.com/wenzhongchi/contactly-ui/issues"
   },
   "dependencies": {
-    "@contactly-ui/system": "^1.0.0",
-    "@contactly-ui/flex": "^1.0.0",
-    "@contactly-ui/text": "^1.0.0"
+    "@contactly-ui/flex": "file:.yalc/@contactly-ui/flex",
+    "@contactly-ui/icon": "file:.yalc/@contactly-ui/text",
+    "@contactly-ui/icons": "file:.yalc/@contactly-ui/icons",
+    "@contactly-ui/system": "file:.yalc/@contactly-ui/system",
+    "@contactly-ui/text": "file:.yalc/@contactly-ui/text"
   },
   "peerDependencies": {
     "react": "^17.0.2",

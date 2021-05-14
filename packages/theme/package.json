@@ -31,9 +31,14 @@
     "url": "https://github.com/wenzhongchi/contactly-ui/issues"
   },
   "dependencies": {
-    "@contactly-ui/system": "^1.0.0",
-    "@contactly-ui/text": "^1.0.0",
-    "@contactly-ui/button": "^1.0.0"
+    "@contactly-ui/button": "file:.yalc/@contactly-ui/button",
+    "@contactly-ui/icon": "file:.yalc/@contactly-ui/icon",
+    "@contactly-ui/system": "file:.yalc/@contactly-ui/system",
+    "@contactly-ui/text": "file:.yalc/@contactly-ui/text",
+    "lodash-es": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/lodash-es": "^4.17.4"
   },
   "peerDependencies": {
     "react": "^17.0.2",

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { v4 as uuid } from "uuid";
 
 import { composedSystem, StyledSystemProps } from "@contactly-ui/system";
-import { useColor } from "@hooks/useColor";
+import { useColor } from "@contactly-ui/theme";
 
 const Svg = styled.svg(
     {
@@ -33,9 +33,9 @@ const getColorProp = (
 ) => (props[prop] === "currentColor" ? color : props[prop]);
 
 export const BaseSvg = forwardRef<SVGSVGElement, BaseSvgForwardedProps>(
-    ({ title, size = 16, children, color, ...restProps }, ref) => {
+    ({ title, size = 24, children, color, ...restProps }, ref) => {
         const [titleId] = useState(() => (title ? uuid() : undefined));
-        const selectedColor = useColor(color || "text.primary");
+        const selectedColor = useColor(color || "icon.default");
 
         return (
             <Svg
@@ -45,12 +45,12 @@ export const BaseSvg = forwardRef<SVGSVGElement, BaseSvgForwardedProps>(
                 viewBox={`0 0 24 24`}
                 aria-labelledby={titleId}
                 {...restProps}
-                fill={getColorProp(restProps, "fill", color)}
-                stroke={getColorProp(restProps, "stroke", color)}
+                fill={getColorProp(restProps, "fill", selectedColor)}
+                stroke={getColorProp(restProps, "stroke", selectedColor)}
                 ref={ref}
             >
                 {title && <title id={titleId}>{title}</title>}
-                {React.cloneElement(children, { selectedColor, ...restProps })}
+                {React.cloneElement(children, { ...restProps })}
             </Svg>
         );
     },

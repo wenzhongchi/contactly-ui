@@ -23,7 +23,7 @@ const PLUGINS = [
     pluginTerser(),
 ];
 
-export const getRollupConfig = (pwd) => {
+export const getRollupConfig = (pwd, icon = false) => {
     const SOURCE_DIR = path.resolve(pwd);
     const pkg = require(`${SOURCE_DIR}/package.json`);
     const input = `${SOURCE_DIR}/index.ts`;
@@ -35,7 +35,9 @@ export const getRollupConfig = (pwd) => {
             ...PLUGINS,
             babel({
                 babelHelpers: "bundled",
-                configFile: path.resolve(SOURCE_DIR, "../../.babelrc"),
+                configFile: icon
+                    ? path.resolve(SOURCE_DIR, "../.babelrc")
+                    : path.resolve(SOURCE_DIR, "../../.babelrc"),
             }),
         ],
     };
@@ -47,7 +49,9 @@ export const getRollupConfig = (pwd) => {
             ...PLUGINS,
             babel({
                 babelHelpers: "bundled",
-                configFile: path.resolve(SOURCE_DIR, "../../.babelrc"),
+                configFile: icon
+                    ? path.resolve(SOURCE_DIR, "../.babelrc")
+                    : path.resolve(SOURCE_DIR, "../../.babelrc"),
             }),
         ],
     };
