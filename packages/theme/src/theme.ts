@@ -47,4 +47,4 @@ const dark: Theme = {
     breakpoints,
 };
 
-export default { light, dark };
+export const themes = { light, dark };

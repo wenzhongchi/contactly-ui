@@ -6,9 +6,6 @@
   "module": "dist/box.esm.js",
   "types": "dist/index.d.ts",
   "typings": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "build": "npx rollup -c",
     "watch": "npx rollup -c -w",

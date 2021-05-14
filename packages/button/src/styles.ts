@@ -27,11 +27,6 @@ const defaultStyles = {
         bg: "button.hover-default",
         borderColor: "button.border-default-hover",
     },
-    "&:focus": {
-        bg: "button.hover-default",
-        borderColor: "button.border-default-focus",
-        borderWidth: 2,
-    },
 };
 
 const primaryStyles = {
@@ -41,11 +36,6 @@ const primaryStyles = {
     "&:hover": {
         bg: "button.hover-primary",
         borderColor: "button.border-primary-hover",
-    },
-    "&:focus": {
-        bg: "button.hover-default",
-        borderColor: "button.border-primary-focus",
-        borderWidth: 2,
     },
 };
 
@@ -57,11 +47,6 @@ const secondaryStyles = {
         bg: "highlight.light",
         borderColor: "button.border-secondary-hover",
     },
-    "&:focus": {
-        bg: "button.hover-default",
-        borderColor: "button.border-secondary-focus",
-        borderWidth: 2,
-    },
 };
 
 const successStyles = {
@@ -71,11 +56,6 @@ const successStyles = {
     "&:hover": {
         bg: "highlight.success",
         borderColor: "button.border-success-hover",
-    },
-    "&:focus": {
-        bg: "button.hover-success",
-        borderColor: "button.border-success-focus",
-        borderWidth: 2,
     },
 };
 
@@ -87,11 +67,6 @@ const warningStyles = {
         bg: "highlight.warning",
         borderColor: "button.border-warning-hover",
     },
-    "&:focus": {
-        bg: "button.hover-default",
-        borderColor: "button.border-warning-focus",
-        borderWidth: 2,
-    },
 };
 
 const errorStyles = {
@@ -102,21 +77,12 @@ const errorStyles = {
         bg: "highlight.error",
         borderColor: "button.border-error-hover",
     },
-    "&:focus": {
-        bg: "button.hover-default",
-        borderColor: "button.border-error-focus",
-        borderWidth: 2,
-    },
 };
 
 const textStyles = {
     bg: "button.text",
     borderColor: "button.text",
     cursor: "pointer",
-    "&:focus": {
-        borderColor: "button.border-text-focus",
-        borderWidth: 2,
-    },
 };
 
 export const styleVariants = variant({

@@ -30,8 +30,18 @@
   "bugs": {
     "url": "https://github.com/wenzhongchi/contactly-ui/issues"
   },
-  "dependencies": {
+  "resolutions": {
     "@contactly-ui/button": "file:.yalc/@contactly-ui/button",
+    "@contactly-ui/box": "file:.yalc/@contactly-ui/box",
+    "@contactly-ui/flex": "file:.yalc/@contactly-ui/flex",
+    "@contactly-ui/text": "file:.yalc/@contactly-ui/text",
+    "@contactly-ui/system": "file:.yalc/@contactly-ui/system",
+    "@contactly-ui/icon": "file:.yalc/@contactly-ui/icon"
+  },
+  "dependencies": {
+    "@contactly-ui/box": "file:.yalc/@contactly-ui/box",
+    "@contactly-ui/button": "file:.yalc/@contactly-ui/button",
+    "@contactly-ui/flex": "file:.yalc/@contactly-ui/flex",
     "@contactly-ui/icon": "file:.yalc/@contactly-ui/icon",
     "@contactly-ui/system": "file:.yalc/@contactly-ui/system",
     "@contactly-ui/text": "file:.yalc/@contactly-ui/text",

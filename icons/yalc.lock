@@ -12,16 +12,16 @@
       "replaced": "^1.0.0"
     },
     "@contactly-ui/text": {
-      "signature": "84171766952c6af634cd05b5cbd7e779",
+      "signature": "6e8cebd1ef8ee7f36b1f6978736fa49a",
       "file": true,
       "replaced": "^1.0.0"
     },
     "@contactly-ui/theme": {
-      "signature": "46d21ba01bc6ef848be51d357fa6bc76",
+      "signature": "592681ee9a1848ac48647c6e1510f378",
       "file": true
     },
     "@contactly-ui/system": {
-      "signature": "237aa54c3cf5185c53af40417be9e23c",
+      "signature": "b417947c7147a2ca3ad7253c986ba02b",
       "file": true
     }
   }

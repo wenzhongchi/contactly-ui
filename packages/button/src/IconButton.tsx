@@ -52,25 +52,6 @@ export const IconButton: React.FC<IconButtonProps> = forwardRef<HTMLButtonElemen
         const selectedVariant = groupVariant ?? variant;
         const selectedSize = groupSize ?? size;
 
-        // const getIconColor = () => {
-        //     switch (selectedVariant) {
-        //         case "default":
-        //             return isDisabled ? "text.disabled" : "text.default";
-        //         case "primary":
-        //             return "text.white";
-        //         case "secondary":
-        //             return "text.white";
-        //         case "success":
-        //             return "text.white";
-        //         case "warning":
-        //             return "text.white";
-        //         case "error":
-        //             return "text.white";
-        //         case "text":
-        //             return isDisabled ? "text.disabled" : "text.default";
-        //     }
-        // };
-
         const getIconSize = () => {
             switch (selectedSize) {
                 case "sm":
