@@ -12,6 +12,8 @@ const storybookConfig = {
         "../packages/**/Button.stories.@(js|jsx|ts|tsx)",
         "../packages/**/Input.stories.@(js|jsx|ts|tsx)",
         "../packages/**/Hint.stories.@(js|jsx|ts|tsx)",
+        "../packages/**/Card.stories.@(js|jsx|ts|tsx)",
+        "../packages/**/Avatar.stories.@(js|jsx|ts|tsx)",
         // "../packages/**/*.stories.@(js|jsx|ts|tsx)",
     ],
     addons: [

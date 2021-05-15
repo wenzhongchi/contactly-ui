@@ -3,23 +3,15 @@
   "packages": {
     "@contactly-ui/system": {
       "signature": "b417947c7147a2ca3ad7253c986ba02b",
-      "file": true,
-      "replaced": "^1.0.0"
+      "file": true
     },
     "@contactly-ui/box": {
       "signature": "2e5c951548f9af6b1a28f3cc57834123",
-      "file": true,
-      "replaced": "^1.0.0"
-    },
-    "@contactly-ui/flex": {
-      "signature": "0b42056b50dd1783a57c491b7386b690",
-      "file": true,
-      "replaced": "^1.0.0"
+      "file": true
     },
     "@contactly-ui/text": {
       "signature": "8adeb3961cde29cb7b8d54ff5cb9a9c9",
-      "file": true,
-      "replaced": "^1.0.0"
+      "file": true
     }
   }
 }

@@ -11,8 +11,14 @@ export default {
         variant: {
             control: {
                 type: "select",
-                options: ["sm", "md", "lg"],
+                options: ["xs", "sm", "md", "lg", "xl"],
             },
+        },
+        src: {
+            type: "string",
+        },
+        label: {
+            type: "string",
         },
     },
 };
@@ -23,12 +29,14 @@ export const Image: Story<AvatarComponentProps> = (props: AvatarComponentProps) 
 
 Image.args = {
     src: "https://i1.sndcdn.com/avatars-000333187303-234nv2-t500x500.jpg",
+    variant: "md",
 };
 
-export const Placeholder: Story<AvatarComponentProps> = (props: AvatarComponentProps) => (
+export const Label: Story<AvatarComponentProps> = (props: AvatarComponentProps) => (
     <Avatar {...props} />
 );
 
-Placeholder.args = {
-    src: undefined,
+Label.args = {
+    label: "AB",
+    variant: "md",
 };

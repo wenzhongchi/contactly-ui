@@ -1,48 +1,44 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef, useCallback } from "react";
 import styled, { StyledComponentProps } from "styled-components";
-import {
-    compose,
-    variant,
-    space,
-    layout,
-    flexbox,
-    border,
-    position,
-    SpaceProps,
-    LayoutProps,
-    FlexboxProps,
-    BorderProps,
-    PositionProps,
-} from "styled-system";
+import { variant } from "styled-system";
 
-import { AnyObject } from "@type/types";
-import { Box } from "@components/Box";
-import IconUser from "@icon/User";
+import { AnyObject, composedSystem, StyledSystemProps } from "@contactly-ui/system";
+import { Box } from "@contactly-ui/box";
+import { Text } from "@contactly-ui/text";
 
-export type AvatarComponentProps = { variant?: "sm" | "md" | "lg"; src?: string };
+export type AvatarComponentProps = {
+    variant?: "xs" | "sm" | "md" | "lg" | "xl";
+    src?: string;
+    label?: string;
+};
 
-type StyledAvatarProps = SpaceProps &
-    LayoutProps &
-    FlexboxProps &
-    BorderProps &
-    PositionProps &
-    AvatarComponentProps;
+type StyledAvatarProps = StyledSystemProps & AvatarComponentProps;
 
-const variants = variant({
+const styleVariants = variant({
     variants: {
-        sm: {
+        xs: {
             width: 24,
             height: 24,
             borderRadius: 999999,
         },
-        md: {
+        sm: {
             width: 32,
             height: 32,
             borderRadius: 999999,
         },
-        lg: {
+        md: {
             width: 40,
             height: 40,
+            borderRadius: 999999,
+        },
+        lg: {
+            width: 52,
+            height: 52,
+            borderRadius: 999999,
+        },
+        xl: {
+            width: 64,
+            height: 64,
             borderRadius: 999999,
         },
     },
@@ -55,47 +51,56 @@ const StyledAvatar = styled.img<AvatarProps>(
         width: "100%",
         height: "100%",
     },
-    compose(space, layout, flexbox, border, position),
-    variants,
+    styleVariants,
+    composedSystem,
 );
 
 export const Avatar: React.FC<AvatarProps> = forwardRef<HTMLImageElement, AvatarProps>(
-    ({ src, variant = "md", ...restProps }, ref) => {
-        const getBoxSize = () => {
-            switch (variant) {
-                case "sm":
-                    return 24;
-                case "md":
-                    return 32;
-                case "lg":
-                    return 40;
-                default:
-                    return 24;
-            }
-        };
+    ({ src, label, variant = "md", ...restProps }, ref) => {
+        const getBgColor = useCallback(() => {
+            if (label) return "avatar.label";
+            return "avatar.image";
+        }, [label]);
 
-        const getPlaceholderSize = () => {
+        const getBoxSize = useCallback(() => {
             switch (variant) {
+                case "xs":
+                    return 24;
                 case "sm":
-                    return 16;
-                case "md":
-                    return 16;
-                case "lg":
                     return 32;
-                default:
-                    return 16;
+                case "md":
+                    return 40;
+                case "lg":
+                    return 52;
+                case "xl":
+                    return 64;
             }
-        };
+        }, [variant]);
+
+        const getLabelVariant = useCallback(() => {
+            switch (variant) {
+                case "xs":
+                    return "subheading";
+                case "sm":
+                    return "subheading";
+                case "md":
+                    return "subheading";
+                case "lg":
+                    return "heading";
+                case "xl":
+                    return "display-sm";
+            }
+        }, [variant]);
 
         return (
             <Box
+                display="flex"
                 position="relative"
                 size={getBoxSize()}
                 justifyContent="center"
                 alignItems="center"
-                display="flex"
                 borderRadius="999999px"
-                backgroundColor="avatar.background"
+                backgroundColor={getBgColor()}
                 {...restProps}
             >
                 {src && (
@@ -104,11 +109,15 @@ export const Avatar: React.FC<AvatarProps> = forwardRef<HTMLImageElement, Avatar
                         ref={ref}
                         variant={variant}
                         border={2}
-                        borderColor="avatar.border"
+                        borderColor={getBgColor()}
                         referrerPolicy="no-referrer"
                     />
                 )}
-                {!src && <IconUser size={getPlaceholderSize()} />}
+                {label && (
+                    <Text variant={getLabelVariant()} color="text.white">
+                        {label}
+                    </Text>
+                )}
             </Box>
         );
     },

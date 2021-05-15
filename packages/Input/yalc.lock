@@ -7,17 +7,17 @@
       "replaced": "^1.0.0"
     },
     "@contactly-ui/flex": {
-      "signature": "5adb8b623d4bcaf4a670c02c08bfc008",
+      "signature": "0b42056b50dd1783a57c491b7386b690",
       "file": true,
       "replaced": "^1.0.0"
     },
     "@contactly-ui/box": {
-      "signature": "c73d88220d95922c92fcfe8b693c8f50",
+      "signature": "2e5c951548f9af6b1a28f3cc57834123",
       "file": true,
       "replaced": "^1.0.0"
     },
     "@contactly-ui/text": {
-      "signature": "6e8cebd1ef8ee7f36b1f6978736fa49a",
+      "signature": "8adeb3961cde29cb7b8d54ff5cb9a9c9",
       "file": true,
       "replaced": "^1.0.0"
     }

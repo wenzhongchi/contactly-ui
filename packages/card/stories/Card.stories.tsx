@@ -1,7 +1,7 @@
 import React from "react";
 import { Story } from "@storybook/react";
 
-import { Card, CardComponentProps } from "../src/Card";
+import { Card, CardProps } from "../src/Card";
 
 export default {
     title: "Components/Card",
@@ -10,7 +10,7 @@ export default {
         variant: {
             control: {
                 type: "select",
-                options: ["soft", "medium", "strong", "none"],
+                options: ["default", "soft", "medium", "strong"],
             },
         },
         height: {
@@ -22,8 +22,12 @@ export default {
     },
 };
 
-export const Basic: Story<CardComponentProps> = (props: CardComponentProps) => (
+export const Default: Story<CardProps> = (props: CardProps) => (
     <Card height="200px" width="80%" {...props} />
 );
 
-Basic.args = {};
+Default.args = {
+    height: "200px",
+    width: "80%",
+    variant: "default",
+};

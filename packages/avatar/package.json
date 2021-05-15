@@ -1,9 +1,9 @@
 {
-  "name": "@contactly-ui/hint",
+  "name": "@contactly-ui/avatar",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/hint.cjs.js",
-  "module": "dist/hint.esm.js",
+  "main": "dist/avatar.cjs.js",
+  "module": "dist/avatar.esm.js",
   "types": "dist/index.d.ts",
   "typings": "dist/index.d.ts",
   "scripts": {
@@ -31,8 +31,7 @@
     "url": "https://github.com/wenzhongchi/contactly-ui/issues"
   },
   "dependencies": {
-    "@contactly-ui/flex": "file:.yalc/@contactly-ui/flex",
-    "@contactly-ui/icons": "file:.yalc/@contactly-ui/icons",
+    "@contactly-ui/box": "file:.yalc/@contactly-ui/box",
     "@contactly-ui/system": "file:.yalc/@contactly-ui/system",
     "@contactly-ui/text": "file:.yalc/@contactly-ui/text"
   },
@@ -42,6 +41,6 @@
     "styled-components": "^5.3.0",
     "styled-system": "^5.1.5"
   },
-  "component": "Hint",
+  "component": "Avatar",
   "homepage": ""
 }

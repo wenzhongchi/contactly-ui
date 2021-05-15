@@ -4,6 +4,8 @@ import { colors } from "@contactly-ui/system";
 import { getTextColors } from "@contactly-ui/text";
 import { getButtonColors } from "@contactly-ui/button";
 import { getIconColors } from "@contactly-ui/icon";
+import { getCardColors } from "@contactly-ui/card";
+import { getAvatarColors } from "@contactly-ui/avatar";
 
 import { fonts, fontSizes, fontWeights, lineHeights, letterSpacings } from "./base/typography";
 import space from "./base/spaces";
@@ -33,6 +35,8 @@ const light: Theme = {
         text: getTextColors(colors).light,
         button: getButtonColors(colors).light,
         icon: getIconColors(colors).light,
+        card: getCardColors(colors).light,
+        avatar: getAvatarColors(colors).light,
     },
     breakpoints,
 };
@@ -43,6 +47,8 @@ const dark: Theme = {
         text: getTextColors(colors).dark,
         button: getButtonColors(colors).dark,
         icon: getIconColors(colors).dark,
+        card: getCardColors(colors).dark,
+        avatar: getAvatarColors(colors).dark,
     },
     breakpoints,
 };

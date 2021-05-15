@@ -1,61 +1,40 @@
 import React, { forwardRef } from "react";
 import styled, { StyledComponentProps } from "styled-components";
-import {
-    compose,
-    variant,
-    space,
-    layout,
-    flexbox,
-    border,
-    position,
-    color,
-    SpaceProps,
-    ColorProps,
-    LayoutProps,
-    FlexboxProps,
-    BorderProps,
-    PositionProps,
-    ShadowProps,
-} from "styled-system";
+import { variant } from "styled-system";
 
-import { AnyObject } from "@type/types";
+import { AnyObject, composedSystem, StyledSystemProps } from "@contactly-ui/system";
 
 export type CardComponentProps = {
-    variant?: "soft" | "medium" | "strong" | "none";
+    variant?: "default" | "soft" | "medium" | "strong";
 };
 
-export type StyledCardProps = SpaceProps &
-    ColorProps &
-    LayoutProps &
-    FlexboxProps &
-    BorderProps &
-    PositionProps &
-    ShadowProps &
-    CardComponentProps;
+export type StyledCardProps = StyledSystemProps & CardComponentProps;
 
 const styleVariants = variant({
     variants: {
+        default: {
+            border: 1,
+            borderColor: "card.border",
+            borderRadius: 4,
+            boxShadow: "none",
+        },
         soft: {
             border: 1,
-            borderColor: "border.default",
+            borderColor: "card.border",
             borderRadius: 4,
-            boxShadow: "soft",
+            boxShadow: "elevation0",
         },
         medium: {
             border: 1,
-            borderColor: "border.default",
+            borderColor: "card.border",
             borderRadius: 4,
-            boxShadow: "medium",
+            boxShadow: "elevation1",
         },
         strong: {
             border: 1,
-            borderColor: "border.default",
+            borderColor: "card.border",
             borderRadius: 4,
-            boxShadow: "strong",
-        },
-        none: {
-            border: 0,
-            borderColor: "border.transparent",
+            boxShadow: "elevation2",
         },
     },
 });
@@ -68,11 +47,11 @@ const StyledCard: React.FC<CardProps> = styled.div<CardProps>(
         display: "flex",
     },
     styleVariants,
-    compose(space, color, layout, flexbox, border, position),
+    composedSystem,
 );
 
 export const Card: React.FC<CardProps> = forwardRef<HTMLDivElement, CardProps>(
-    ({ children, variant = "soft", ...restProps }, ref) => (
+    ({ children, variant = "default", ...restProps }, ref) => (
         <StyledCard ref={ref} variant={variant} {...restProps}>
             {children}
         </StyledCard>
