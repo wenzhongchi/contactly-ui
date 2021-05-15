@@ -1,10 +1,9 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef, useCallback } from "react";
 import styled, { StyledComponentProps } from "styled-components";
 import { css as customCSS, SystemStyleObject } from "@styled-system/css";
 
 import { AnyObject, composedSystem, StyledSystemProps } from "@contactly-ui/system";
-import { Text, TextVariant } from "@contactly-ui/text";
-import { Box } from "@contactly-ui/box";
+import { Text } from "@contactly-ui/text";
 
 import { getButtonGroupStyle, sizeVariants, styleVariants } from "./styles";
 import { useButtonGroup } from "./ButtonContext";
@@ -35,12 +34,6 @@ type StyledButtonProps = StyledSystemProps & ButtonComponentProps;
 export type ButtonProps = StyledComponentProps<"button", AnyObject, StyledButtonProps, never>;
 
 export const StyledButton = styled.button<ButtonProps>(
-    ({ theme: { colors }, isDisabled }) => {
-        if (isDisabled)
-            return {
-                backgroundColor: colors.button.transparent,
-            };
-    },
     ({ css }) => customCSS(css),
     styleVariants,
     sizeVariants,
@@ -61,67 +54,67 @@ export const Button: React.FC<ButtonProps> = forwardRef<HTMLButtonElement, Butto
         const selectedVariant = groupVariant ?? variant;
         const selectedSize = groupSize ?? size;
 
-        const getFontColor = () => {
+        const getFontColor = useCallback(() => {
             switch (selectedVariant) {
                 case "default":
-                    return isDisabled ? "text.disabled" : "text.default";
+                    return isDisabled ? "button.text-disabled" : "button.text-default";
                 case "primary":
-                    return "text.white";
+                    return isDisabled ? "button.text-disabled" : "button.text-white";
                 case "secondary":
-                    return "text.white";
+                    return isDisabled ? "button.text-disabled" : "button.text-white";
                 case "success":
-                    return "text.white";
+                    return isDisabled ? "button.text-disabled" : "button.text-white";
                 case "warning":
-                    return "text.white";
+                    return isDisabled ? "button.text-disabled" : "button.text-default";
                 case "error":
-                    return "text.white";
+                    return isDisabled ? "button.text-disabled" : "button.text-white";
                 case "text":
-                    return isDisabled ? "text.disabled" : "text.default";
+                    return isDisabled ? "button.text-disabled" : "button.text-default";
             }
-        };
+        }, [selectedVariant, isDisabled]);
 
-        const getFontVariant = (): TextVariant => {
+        const getFontVariant = useCallback(() => {
             switch (selectedSize) {
                 case "sm":
                     return "body";
                 case "md":
                     return "body";
                 case "lg":
-                    return "body";
+                    return "display-sm";
             }
-        };
+        }, [selectedSize]);
 
-        // const getIconColor = () => {
-        //     switch (selectedVariant) {
-        //         case "default":
-        //             return isDisabled ? "text.disabled" : "text.default";
-        //         case "primary":
-        //             return "text.white";
-        //         case "secondary":
-        //             return "text.white";
-        //         case "success":
-        //             return "text.white";
-        //         case "warning":
-        //             return "text.white";
-        //         case "error":
-        //             return "text.white";
-        //         case "text":
-        //             return isDisabled ? "text.disabled" : "text.default";
-        //     }
-        // };
+        const getIconColor = useCallback(() => {
+            switch (selectedVariant) {
+                case "default":
+                    return isDisabled ? "button.icon-disabled" : "button.icon-default";
+                case "primary":
+                    return "button.icon-white";
+                case "secondary":
+                    return "button.icon-white";
+                case "success":
+                    return "button.icon-white";
+                case "warning":
+                    return isDisabled ? "button.icon-disabled" : "button.icon-default";
+                case "error":
+                    return "button.icon-white";
+                case "text":
+                    return isDisabled ? "button.icon-disabled" : "button.icon-default";
+            }
+        }, [selectedVariant, isDisabled]);
 
-        const getIconSize = () => {
+        const getIconSize = useCallback(() => {
             switch (selectedSize) {
                 case "sm":
-                    return 12;
+                    return 14;
                 case "md":
                     return 16;
                 case "lg":
                     return 24;
             }
-        };
+        }, [selectedSize]);
 
-        const getIconMargin = () => {
+        const getIconMargin = useCallback(() => {
             switch (selectedSize) {
                 case "sm":
                     return 8;
@@ -129,32 +122,47 @@ export const Button: React.FC<ButtonProps> = forwardRef<HTMLButtonElement, Butto
                 case "lg":
                     return 8;
             }
-        };
+        }, [selectedSize]);
+
+        const renderIcon = useCallback(
+            (icon: React.ReactElement, isLeft: boolean) => {
+                const baseStyle = {
+                    width: getIconSize(),
+                    height: getIconSize(),
+                    color: getIconColor(),
+                };
+
+                return React.cloneElement(
+                    icon as React.ReactElement,
+                    isLeft
+                        ? {
+                              ...baseStyle,
+                              mr: getIconMargin(),
+                          }
+                        : {
+                              ...baseStyle,
+                              ml: getIconMargin(),
+                          },
+                );
+            },
+            [getIconSize, getIconMargin, getIconColor],
+        );
 
         return (
             <StyledButton
                 ref={ref}
-                isDisabled={isDisabled}
                 size={selectedSize}
                 variant={selectedVariant}
                 css={groupOrientation ? getButtonGroupStyle(groupOrientation) : {}}
                 {...restProps}
             >
-                {leftIcon && (
-                    <Box width={getIconSize()} height={getIconSize()} mr={getIconMargin()}>
-                        {leftIcon}
-                    </Box>
-                )}
+                {leftIcon && renderIcon(leftIcon as React.ReactElement, true)}
                 {label && (
                     <Text variant={getFontVariant()} color={getFontColor()}>
                         {label}
                     </Text>
                 )}
-                {rightIcon && (
-                    <Box width={getIconSize()} height={getIconSize()} ml={getIconMargin()}>
-                        {rightIcon}
-                    </Box>
-                )}
+                {rightIcon && renderIcon(rightIcon as React.ReactElement, false)}
             </StyledButton>
         );
     },

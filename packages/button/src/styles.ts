@@ -44,7 +44,7 @@ const secondaryStyles = {
     borderColor: "button.border-secondary-default",
     cursor: "pointer",
     "&:hover": {
-        bg: "highlight.light",
+        bg: "button.hover-secondary",
         borderColor: "button.border-secondary-hover",
     },
 };
@@ -54,7 +54,7 @@ const successStyles = {
     borderColor: "button.border-success-default",
     cursor: "pointer",
     "&:hover": {
-        bg: "highlight.success",
+        bg: "button.hover-success",
         borderColor: "button.border-success-hover",
     },
 };
@@ -64,7 +64,7 @@ const warningStyles = {
     borderColor: "button.border-warning-default",
     cursor: "pointer",
     "&:hover": {
-        bg: "highlight.warning",
+        bg: "button.hover-warning",
         borderColor: "button.border-warning-hover",
     },
 };
@@ -74,7 +74,7 @@ const errorStyles = {
     borderColor: "button.border-error-default",
     cursor: "pointer",
     "&:hover": {
-        bg: "highlight.error",
+        bg: "button.hover-error",
         borderColor: "button.border-error-hover",
     },
 };
@@ -83,6 +83,9 @@ const textStyles = {
     bg: "button.text",
     borderColor: "button.text",
     cursor: "pointer",
+    "&:hover": {
+        bg: "button.hover-text",
+    },
 };
 
 export const styleVariants = variant({
@@ -122,7 +125,7 @@ export const sizeVariants = variant({
     prop: "size",
     variants: {
         sm: {
-            height: "34px",
+            height: "36px",
             padding: "8px 12px",
         },
         md: {
@@ -132,6 +135,24 @@ export const sizeVariants = variant({
         lg: {
             height: "60px",
             padding: "18px 18px",
+        },
+    },
+});
+
+export const iconSizeVariants = variant({
+    prop: "size",
+    variants: {
+        sm: {
+            height: "36px",
+            padding: "8px 8px",
+        },
+        md: {
+            height: "48px",
+            padding: "12px 12px",
+        },
+        lg: {
+            height: "60px",
+            padding: "14px 14px",
         },
     },
 });

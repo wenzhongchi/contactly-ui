@@ -1,15 +1,14 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef, useCallback } from "react";
 import styled, { StyledComponentProps } from "styled-components";
 import { css as customCSS, SystemStyleObject } from "@styled-system/css";
 
 import { AnyObject, composedSystem, StyledSystemProps } from "@contactly-ui/system";
-import { Box } from "@contactly-ui/box";
 
-import { getButtonGroupStyle, sizeVariants, styleVariants } from "./styles";
+import { getButtonGroupStyle, iconSizeVariants, styleVariants } from "./styles";
 import { useButtonGroup } from "./ButtonContext";
 import { ButtonSize, ButtonVariant } from "./Button";
 
-export type IconButtonComponentProps = {
+type IconButtonComponentProps = {
     size?: ButtonSize;
     variant?: ButtonVariant;
     icon: React.ReactNode;
@@ -29,15 +28,9 @@ export type IconButtonProps = StyledComponentProps<
 type OmittedIconButtonProps = Omit<IconButtonProps, "icon">;
 
 export const StyledIconButton = styled.button<OmittedIconButtonProps>(
-    ({ theme: { colors }, isDisabled }) => {
-        if (isDisabled)
-            return {
-                backgroundColor: colors.button.transparent,
-            };
-    },
     ({ css }) => customCSS(css),
     styleVariants,
-    sizeVariants,
+    iconSizeVariants,
     composedSystem,
 );
 
@@ -52,31 +45,55 @@ export const IconButton: React.FC<IconButtonProps> = forwardRef<HTMLButtonElemen
         const selectedVariant = groupVariant ?? variant;
         const selectedSize = groupSize ?? size;
 
-        const getIconSize = () => {
+        const getIconColor = useCallback(() => {
+            switch (selectedVariant) {
+                case "default":
+                    return isDisabled ? "button.icon-disabled" : "button.icon-default";
+                case "primary":
+                    return "button.icon-white";
+                case "secondary":
+                    return "button.icon-white";
+                case "success":
+                    return "button.icon-white";
+                case "warning":
+                    return isDisabled ? "button.icon-disabled" : "button.icon-default";
+                case "error":
+                    return "button.icon-white";
+                case "text":
+                    return isDisabled ? "button.icon-disabled" : "button.icon-default";
+            }
+        }, [selectedVariant, isDisabled]);
+
+        const getIconSize = useCallback(() => {
             switch (selectedSize) {
                 case "sm":
-                    return 12;
+                    return 20;
                 case "md":
-                    return 16;
-                case "lg":
                     return 24;
+                case "lg":
+                    return 32;
             }
-        };
+        }, [selectedSize]);
+
+        const renderIcon = useCallback(
+            (icon: React.ReactElement) =>
+                React.cloneElement(icon as React.ReactElement, {
+                    width: getIconSize(),
+                    height: getIconSize(),
+                    color: getIconColor(),
+                }),
+            [getIconSize, getIconColor],
+        );
 
         return (
             <StyledIconButton
                 ref={ref}
-                isDisabled={isDisabled}
                 size={selectedSize}
                 variant={selectedVariant}
                 css={groupOrientation ? getButtonGroupStyle(groupOrientation) : {}}
                 {...restProps}
             >
-                {
-                    <Box width={getIconSize()} height={getIconSize()}>
-                        {icon}
-                    </Box>
-                }
+                {icon && renderIcon(icon as React.ReactElement)}
             </StyledIconButton>
         );
     },

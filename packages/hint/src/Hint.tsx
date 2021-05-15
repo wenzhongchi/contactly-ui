@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef, useCallback } from "react";
 import { StyledComponentProps } from "styled-components";
 
 import { AnyObject, StyledSystemProps } from "@contactly-ui/system";
@@ -47,7 +47,7 @@ const renderIcon = (variant?: HintVariant) => {
 
 export const Hint: React.FC<HintProps> = forwardRef<HTMLDivElement, HintProps>(
     ({ variant = "default", label, ...restProps }, ref) => {
-        const getTextColor = () => {
+        const getTextColor = useCallback(() => {
             switch (variant) {
                 case "default":
                     return "text.secondary";
@@ -58,7 +58,7 @@ export const Hint: React.FC<HintProps> = forwardRef<HTMLDivElement, HintProps>(
                 case "success":
                     return "text.secondary";
             }
-        };
+        }, [variant]);
 
         return (
             <Flex ref={ref} {...restProps} justifyContent="flex-start" alignItems="center">

@@ -2,7 +2,7 @@
   "version": "v1",
   "packages": {
     "@contactly-ui/button": {
-      "signature": "4a252cf2d31c7724682065bfe0dde5a7",
+      "signature": "52564d2bc165e06d7de7d4a9b2b96e6e",
       "file": true
     },
     "@contactly-ui/flex": {

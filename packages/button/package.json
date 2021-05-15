@@ -35,10 +35,12 @@
     "url": "https://github.com/wenzhongchi/contactly-ui/issues"
   },
   "dependencies": {
-    "@contactly-ui/box": "file:.yalc/@contactly-ui/box",
     "@contactly-ui/flex": "file:.yalc/@contactly-ui/flex",
     "@contactly-ui/system": "file:.yalc/@contactly-ui/system",
     "@contactly-ui/text": "file:.yalc/@contactly-ui/text"
+  },
+  "devDependencies": {
+    "@contactly-ui/icons": "file:.yalc/@contactly-ui/icons"
   },
   "peerDependencies": {
     "react": "^17.0.2",

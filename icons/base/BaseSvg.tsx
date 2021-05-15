@@ -50,7 +50,7 @@ export const BaseSvg = forwardRef<SVGSVGElement, BaseSvgForwardedProps>(
                 ref={ref}
             >
                 {title && <title id={titleId}>{title}</title>}
-                {React.cloneElement(children, { ...restProps })}
+                {React.cloneElement(children, { color: selectedColor, ...restProps })}
             </Svg>
         );
     },
