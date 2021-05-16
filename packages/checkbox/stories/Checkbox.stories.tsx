@@ -11,7 +11,7 @@ export default {
         variant: {
             control: {
                 type: "select",
-                options: ["default", "error", "disabled"],
+                labels: ["default", "error", "disabled"],
             },
         },
         label: {

@@ -2,35 +2,35 @@
   "version": "v1",
   "packages": {
     "@contactly-ui/button": {
-      "signature": "650523bb44cff8aad8316bf792497360",
+      "signature": "98d0a3d2d64507d14f34dd6db5dbefcd",
       "file": true
     },
     "@contactly-ui/flex": {
-      "signature": "6a922c9db05c826d4282535d0b6d3a40",
+      "signature": "34b43d3d9225560f259dc9e71ddce830",
       "file": true
     },
     "@contactly-ui/box": {
-      "signature": "bdcfd4efff9c56900f9f6fea8bed1698",
+      "signature": "cc4098a28424054ef319ebb4e8af82e1",
       "file": true
     },
     "@contactly-ui/text": {
-      "signature": "2b3638ee1fe91bcaa58e5bda6c756955",
+      "signature": "3ccc1a8c4daa6d8cc1d15e7b65d0efdf",
       "file": true
     },
     "@contactly-ui/system": {
-      "signature": "0ee6e725025029fff2e6b273ca9fcbda",
+      "signature": "908f3cd2ff92875c65dd6790cc15c4d3",
       "file": true
     },
     "@contactly-ui/icon": {
-      "signature": "4545e092d4b7ddabfd69980454910fe9",
+      "signature": "a739a5c8a4807a3079f02091dd3baf2d",
       "file": true
     },
     "@contactly-ui/card": {
-      "signature": "4c8f02894626a0c7786d8647d44b603e",
+      "signature": "cc486312249f8788f5cd98dab9f511df",
       "file": true
     },
     "@contactly-ui/avatar": {
-      "signature": "4cdfafa03c92512fd89d7a0c59c2312e",
+      "signature": "3e0a3bdb266507fbf22d1c95658fe8e6",
       "file": true
     }
   }

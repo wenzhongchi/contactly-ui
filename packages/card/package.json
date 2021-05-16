@@ -8,7 +8,7 @@
   "typings": "dist/index.d.ts",
   "scripts": {
     "pre-build": "yarn clear && npx rollup -c && yarn push",
-    "build": "npx rollup -c && yarn push",
+    "build": "yarn install && npx rollup -c && yarn push",
     "watch": "npx rollup -c -w",
     "clear": "rm -rf dist && rm -rf yarn.lock && rm -rf yarn-error.log && rm -rf node_modules && yarn install",
     "push": "yalc push"

@@ -14,25 +14,25 @@ export default {
         variant: {
             control: {
                 type: "select",
-                options: ["default", "error", "success", "warning"],
+                labels: ["default", "error", "success", "warning"],
             },
         },
         size: {
             control: {
                 type: "select",
-                options: ["sm", "md", "lg"],
+                labels: ["sm", "md", "lg"],
             },
         },
         icon: {
             control: {
                 type: "select",
-                options: ["undefined", ...Object.keys(ICONS)],
+                labels: ["undefined", ...Object.keys(ICONS)],
             },
         },
         isClosable: {
             control: {
                 type: "select",
-                options: [true, false],
+                labels: [true, false],
             },
         },
     },

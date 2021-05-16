@@ -10,7 +10,7 @@ export default {
         variant: {
             control: {
                 type: "select",
-                options: ["default", "soft", "medium", "strong"],
+                labels: ["default", "soft", "medium", "strong"],
             },
         },
         height: {

@@ -11,7 +11,7 @@ export default {
         variant: {
             control: {
                 type: "select",
-                options: ["xs", "sm", "md", "lg", "xl"],
+                labels: ["xs", "sm", "md", "lg", "xl"],
             },
         },
         src: {

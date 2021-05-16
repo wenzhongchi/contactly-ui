@@ -11,7 +11,7 @@ export default {
         size: {
             control: {
                 type: "select",
-                options: ["sm", "md", "lg"],
+                labels: ["sm", "md", "lg"],
             },
         },
 

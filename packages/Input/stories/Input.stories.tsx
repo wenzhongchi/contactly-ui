@@ -11,13 +11,13 @@ export default {
         variant: {
             control: {
                 type: "select",
-                options: ["default", "error", "success", "warning", "text"],
+                labels: ["default", "error", "success", "warning", "text"],
             },
         },
         inputSize: {
             control: {
                 type: "select",
-                options: ["sm", "md", "lg"],
+                labels: ["sm", "md", "lg"],
             },
         },
         value: {
@@ -44,7 +44,7 @@ Label.argTypes = {
     statusVariant: {
         control: {
             type: "select",
-            options: ["default", "error", "success", "warning", "loading"],
+            labels: ["default", "error", "success", "warning", "loading"],
         },
     },
     statusLabel: {
@@ -56,7 +56,7 @@ Label.argTypes = {
     isOptional: {
         control: {
             type: "select",
-            options: [true, false],
+            labels: [true, false],
         },
     },
 };

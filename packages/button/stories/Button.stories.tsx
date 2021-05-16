@@ -14,13 +14,13 @@ export default {
         variant: {
             control: {
                 type: "select",
-                options: ["default", "primary", "secondary", "success", "warning", "error", "text"],
+                labels: ["default", "primary", "secondary", "success", "warning", "error", "text"],
             },
         },
         size: {
             control: {
                 type: "select",
-                options: ["sm", "md", "lg"],
+                labels: ["sm", "md", "lg"],
             },
         },
         leftIcon: {
@@ -35,7 +35,7 @@ export default {
         disabled: {
             control: {
                 type: "select",
-                options: [true, false],
+                labels: [true, false],
             },
         },
     },
