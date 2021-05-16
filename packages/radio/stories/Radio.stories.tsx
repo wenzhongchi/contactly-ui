@@ -21,11 +21,11 @@ export default {
     },
 };
 
-export const Basic: Story<RadioComponentProps> = (props: RadioComponentProps) => (
+export const Default: Story<RadioComponentProps> = (props: RadioComponentProps) => (
     <Radio {...props} />
 );
 
-Basic.args = {
+Default.args = {
     variant: "default",
     label: "checkbox description",
 };

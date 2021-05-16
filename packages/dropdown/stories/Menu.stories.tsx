@@ -15,7 +15,7 @@ export default {
     component: Menu,
 };
 
-export const HoverBasic: React.FC = () => {
+export const HoverDefault: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [selectedValue, setSelectedValue] = useState("English");
 

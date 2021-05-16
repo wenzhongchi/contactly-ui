@@ -16,7 +16,7 @@ const title = "Toast Title ";
 const message =
     "You can currently trade up to 9246 EUR worth of bitcoin. Please verify your address to increase your trading limit.If you do not wish to verify, you have the option to be placed in Banned status and withdraw your funds.";
 
-export const Basic: React.FC = () => {
+export const Default: React.FC = () => {
     const { showToast } = useToast();
 
     return (

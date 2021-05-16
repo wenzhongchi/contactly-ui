@@ -20,9 +20,11 @@ export default {
     },
 };
 
-export const Basic: Story<HintComponentProps> = (props: HintComponentProps) => <Hint {...props} />;
+export const Default: Story<HintComponentProps> = (props: HintComponentProps) => (
+    <Hint {...props} />
+);
 
-Basic.args = {
+Default.args = {
     label: "this is a hint",
     variant: "default",
 };

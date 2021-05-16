@@ -8,7 +8,7 @@ export default {
     component: Tab,
 };
 
-export const Basic: React.FC = () => (
+export const Default: React.FC = () => (
     <Flex flexDirection="row" flexGrow={1}>
         <Flex flexDirection="row">
             <Tab isActive={true} label="Active" m={16} />

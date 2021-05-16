@@ -22,19 +22,19 @@ const styleVariants = variant({
             border: 1,
             borderColor: "card.border",
             borderRadius: 4,
-            boxShadow: "elevation0",
+            boxShadow: "elevation1",
         },
         medium: {
             border: 1,
             borderColor: "card.border",
             borderRadius: 4,
-            boxShadow: "elevation1",
+            boxShadow: "elevation2",
         },
         strong: {
             border: 1,
             borderColor: "card.border",
             borderRadius: 4,
-            boxShadow: "elevation2",
+            boxShadow: "elevation3",
         },
     },
 });

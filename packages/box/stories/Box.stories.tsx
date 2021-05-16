@@ -7,7 +7,7 @@ export default {
     component: Box,
 };
 
-export const Basic: React.FC = () => <Box>Put Something in the Box</Box>;
+export const Default: React.FC = () => <Box>Put Something in the Box</Box>;
 
 export const Advanced: React.FC = () => (
     <Box

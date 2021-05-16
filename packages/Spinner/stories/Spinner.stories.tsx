@@ -7,7 +7,7 @@ export default {
     component: Spinner,
 };
 
-export const Basic: React.FC = () => (
+export const Default: React.FC = () => (
     <>
         <Spinner />
     </>

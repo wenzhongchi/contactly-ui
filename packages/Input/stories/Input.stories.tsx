@@ -29,11 +29,11 @@ export default {
     },
 };
 
-export const Basic: Story<InputComponentProps> = (props: InputComponentProps) => (
+export const Default: Story<InputComponentProps> = (props: InputComponentProps) => (
     <Input {...props} />
 );
 
-Basic.args = {
+Default.args = {
     variant: "default",
     inputSize: "sm",
 };

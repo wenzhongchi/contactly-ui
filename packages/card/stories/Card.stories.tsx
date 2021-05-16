@@ -2,6 +2,7 @@ import React from "react";
 import { Story } from "@storybook/react";
 
 import { Card, CardProps } from "../src/Card";
+import { ArrowCard, ArrowCardProps } from "../src/ArrowCard";
 
 export default {
     title: "Components/Card",
@@ -27,6 +28,14 @@ export const Default: Story<CardProps> = (props: CardProps) => (
 );
 
 Default.args = {
+    height: "200px",
+    width: "80%",
+    variant: "default",
+};
+
+export const Arrow: Story<ArrowCardProps> = (props: ArrowCardProps) => <ArrowCard {...props} />;
+
+Arrow.args = {
     height: "200px",
     width: "80%",
     variant: "default",

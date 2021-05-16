@@ -7,7 +7,7 @@ export default {
     component: Toggle,
 };
 
-export const Basic: React.FC = () => (
+export const Default: React.FC = () => (
     <>
         <Toggle mr={10} />
         <Toggle variant="error" mr={10} />

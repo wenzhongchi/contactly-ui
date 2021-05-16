@@ -1,9 +1,8 @@
 const shadows = {
     none: "none",
-    elevation0: "0px 4px 16px rgba(181, 189, 200, 0.16)",
-    elevation1: "2px 5px 8px rgba(95, 102, 114, 0.04), 0px 4px 5px rgba(121, 127, 137, 0.08)",
-    elevation2: "0px 4px 40px rgba(30, 39, 79, 0.16)",
-    elevation3: "0px 8px 5px rgba(23, 43, 77, 0.04), 0px 15px 12px rgba(23, 43, 77, 0.08)",
+    elevation1: "0px 4px 10px rgba(197, 204, 211, 0.16)",
+    elevation2: "2px 5px 8px rgba(135, 141, 150, 0.04), 0px 4px 5px rgba(166, 167, 170, 0.08)",
+    elevation3: "0px 4px 40px rgba(85, 90, 114, 0.16)",
 };
 
 export type Shadows = typeof shadows;

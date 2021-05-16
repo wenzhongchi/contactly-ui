@@ -21,11 +21,11 @@ export default {
     },
 };
 
-export const Basic: Story<CheckboxComponentProps> = (props: CheckboxComponentProps) => (
+export const Default: Story<CheckboxComponentProps> = (props: CheckboxComponentProps) => (
     <Checkbox {...props} />
 );
 
-Basic.args = {
+Default.args = {
     variant: "default",
     label: "checkbox description",
 };

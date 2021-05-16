@@ -32,12 +32,15 @@ export default {
     },
 };
 
-export const Basic: Story<AlertComponentProps> = ({ icon, ...restProps }: AlertComponentProps) => {
+export const Default: Story<AlertComponentProps> = ({
+    icon,
+    ...restProps
+}: AlertComponentProps) => {
     const SelectedIcon = _get(ICONS, `${icon}`, "div"); // eslint-disable-line
     return <Alert icon={<SelectedIcon />} {...restProps} />;
 };
 
-Basic.args = {
+Default.args = {
     label: "this is a label",
     icon: "IconActivity",
     size: "sm",

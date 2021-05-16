@@ -38,12 +38,12 @@ export default {
     },
 };
 
-export const Basic: Story<TagComponentProps> = ({ icon, ...restProps }: TagComponentProps) => {
+export const Default: Story<TagComponentProps> = ({ icon, ...restProps }: TagComponentProps) => {
     const SelectedIcon = _get(ICONS, `${icon}`, "div"); // eslint-disable-line
     return <Tag icon={<SelectedIcon />} {...restProps} />;
 };
 
-Basic.args = {
+Default.args = {
     label: "this is a tag",
     icon: undefined,
     size: "sm",

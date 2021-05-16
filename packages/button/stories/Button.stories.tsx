@@ -41,9 +41,9 @@ export default {
     },
 };
 
-export const Basic: Story<ButtonProps> = (props) => <Button {...props} />;
+export const Default: Story<ButtonProps> = (props) => <Button {...props} />;
 
-Basic.args = {
+Default.args = {
     variant: "default",
     size: "sm",
     label: "Click Me",

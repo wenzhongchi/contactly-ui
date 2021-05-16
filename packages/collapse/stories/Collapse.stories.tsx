@@ -12,7 +12,7 @@ export default {
     component: Collapse,
 };
 
-export const Basic: React.FC = () => {
+export const Default: React.FC = () => {
     const [isShow, setShow] = React.useState(false);
     const handleToggle = () => setShow(!isShow);
 
