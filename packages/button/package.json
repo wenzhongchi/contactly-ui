@@ -6,14 +6,12 @@
   "module": "dist/button.esm.js",
   "types": "dist/index.d.ts",
   "typings": "dist/index.d.ts",
-  "files": [
-    "dist",
-    "yalc.lock"
-  ],
   "scripts": {
-    "build": "npx rollup -c",
+    "pre-build": "yarn clear && npx rollup -c && yarn push",
+    "build": "npx rollup -c && yarn push",
     "watch": "npx rollup -c -w",
-    "test": "jest"
+    "clear": "rm -rf dist && rm -rf yarn.lock && rm -rf yarn-error.log && rm -rf node_modules && yarn install",
+    "push": "yalc push"
   },
   "publishConfig": {
     "access": "public"

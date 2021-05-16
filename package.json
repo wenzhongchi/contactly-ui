@@ -17,16 +17,17 @@
         "url": "https://github.com/wenzhongchi/contactly-ui/issues"
     },
     "scripts": {
-        "build": "rm -rf dist && ttsc",
+        "pre-build": "lerna run pre-build --stream",
+        "build": "lerna run build --include-dependencies --stream",
         "type-check": "tsc --noEmit",
-        "lint": "eslint './src/**/*.{ts,tsx}'",
+        "lint": "eslint './packages/**/*.{ts,tsx}'",
         "lint:fix": "eslint './src/**/*.{ts,tsx}' --fix",
-        "lint:icons:fix": "eslint './icons/{src,stories}/**/*.{ts,tsx}' --fix",
-        "format": "prettier --write './src/**/*.{ts,tsx,js,md,json}'",
+        "format": "prettier --write './packages/**/*.{ts,tsx,js,md,json}'",
+        "clear": "rm -rf dist && rm -rf yarn.lock && rm -rf yarn-error.log && rm -rf node_modules && yarn install",
         "pre-push": "yarn lint && yarn type-check",
-        "clear": "rm -rf dist && rm -rf build && rm -rf yarn.lock && rm -rf node_modules && yarn install",
         "storybook": "start-storybook -p 6006",
         "build-storybook": "build-storybook -o .out",
+        "lint:icons:fix": "eslint './icons/{src,stories}/**/*.{ts,tsx}' --fix",
         "build:icons": "./icons/scripts/generate.js -o ./icons/src -i ./icons/assets && yarn lint:icons:fix && yarn prettier -w --loglevel=warn ./icons/src"
     },
     "husky": {
@@ -86,6 +87,7 @@
         "eslint-plugin-react-hooks": "^4.2.0",
         "file-loader": "^6.2.0",
         "husky": "6.0.0",
+        "lerna": "^4.0.0",
         "minimist": "^1.2.5",
         "mkdirp": "^1.0.4",
         "prettier": "^2.2.1",

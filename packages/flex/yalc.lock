@@ -2,12 +2,12 @@
   "version": "v1",
   "packages": {
     "@contactly-ui/system": {
-      "signature": "b417947c7147a2ca3ad7253c986ba02b",
+      "signature": "0ee6e725025029fff2e6b273ca9fcbda",
       "file": true,
       "replaced": "^1.0.0"
     },
     "@contactly-ui/box": {
-      "signature": "2e5c951548f9af6b1a28f3cc57834123",
+      "signature": "bdcfd4efff9c56900f9f6fea8bed1698",
       "file": true,
       "replaced": "^1.0.0"
     }

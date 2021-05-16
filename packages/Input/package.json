@@ -7,7 +7,7 @@
   "types": "dist/index.d.ts",
   "typings": "dist/index.d.ts",
   "scripts": {
-    "build": "npx rollup -c",
+    "build": "",
     "watch": "npx rollup -c -w",
     "test": "jest"
   },
