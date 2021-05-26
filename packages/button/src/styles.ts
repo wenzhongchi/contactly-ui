@@ -124,6 +124,10 @@ export const styleVariants = variant({
 export const sizeVariants = variant({
     prop: "size",
     variants: {
+        xs: {
+            height: "16px",
+            padding: "0px",
+        },
         sm: {
             height: "36px",
             padding: "8px 12px",

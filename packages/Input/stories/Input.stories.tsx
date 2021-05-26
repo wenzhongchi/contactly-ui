@@ -1,6 +1,8 @@
 import React from "react";
 import { Story } from "@storybook/react";
 
+import { Button } from "../../button";
+
 import { Input, InputComponentProps } from "../src/Input";
 import { LabelInput, LabelInputProps } from "../src/LabelInput";
 
@@ -31,7 +33,7 @@ export default {
 };
 
 export const Default: Story<InputComponentProps> = (props: InputComponentProps) => (
-    <Input {...props} />
+    <Input {...props} placeholder="placeholder" />
 );
 
 Default.args = {
@@ -39,7 +41,9 @@ Default.args = {
     inputSize: "sm",
 };
 
-export const Label: Story<LabelInputProps> = (props: LabelInputProps) => <LabelInput {...props} />;
+export const Label: Story<LabelInputProps> = (props: LabelInputProps) => (
+    <LabelInput {...props} button={<Button size="xs" variant="text" label="action" />} />
+);
 
 Label.argTypes = {
     variant: {
@@ -62,5 +66,5 @@ Label.argTypes = {
 Label.args = {
     variant: "default",
     inputSize: "sm",
-    title: "Email",
+    label: "Email",
 };

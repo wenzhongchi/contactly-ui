@@ -5,7 +5,7 @@
 "@contactly-ui/box@file:.yalc/@contactly-ui/box":
   version "1.0.0"
   dependencies:
-    "@contactly-ui/system" "file:../../../../Library/Caches/Yarn/v6/npm-@contactly-ui-box-1.0.0-b46a814d-b319-454c-926a-ab080d78e7dd-1621489419809/node_modules/@contactly-ui/box/.yalc/@contactly-ui/system"
+    "@contactly-ui/system" "file:../../../../Library/Caches/Yarn/v6/npm-@contactly-ui-box-1.0.0-724a51da-bb44-4a74-9c48-fabebe5e9045-1622010093733/node_modules/@contactly-ui/box/.yalc/@contactly-ui/system"
 
 "@contactly-ui/system@file:.yalc/@contactly-ui/box/.yalc/@contactly-ui/system":
   version "1.0.0"

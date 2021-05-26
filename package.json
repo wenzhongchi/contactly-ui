@@ -17,8 +17,7 @@
         "url": "https://github.com/wenzhongchi/contactly-ui/issues"
     },
     "scripts": {
-        "pre-build": "lerna run pre-build --stream",
-        "build": "lerna run build --include-dependencies --stream",
+        "build": "./scripts/build.sh",
         "type-check": "tsc --noEmit",
         "lint": "eslint './packages/**/*.{ts,tsx}'",
         "lint:fix": "eslint './src/**/*.{ts,tsx}' --fix",
@@ -87,7 +86,6 @@
         "eslint-plugin-react-hooks": "^4.2.0",
         "file-loader": "^6.2.0",
         "husky": "6.0.0",
-        "lerna": "^4.0.0",
         "minimist": "^1.2.5",
         "mkdirp": "^1.0.4",
         "prettier": "^2.2.1",

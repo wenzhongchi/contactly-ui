@@ -2,26 +2,26 @@
   "version": "v1",
   "packages": {
     "@contactly-ui/box": {
-      "signature": "cc4098a28424054ef319ebb4e8af82e1",
+      "signature": "79288be3028dead9c04db6399ad21446",
       "file": true,
       "replaced": "^1.0.0"
     },
     "@contactly-ui/flex": {
-      "signature": "34b43d3d9225560f259dc9e71ddce830",
+      "signature": "909dc98a612d9d57090a83d25c779340",
       "file": true,
       "replaced": "^1.0.0"
     },
     "@contactly-ui/text": {
-      "signature": "3ccc1a8c4daa6d8cc1d15e7b65d0efdf",
+      "signature": "7a555b9aacc00daeb60459c92db185f1",
       "file": true,
       "replaced": "^1.0.0"
     },
     "@contactly-ui/theme": {
-      "signature": "32e56d08da426ff5e930f23f4a37f5b5",
+      "signature": "f83bbdd7fd08e09c6540c3d9a4d128c7",
       "file": true
     },
     "@contactly-ui/system": {
-      "signature": "908f3cd2ff92875c65dd6790cc15c4d3",
+      "signature": "290e64303a48d4fb3d28ef8af45cbe2a",
       "file": true
     }
   }

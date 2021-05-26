@@ -2,7 +2,7 @@
   "version": "v1",
   "packages": {
     "@contactly-ui/system": {
-      "signature": "908f3cd2ff92875c65dd6790cc15c4d3",
+      "signature": "290e64303a48d4fb3d28ef8af45cbe2a",
       "file": true
     }
   }

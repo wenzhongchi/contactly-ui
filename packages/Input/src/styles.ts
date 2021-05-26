@@ -5,57 +5,52 @@ const sharedStyles = {
     border: 1,
     paddingLeft: 8,
     "::-webkit-input-placeholder": {
-        color: "text.disabled",
+        color: "input.placeholder",
     },
 };
 
 const defaultStyles = {
     type: "text",
-    bg: "input.default",
-    color: "text.primary",
-    borderColor: "border.default",
+    color: "input.text",
+    borderColor: "input.border-default-default",
     "&:focus": {
-        borderColor: "border.default",
+        borderColor: "input.border-default-focus",
         outline: "none",
     },
 };
 
 const successStyles = {
-    bg: "input.success",
-    color: "text.primary",
-    borderColor: "border.success",
+    color: "input.text",
+    borderColor: "input.border-success-default",
     "&:focus": {
-        borderColor: "border.success",
+        borderColor: "input.border-success-focus",
         outline: "none",
     },
 };
 
 const warningStyles = {
-    bg: "input.warning",
-    color: "text.primary",
-    borderColor: "border.warning",
+    color: "input.text",
+    borderColor: "input.border-warning-default",
     "&:focus": {
-        borderColor: "border.warning",
+        borderColor: "input.border-warning-focus",
         outline: "none",
     },
 };
 
 const errorStyles = {
-    bg: "input.error",
-    color: "text.primary",
-    borderColor: "border.error",
+    color: "input.text",
+    borderColor: "input.border-error-default",
     "&:focus": {
-        borderColor: "border.error",
+        borderColor: "input.border-error-focus",
         outline: "none",
     },
 };
 
 const textStyles = {
-    bg: "input.dark",
-    color: "text.disabled",
-    borderColor: "border.default",
+    color: "input.text",
+    borderColor: "input.border-transparent",
     "&:focus": {
-        borderColor: "border.white",
+        borderColor: "input.border-transparent",
         outline: "none",
     },
 };

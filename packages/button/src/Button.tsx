@@ -8,7 +8,7 @@ import { Text } from "@contactly-ui/text";
 import { getButtonGroupStyle, sizeVariants, styleVariants } from "./styles";
 import { useButtonGroup } from "./ButtonContext";
 
-export type ButtonSize = "sm" | "md" | "lg";
+export type ButtonSize = "xs" | "sm" | "md" | "lg";
 
 export type ButtonVariant =
     | "default"
@@ -75,6 +75,8 @@ export const Button: React.FC<ButtonProps> = forwardRef<HTMLButtonElement, Butto
 
         const getFontVariant = useCallback(() => {
             switch (selectedSize) {
+                case "xs":
+                    return "subheading";
                 case "sm":
                     return "body";
                 case "md":

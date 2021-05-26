@@ -6,7 +6,7 @@ import { Text } from "@contactly-ui/text";
 import { Input, InputProps, InputSize, InputVariant } from "./Input";
 
 export type LabelInputProps = InputProps & {
-    label?: string;
+    label: string;
     defaultValue?: string;
     placeholder?: string;
     inputSize?: InputSize;
@@ -40,7 +40,7 @@ export const LabelInput: React.FC<LabelInputProps> = ({
         mt={mt}
         width={width}
     >
-        <Flex justifyContent="space-between" alignItems="center" mb={6}>
+        <Flex justifyContent="space-between" alignItems="center" mb={2}>
             <Text variant="caption">{label}</Text>
             {button && button}
         </Flex>

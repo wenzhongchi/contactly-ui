@@ -1,7 +1,7 @@
 import React from "react";
 import { Story } from "@storybook/react";
 
-import { IconHome, IconArrowRightCircle, IconPlusCircle } from "@contactly-ui/icons";
+import { IconHome, IconArrowRightCircle, IconPlusCircle } from "../../../icons";
 
 import { Button, ButtonProps } from "../src/Button";
 import { IconButton, IconButtonProps } from "../src/IconButton";

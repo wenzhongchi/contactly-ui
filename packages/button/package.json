@@ -7,8 +7,7 @@
   "types": "dist/index.d.ts",
   "typings": "dist/index.d.ts",
   "scripts": {
-    "pre-build": "yarn clear && npx rollup -c && yarn push",
-    "build": "yarn install && npx rollup -c && yarn push",
+    "build": "yarn clear && npx rollup -c && yarn push",
     "watch": "npx rollup -c -w",
     "clear": "rm -rf dist && rm -rf yarn.lock && rm -rf yarn-error.log && rm -rf node_modules && yarn install",
     "push": "yalc push"
@@ -36,9 +35,6 @@
     "@contactly-ui/flex": "file:.yalc/@contactly-ui/flex",
     "@contactly-ui/system": "file:.yalc/@contactly-ui/system",
     "@contactly-ui/text": "file:.yalc/@contactly-ui/text"
-  },
-  "devDependencies": {
-    "@contactly-ui/icons": "file:.yalc/@contactly-ui/icons"
   },
   "peerDependencies": {
     "react": "^17.0.2",
