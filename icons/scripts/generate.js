@@ -14,18 +14,6 @@ const storiesTemplate = require("./stories-template");
 const exportsTemplate = require("./exports-template");
 const colorReplacements = [
     {
-        from: /\"var\(--icons-bg-fill, #ffffff\)\"/g,
-        to: '{useColor("icon.bgFill")}',
-    },
-    {
-        from: /\"var\(--icons-primary, #0097db\)\"/g,
-        to: '{useColor("icon.primary")}',
-    },
-    {
-        from: /\"var\(--icons-secondary, #454c59\)\"/g,
-        to: '{useColor("icon.secondary")}',
-    },
-    {
         from: /\"currentColor\"/g,
         to: "{color}",
     },

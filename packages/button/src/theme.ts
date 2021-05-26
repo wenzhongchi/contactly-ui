@@ -8,6 +8,7 @@ export type ButtonColors = {
     warning: string;
     error: string;
     text: string;
+    widget: string;
     "border-default-default": string;
     "border-default-hover": string;
     "border-default-disabled": string;
@@ -62,6 +63,7 @@ export const getButtonColors = (colors: Colors): ButtonTheme => ({
         warning: colors.yellow[100],
         error: colors.red[400],
         text: colors.transparent,
+        widget: colors.blue[200],
         "border-default-default": colors.gray[40],
         "border-default-hover": colors.gray[50],
         "border-default-disabled": colors.gray[40],
@@ -109,6 +111,7 @@ export const getButtonColors = (colors: Colors): ButtonTheme => ({
         warning: colors.yellow[100],
         error: colors.red[400],
         text: colors.transparent,
+        widget: colors.blue[200],
         "border-default-default": colors.gray[40],
         "border-default-hover": colors.gray[50],
         "border-default-disabled": colors.gray[40],

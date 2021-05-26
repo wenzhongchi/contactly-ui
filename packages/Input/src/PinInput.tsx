@@ -1,32 +1,12 @@
 import React, { forwardRef } from "react";
 import styled, { StyledComponentProps } from "styled-components";
-import {
-    border,
-    compose,
-    flexbox,
-    layout,
-    position,
-    space,
-    variant,
-    BorderProps,
-    FlexboxProps,
-    LayoutProps,
-    PositionProps,
-    SpaceProps,
-    TypographyProps,
-    typography,
-} from "styled-system";
+import { variant } from "styled-system";
 
-import { AnyObject } from "@type/types";
+import { AnyObject, composedSystem, StyledSystemProps } from "@contactly-ui/system";
 
-type StyledPinInputProps = SpaceProps &
-    LayoutProps &
-    FlexboxProps &
-    BorderProps &
-    PositionProps &
-    TypographyProps & {
-        variant?: "primary" | "success" | "danger";
-    };
+type StyledPinInputProps = StyledSystemProps & {
+    variant?: "primary" | "success" | "danger";
+};
 
 const defaultStyles = {
     boxSizing: "border-box",
@@ -91,10 +71,7 @@ export type PinInputFieldProps = StyledComponentProps<
     never
 >;
 
-const StyledPinInput = styled.input<PinInputFieldProps>`
-    ${inputVariants}
-    ${compose(space, layout, flexbox, border, position, typography)}
-`;
+const StyledPinInput = styled.input<PinInputFieldProps>(inputVariants, composedSystem);
 
 export const PinInput: React.FC<PinInputFieldProps> = forwardRef<
     HTMLInputElement,

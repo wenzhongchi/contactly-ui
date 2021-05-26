@@ -8,6 +8,7 @@ export type IconColors = {
     warning: string;
     error: string;
     text: string;
+    white: string;
 };
 
 export type IconTheme = {
@@ -24,6 +25,7 @@ export const getIconColors = (colors: Colors): IconTheme => ({
         warning: colors.yellow[300],
         error: colors.red[300],
         text: colors.transparent,
+        white: colors.white,
     },
     dark: {
         default: colors.gray[20],
@@ -33,5 +35,6 @@ export const getIconColors = (colors: Colors): IconTheme => ({
         warning: colors.blue[300],
         error: colors.blue[300],
         text: colors.blue[300],
+        white: colors.white,
     },
 });

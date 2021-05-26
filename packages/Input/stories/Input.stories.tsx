@@ -7,6 +7,7 @@ import { LabelInput, LabelInputProps } from "../src/LabelInput";
 export default {
     title: "Components/Input",
     component: Input,
+    parameters: { layout: "centered" },
     argTypes: {
         variant: {
             control: {
@@ -41,31 +42,25 @@ Default.args = {
 export const Label: Story<LabelInputProps> = (props: LabelInputProps) => <LabelInput {...props} />;
 
 Label.argTypes = {
-    statusVariant: {
+    variant: {
         control: {
             type: "select",
-            labels: ["default", "error", "success", "warning", "loading"],
+            labels: ["default", "error", "success", "warning", "text"],
         },
     },
-    statusLabel: {
-        type: "string",
+    inputSize: {
+        control: {
+            type: "select",
+            labels: ["sm", "md", "lg"],
+        },
     },
     title: {
         type: "string",
-    },
-    isOptional: {
-        control: {
-            type: "select",
-            labels: [true, false],
-        },
     },
 };
 
 Label.args = {
     variant: "default",
     inputSize: "sm",
-    statusVariant: "success",
-    statusLabel: "success input check",
-    placeholder: "Please enter your email",
     title: "Email",
 };

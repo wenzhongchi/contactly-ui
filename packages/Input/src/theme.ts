@@ -1,6 +1,6 @@
 import { Colors } from "@contactly-ui/system";
 
-export type ButtonColors = {
+export type InputColors = {
     default: string;
     primary: string;
     secondary: string;
@@ -55,12 +55,12 @@ export type ButtonColors = {
     "disabled-text": string;
 };
 
-export type ButtonTheme = {
-    light: ButtonColors;
-    dark: ButtonColors;
+export type InputTheme = {
+    light: InputColors;
+    dark: InputColors;
 };
 
-export const getButtonColors = (colors: Colors): ButtonTheme => ({
+export const getInputColors = (colors: Colors): InputTheme => ({
     light: {
         default: `linear-gradient(180deg, ${colors.white} 0%, ${colors.gray[20]} 100%)`,
         primary: colors.blue[300],

@@ -20,7 +20,7 @@ export default {
         size: {
             control: {
                 type: "select",
-                labels: ["sm", "md", "lg"],
+                options: ["sm", "md", "lg"],
             },
         },
         leftIcon: {
@@ -35,7 +35,7 @@ export default {
         disabled: {
             control: {
                 type: "select",
-                labels: [true, false],
+                options: [true, false],
             },
         },
     },

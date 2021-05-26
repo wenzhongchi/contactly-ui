@@ -2,8 +2,6 @@ import React from "react";
 
 import { Flex } from "@contactly-ui/flex";
 import { Text } from "@contactly-ui/text";
-import { Hint } from "@contactly-ui/hint";
-import { Button } from "@contactly-ui/button";
 
 import { Input, InputProps, InputSize, InputVariant } from "./Input";
 
@@ -13,8 +11,8 @@ export type LabelInputProps = InputProps & {
     placeholder?: string;
     inputSize?: InputSize;
     variant?: InputVariant;
-    button: Button;
-    hint: Hint;
+    button: React.ReactNode;
+    hint: React.ReactNode;
 };
 
 export const LabelInput: React.FC<LabelInputProps> = ({

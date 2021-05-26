@@ -8,12 +8,6 @@ export default {
     component: Checkbox,
     parameters: { layout: "centered" },
     argTypes: {
-        variant: {
-            control: {
-                type: "select",
-                labels: ["default", "error", "disabled"],
-            },
-        },
         label: {
             type: "string",
         },
@@ -26,6 +20,5 @@ export const Default: Story<CheckboxComponentProps> = (props: CheckboxComponentP
 );
 
 Default.args = {
-    variant: "default",
-    label: "checkbox description",
+    label: "checkbox text",
 };
