@@ -7,12 +7,14 @@ import { Input, InputProps, InputSize, InputVariant } from "./Input";
 
 export type LabelInputProps = InputProps & {
     label: string;
+    labelColor: string;
     defaultValue?: string;
     placeholder?: string;
     inputSize?: InputSize;
     variant?: InputVariant;
     button: React.ReactNode;
     hint: React.ReactNode;
+    disabled?: boolean;
 };
 
 export const LabelInput: React.FC<LabelInputProps> = ({
@@ -28,6 +30,7 @@ export const LabelInput: React.FC<LabelInputProps> = ({
     width,
     button,
     hint,
+    disabled,
     ...restProps
 }) => (
     <Flex
@@ -41,13 +44,16 @@ export const LabelInput: React.FC<LabelInputProps> = ({
         width={width}
     >
         <Flex justifyContent="space-between" alignItems="center" mb={2}>
-            <Text variant="caption">{label}</Text>
+            <Text variant="caption" color="text.secondary">
+                {label}
+            </Text>
             {button && button}
         </Flex>
         <Input
             variant={variant}
             value={defaultValue}
             placeholder={placeholder}
+            disabled={disabled}
             {...(restProps as InputProps)}
         />
         {hint && hint}

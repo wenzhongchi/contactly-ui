@@ -2,6 +2,7 @@ import React from "react";
 import { Story } from "@storybook/react";
 
 import { Button } from "../../button";
+import { Text } from "../../text";
 
 import { Input, InputComponentProps } from "../src/Input";
 import { LabelInput, LabelInputProps } from "../src/LabelInput";
@@ -23,6 +24,12 @@ export default {
                 labels: ["sm", "md", "lg"],
             },
         },
+        disabled: {
+            control: {
+                type: "select",
+                options: [true, false],
+            },
+        },
         value: {
             type: "string",
         },
@@ -33,16 +40,26 @@ export default {
 };
 
 export const Default: Story<InputComponentProps> = (props: InputComponentProps) => (
-    <Input {...props} placeholder="placeholder" />
+    <Input {...props} placeholder="Placeholder" />
 );
 
 Default.args = {
     variant: "default",
-    inputSize: "sm",
+    inputSize: "md",
+    disabled: false,
 };
 
 export const Label: Story<LabelInputProps> = (props: LabelInputProps) => (
-    <LabelInput {...props} button={<Button size="xs" variant="text" label="action" />} />
+    <LabelInput
+        {...props}
+        button={
+            <Button size="xs" variant="text">
+                <Text variant="caption" color="text.tertiary">
+                    Action
+                </Text>
+            </Button>
+        }
+    />
 );
 
 Label.argTypes = {
@@ -65,6 +82,7 @@ Label.argTypes = {
 
 Label.args = {
     variant: "default",
-    inputSize: "sm",
+    inputSize: "md",
     label: "Email",
+    disabled: false,
 };

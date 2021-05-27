@@ -42,7 +42,17 @@ export const StyledButton = styled.button<ButtonProps>(
 
 export const Button: React.FC<ButtonProps> = forwardRef<HTMLButtonElement, ButtonProps>(
     (
-        { label, variant = "default", size = "sm", leftIcon, rightIcon, isDisabled, ...restProps },
+        {
+            label,
+            variant = "default",
+            size = "sm",
+            leftIcon,
+            rightIcon,
+            isDisabled,
+            css,
+            children,
+            ...restProps
+        },
         ref,
     ) => {
         const {
@@ -155,14 +165,16 @@ export const Button: React.FC<ButtonProps> = forwardRef<HTMLButtonElement, Butto
                 ref={ref}
                 size={selectedSize}
                 variant={selectedVariant}
-                css={groupOrientation ? getButtonGroupStyle(groupOrientation) : {}}
+                css={groupOrientation ? { ...getButtonGroupStyle(groupOrientation), ...css } : css}
                 {...restProps}
             >
                 {leftIcon && renderIcon(leftIcon as React.ReactElement, true)}
-                {label && (
+                {label ? (
                     <Text variant={getFontVariant()} color={getFontColor()}>
                         {label}
                     </Text>
+                ) : (
+                    children
                 )}
                 {rightIcon && renderIcon(rightIcon as React.ReactElement, false)}
             </StyledButton>

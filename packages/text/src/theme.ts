@@ -20,7 +20,7 @@ export const getTextColors = (colors: Colors): TextTheme => ({
         default: colors.gray[700],
         primary: colors.gray[900],
         secondary: colors.gray[800],
-        tertiary: colors.gray[600],
+        tertiary: colors.blue[300],
         disabled: colors.gray[80],
         error: colors.red[500],
         white: colors.white,

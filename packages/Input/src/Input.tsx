@@ -11,6 +11,7 @@ export type InputVariant = "default" | "success" | "error" | "warning" | "text";
 export type InputComponentProps = {
     inputSize?: InputSize;
     variant?: InputVariant;
+    disabled?: boolean;
 };
 
 type StyledInputProps = StyledSystemProps & InputComponentProps;
@@ -20,7 +21,15 @@ export type InputProps = StyledComponentProps<"input", AnyObject, StyledInputPro
 const StyledInput = styled.input<InputProps>(inputVariants, inputSizeVariants, composedSystem);
 
 export const Input: React.FC<InputProps> = forwardRef<HTMLInputElement, InputProps>(
-    ({ variant = "default", inputSize = "md", ...restProps }, ref) => (
-        <StyledInput ref={ref} variant={variant} inputSize={inputSize} {...restProps} />
+    ({ variant = "default", inputSize = "md", disabled, ...restProps }, ref) => (
+        <StyledInput
+            ref={ref}
+            variant={variant}
+            inputSize={inputSize}
+            disabled={disabled}
+            backgroundColor={disabled ? "input.bg-disabled" : undefined}
+            color={disabled ? "input.disabled" : undefined}
+            {...restProps}
+        />
     ),
 );

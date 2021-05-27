@@ -2,8 +2,8 @@ import { Colors } from "@contactly-ui/system";
 
 export type InputColors = {
     text: string;
-    placeholder: string;
     disabled: string;
+    placeholder: string;
     "border-default-default": string;
     "border-default-focus": string;
     "border-success-default": string;
@@ -31,9 +31,9 @@ export const getInputColors = (colors: Colors): InputTheme => ({
         "border-default-focus": colors.blue[300],
         "border-success-default": colors.green[400],
         "border-success-focus": colors.blue[300],
-        "border-warning-default": colors.gray[40],
+        "border-warning-default": colors.yellow[500],
         "border-warning-focus": colors.blue[300],
-        "border-error-default": colors.gray[40],
+        "border-error-default": colors.red[400],
         "border-error-focus": colors.blue[300],
         "border-disabled": colors.gray[40],
         "border-transparent": colors.transparent,
