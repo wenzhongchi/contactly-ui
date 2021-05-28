@@ -42,6 +42,7 @@ export type ButtonColors = {
     "disabled-error": string;
     "disabled-text": string;
     "text-default": string;
+    "text-hover": string;
     "text-disabled": string;
     "text-white": string;
     "icon-default": string;
@@ -56,7 +57,7 @@ export type ButtonTheme = {
 
 export const getButtonColors = (colors: Colors): ButtonTheme => ({
     light: {
-        default: `linear-gradient(180deg, ${colors.white} 0%, ${colors.gray[20]} 100%)`,
+        default: colors.transparent,
         primary: colors.blue[300],
         secondary: colors.teal[300],
         success: colors.green[400],
@@ -69,19 +70,19 @@ export const getButtonColors = (colors: Colors): ButtonTheme => ({
         "border-default-disabled": colors.gray[40],
         "border-primary-default": colors.gray[40],
         "border-primary-hover": colors.gray[50],
-        "border-primary-disabled": colors.gray[40],
+        "border-primary-disabled": colors.blue[100],
         "border-secondary-default": colors.gray[40],
         "border-secondary-hover": colors.gray[50],
-        "border-secondary-disabled": colors.gray[40],
+        "border-secondary-disabled": colors.teal[300],
         "border-success-default": colors.gray[40],
         "border-success-hover": colors.green[500],
-        "border-success-disabled": colors.gray[40],
+        "border-success-disabled": colors.green[75],
         "border-warning-default": colors.gray[40],
         "border-warning-hover": colors.gray[50],
-        "border-warning-disabled": colors.gray[40],
+        "border-warning-disabled": colors.yellow[200],
         "border-error-default": colors.gray[40],
         "border-error-hover": colors.gray[50],
-        "border-error-disabled": colors.gray[40],
+        "border-error-disabled": colors.red[100],
         "hover-default": colors.gray[30],
         "hover-primary": colors.blue[400],
         "hover-secondary": colors.teal[500],
@@ -92,11 +93,12 @@ export const getButtonColors = (colors: Colors): ButtonTheme => ({
         "disabled-default": `linear-gradient(180deg, ${colors.white} 0%, ${colors.gray[20]} 100%)`,
         "disabled-primary": colors.blue[75],
         "disabled-secondary": colors.teal[75],
-        "disabled-success": colors.green[75],
+        "disabled-success": colors.green[50],
         "disabled-warning": colors.yellow[75],
         "disabled-error": colors.red[75],
         "disabled-text": colors.white,
         "text-default": colors.gray[700],
+        "text-hover": colors.blue[400],
         "text-disabled": colors.gray[80],
         "text-white": colors.white,
         "icon-default": colors.gray[900],
@@ -104,7 +106,7 @@ export const getButtonColors = (colors: Colors): ButtonTheme => ({
         "icon-white": colors.white,
     },
     dark: {
-        default: `linear-gradient(180deg, ${colors.white} 0%, ${colors.gray[20]} 100%)`,
+        default: colors.transparent,
         primary: colors.blue[300],
         secondary: colors.teal[300],
         success: colors.green[400],
@@ -145,6 +147,7 @@ export const getButtonColors = (colors: Colors): ButtonTheme => ({
         "disabled-error": colors.red[75],
         "disabled-text": colors.white,
         "text-default": colors.gray[700],
+        "text-hover": colors.blue[400],
         "text-disabled": colors.gray[80],
         "text-white": colors.white,
         "icon-default": colors.gray[900],

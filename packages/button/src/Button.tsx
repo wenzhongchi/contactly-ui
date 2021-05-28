@@ -1,4 +1,4 @@
-import React, { forwardRef, useCallback } from "react";
+import React, { forwardRef, useCallback, useState } from "react";
 import styled, { StyledComponentProps } from "styled-components";
 import { css as customCSS, SystemStyleObject } from "@styled-system/css";
 
@@ -25,7 +25,7 @@ type ButtonComponentProps = {
     variant?: ButtonVariant;
     leftIcon?: React.ReactNode;
     rightIcon?: React.ReactNode;
-    isDisabled?: boolean;
+    disabled?: boolean;
     css?: SystemStyleObject;
 };
 
@@ -34,9 +34,9 @@ type StyledButtonProps = StyledSystemProps & ButtonComponentProps;
 export type ButtonProps = StyledComponentProps<"button", AnyObject, StyledButtonProps, never>;
 
 export const StyledButton = styled.button<ButtonProps>(
-    ({ css }) => customCSS(css),
     styleVariants,
     sizeVariants,
+    ({ css }) => customCSS(css),
     composedSystem,
 );
 
@@ -48,13 +48,14 @@ export const Button: React.FC<ButtonProps> = forwardRef<HTMLButtonElement, Butto
             size = "sm",
             leftIcon,
             rightIcon,
-            isDisabled,
+            disabled,
             css,
             children,
             ...restProps
         },
         ref,
     ) => {
+        const [isHovered, setHovered] = useState(false);
         const {
             variant: groupVariant,
             size: groupSize,
@@ -64,24 +65,33 @@ export const Button: React.FC<ButtonProps> = forwardRef<HTMLButtonElement, Butto
         const selectedVariant = groupVariant ?? variant;
         const selectedSize = groupSize ?? size;
 
+        const handleMouseEnter = useCallback(() => {
+            setHovered(true);
+        }, [setHovered]);
+
+        const handleMouseLeave = useCallback(() => {
+            setHovered(false);
+        }, [setHovered]);
+
         const getFontColor = useCallback(() => {
             switch (selectedVariant) {
                 case "default":
-                    return isDisabled ? "button.text-disabled" : "button.text-default";
+                    return disabled ? "button.text-disabled" : "button.text-default";
                 case "primary":
-                    return isDisabled ? "button.text-disabled" : "button.text-white";
+                    return disabled ? "button.text-white" : "button.text-white";
                 case "secondary":
-                    return isDisabled ? "button.text-disabled" : "button.text-white";
+                    return disabled ? "button.text-disabled" : "button.text-white";
                 case "success":
-                    return isDisabled ? "button.text-disabled" : "button.text-white";
+                    return disabled ? "button.text-disabled" : "button.text-white";
                 case "warning":
-                    return isDisabled ? "button.text-disabled" : "button.text-default";
+                    return disabled ? "button.text-disabled" : "button.text-default";
                 case "error":
-                    return isDisabled ? "button.text-disabled" : "button.text-white";
+                    return disabled ? "button.text-disabled" : "button.text-white";
                 case "text":
-                    return isDisabled ? "button.text-disabled" : "button.text-default";
+                    if (disabled) return "button.text-disabled";
+                    return isHovered ? "button.text-hover" : "button.text-default";
             }
-        }, [selectedVariant, isDisabled]);
+        }, [selectedVariant, disabled, isHovered]);
 
         const getFontVariant = useCallback(() => {
             switch (selectedSize) {
@@ -99,7 +109,7 @@ export const Button: React.FC<ButtonProps> = forwardRef<HTMLButtonElement, Butto
         const getIconColor = useCallback(() => {
             switch (selectedVariant) {
                 case "default":
-                    return isDisabled ? "button.icon-disabled" : "button.icon-default";
+                    return disabled ? "button.icon-disabled" : "button.icon-default";
                 case "primary":
                     return "button.icon-white";
                 case "secondary":
@@ -107,13 +117,13 @@ export const Button: React.FC<ButtonProps> = forwardRef<HTMLButtonElement, Butto
                 case "success":
                     return "button.icon-white";
                 case "warning":
-                    return isDisabled ? "button.icon-disabled" : "button.icon-default";
+                    return disabled ? "button.icon-disabled" : "button.icon-default";
                 case "error":
                     return "button.icon-white";
                 case "text":
-                    return isDisabled ? "button.icon-disabled" : "button.icon-default";
+                    return disabled ? "button.icon-disabled" : "button.icon-default";
             }
-        }, [selectedVariant, isDisabled]);
+        }, [selectedVariant, disabled]);
 
         const getIconSize = useCallback(() => {
             switch (selectedSize) {
@@ -165,7 +175,10 @@ export const Button: React.FC<ButtonProps> = forwardRef<HTMLButtonElement, Butto
                 ref={ref}
                 size={selectedSize}
                 variant={selectedVariant}
+                disabled={disabled}
                 css={groupOrientation ? { ...getButtonGroupStyle(groupOrientation), ...css } : css}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
                 {...restProps}
             >
                 {leftIcon && renderIcon(leftIcon as React.ReactElement, true)}

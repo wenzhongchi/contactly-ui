@@ -1,13 +1,13 @@
 import { Theme } from "styled-system";
 
-import { colors } from "@contactly-ui/system";
-import { getTextColors } from "@contactly-ui/text";
-import { getButtonColors } from "@contactly-ui/button";
-import { getIconColors } from "@contactly-ui/icon";
-import { getCardColors } from "@contactly-ui/card";
-import { getAvatarColors } from "@contactly-ui/avatar";
-import { getCheckboxColors } from "@contactly-ui/checkbox";
-import { getInputColors } from "@contactly-ui/input";
+import { colors } from "../../system/src";
+import { getTextColors } from "../../text/src";
+import { getButtonColors } from "../../button/src";
+import { getIconColors } from "../../icon/src";
+import { getCardColors } from "../../card/src";
+import { getAvatarColors } from "../../avatar/src";
+import { getCheckboxColors } from "../../checkbox/src";
+import { getInputColors } from "../../input/src";
 
 import { fonts, fontSizes, fontWeights, lineHeights, letterSpacings } from "./base/typography";
 import space from "./base/spaces";

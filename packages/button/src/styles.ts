@@ -20,12 +20,17 @@ const sharedStyles = {
 };
 
 const defaultStyles = {
-    bg: "button.default",
+    background: "linear-gradient(180deg, #FFFFFF 0%, #F4F5F7 100%)",
     borderColor: "button.border-default-default",
     cursor: "pointer",
     "&:hover": {
         bg: "button.hover-default",
         borderColor: "button.border-default-hover",
+    },
+    "&:disabled": {
+        background: "linear-gradient(180deg, #FFFFFF 0%, #F4F5F7 100%)",
+        borderColor: "button.border-default-disabled",
+        cursor: "not-allowed",
     },
 };
 
@@ -37,6 +42,11 @@ const primaryStyles = {
         bg: "button.hover-primary",
         borderColor: "button.border-primary-hover",
     },
+    "&:disabled": {
+        bg: "button.disabled-primary",
+        borderColor: "button.border-primary-disabled",
+        cursor: "not-allowed",
+    },
 };
 
 const secondaryStyles = {
@@ -46,6 +56,11 @@ const secondaryStyles = {
     "&:hover": {
         bg: "button.hover-secondary",
         borderColor: "button.border-secondary-hover",
+    },
+    "&:disabled": {
+        bg: "button.disabled-secondary",
+        borderColor: "button.border-secondary-disabled",
+        cursor: "not-allowed",
     },
 };
 
@@ -57,6 +72,11 @@ const successStyles = {
         bg: "button.hover-success",
         borderColor: "button.border-success-hover",
     },
+    "&:disabled": {
+        bg: "button.disabled-success",
+        borderColor: "button.border-success-disabled",
+        cursor: "not-allowed",
+    },
 };
 
 const warningStyles = {
@@ -66,6 +86,11 @@ const warningStyles = {
     "&:hover": {
         bg: "button.hover-warning",
         borderColor: "button.border-warning-hover",
+    },
+    "&:disabled": {
+        bg: "button.disabled-warning",
+        borderColor: "button.border-warning-disabled",
+        cursor: "not-allowed",
     },
 };
 
@@ -77,6 +102,11 @@ const errorStyles = {
         bg: "button.hover-error",
         borderColor: "button.border-error-hover",
     },
+    "&:disabled": {
+        bg: "button.disabled-error",
+        borderColor: "button.border-error-disabled",
+        cursor: "not-allowed",
+    },
 };
 
 const textStyles = {
@@ -85,6 +115,11 @@ const textStyles = {
     cursor: "pointer",
     "&:hover": {
         bg: "button.hover-text",
+    },
+    "&:disabled": {
+        bg: "button.disabled-text",
+        borderColor: "button.border-text-disabled",
+        cursor: "not-allowed",
     },
 };
 

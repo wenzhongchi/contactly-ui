@@ -2,197 +2,32 @@
 # yarn lockfile v1
 
 
-"@contactly-ui/avatar@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/avatar":
-  version "1.0.0"
-  dependencies:
-    "@contactly-ui/box" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-avatar-1.0.0-aa500bb5-9665-4086-8423-3191d3516ac7-1622011497212/node_modules/@contactly-ui/avatar/.yalc/@contactly-ui/box"
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-avatar-1.0.0-aa500bb5-9665-4086-8423-3191d3516ac7-1622011497212/node_modules/@contactly-ui/avatar/.yalc/@contactly-ui/system"
-    "@contactly-ui/text" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-avatar-1.0.0-aa500bb5-9665-4086-8423-3191d3516ac7-1622011497212/node_modules/@contactly-ui/avatar/.yalc/@contactly-ui/text"
-
 "@contactly-ui/box@file:.yalc/@contactly-ui/box":
   version "1.0.0"
   dependencies:
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-box-1.0.0-2c634667-b9b3-4f8f-b67f-553060fdbcd6-1622011497257/node_modules/@contactly-ui/box/.yalc/@contactly-ui/system"
+    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-box-1.0.0-9e278e3a-2742-4ff0-a86f-efe956333ef4-1622164845708/node_modules/@contactly-ui/box/.yalc/@contactly-ui/system"
 
 "@contactly-ui/box@file:.yalc/@contactly-ui/flex/.yalc/@contactly-ui/box":
   version "1.0.0"
   dependencies:
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-box-1.0.0-2fbac6a2-ff62-48c3-a9ba-2e8e9db2120b-1622011497261/node_modules/@contactly-ui/box/.yalc/@contactly-ui/system"
+    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-box-1.0.0-b4ee69fd-44e9-4d40-be9e-a9e7e2c757e3-1622164845712/node_modules/@contactly-ui/box/.yalc/@contactly-ui/system"
 
 "@contactly-ui/box@file:.yalc/@contactly-ui/text/.yalc/@contactly-ui/flex/.yalc/@contactly-ui/box":
   version "1.0.0"
   dependencies:
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-box-1.0.0-2cdab80e-5949-4cf4-a173-a2af42c3acb5-1622011497267/node_modules/@contactly-ui/box/.yalc/@contactly-ui/system"
-
-"@contactly-ui/box@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/avatar/.yalc/@contactly-ui/box":
-  version "1.0.0"
-  dependencies:
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-box-1.0.0-b8bbf0a1-986f-42ca-ae95-f5b643f792c1-1622011497229/node_modules/@contactly-ui/box/.yalc/@contactly-ui/system"
-
-"@contactly-ui/box@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/avatar/.yalc/@contactly-ui/text/.yalc/@contactly-ui/flex/.yalc/@contactly-ui/box":
-  version "1.0.0"
-  dependencies:
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-box-1.0.0-ff11d222-91a1-4117-a943-37c974241efa-1622011497251/node_modules/@contactly-ui/box/.yalc/@contactly-ui/system"
-
-"@contactly-ui/box@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/box":
-  version "1.0.0"
-  dependencies:
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-box-1.0.0-79c6979c-8cca-4d87-aa11-8092868120f0-1622011497212/node_modules/@contactly-ui/box/.yalc/@contactly-ui/system"
-
-"@contactly-ui/box@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/button/.yalc/@contactly-ui/flex/.yalc/@contactly-ui/box":
-  version "1.0.0"
-  dependencies:
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-box-1.0.0-64ed218a-3336-4f35-b802-e9539bd47d35-1622011497244/node_modules/@contactly-ui/box/.yalc/@contactly-ui/system"
-
-"@contactly-ui/box@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/button/.yalc/@contactly-ui/text/.yalc/@contactly-ui/flex/.yalc/@contactly-ui/box":
-  version "1.0.0"
-  dependencies:
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-box-1.0.0-47457f37-6297-4695-aa93-02250cd05232-1622011497252/node_modules/@contactly-ui/box/.yalc/@contactly-ui/system"
-
-"@contactly-ui/box@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/checkbox/.yalc/@contactly-ui/box":
-  version "1.0.0"
-  dependencies:
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-box-1.0.0-87ef433d-b6eb-4aba-ba81-1f460bab176b-1622011497230/node_modules/@contactly-ui/box/.yalc/@contactly-ui/system"
-
-"@contactly-ui/box@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/checkbox/.yalc/@contactly-ui/flex/.yalc/@contactly-ui/box":
-  version "1.0.0"
-  dependencies:
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-box-1.0.0-972c3820-dd62-4084-a527-6883cd34dcf4-1622011497243/node_modules/@contactly-ui/box/.yalc/@contactly-ui/system"
-
-"@contactly-ui/box@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/checkbox/.yalc/@contactly-ui/text/.yalc/@contactly-ui/flex/.yalc/@contactly-ui/box":
-  version "1.0.0"
-  dependencies:
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-box-1.0.0-270f6b9f-3c37-4a15-a9bd-7c8869ea69a6-1622011497251/node_modules/@contactly-ui/box/.yalc/@contactly-ui/system"
-
-"@contactly-ui/box@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/flex/.yalc/@contactly-ui/box":
-  version "1.0.0"
-  dependencies:
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-box-1.0.0-8128f415-667d-4062-a872-fe4118b46faa-1622011497233/node_modules/@contactly-ui/box/.yalc/@contactly-ui/system"
-
-"@contactly-ui/box@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/icon/.yalc/@contactly-ui/box":
-  version "1.0.0"
-  dependencies:
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-box-1.0.0-a79f80ea-482d-4d17-823f-a9839e2ba313-1622011497233/node_modules/@contactly-ui/box/.yalc/@contactly-ui/system"
-
-"@contactly-ui/box@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/input/.yalc/@contactly-ui/box":
-  version "1.0.0"
-  dependencies:
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-box-1.0.0-42a51ea2-6818-4967-af5f-80adba07cdae-1622011497234/node_modules/@contactly-ui/box/.yalc/@contactly-ui/system"
-
-"@contactly-ui/box@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/input/.yalc/@contactly-ui/flex/.yalc/@contactly-ui/box":
-  version "1.0.0"
-  dependencies:
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-box-1.0.0-f53669c5-78f0-464e-bce3-e1da0b7e0656-1622011497245/node_modules/@contactly-ui/box/.yalc/@contactly-ui/system"
-
-"@contactly-ui/box@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/input/.yalc/@contactly-ui/text/.yalc/@contactly-ui/flex/.yalc/@contactly-ui/box":
-  version "1.0.0"
-  dependencies:
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-box-1.0.0-420a424c-f13a-407b-a0ef-efad69c6fc2f-1622011497254/node_modules/@contactly-ui/box/.yalc/@contactly-ui/system"
-
-"@contactly-ui/box@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/text/.yalc/@contactly-ui/flex/.yalc/@contactly-ui/box":
-  version "1.0.0"
-  dependencies:
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-box-1.0.0-618279c9-75df-4a65-848e-3e111678d243-1622011497246/node_modules/@contactly-ui/box/.yalc/@contactly-ui/system"
-
-"@contactly-ui/button@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/button":
-  version "1.0.0"
-  dependencies:
-    "@contactly-ui/flex" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-button-1.0.0-08f3c6d8-74c7-4679-b4fe-df9c3f1ff29e-1622011497216/node_modules/@contactly-ui/button/.yalc/@contactly-ui/flex"
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-button-1.0.0-08f3c6d8-74c7-4679-b4fe-df9c3f1ff29e-1622011497216/node_modules/@contactly-ui/button/.yalc/@contactly-ui/system"
-    "@contactly-ui/text" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-button-1.0.0-08f3c6d8-74c7-4679-b4fe-df9c3f1ff29e-1622011497216/node_modules/@contactly-ui/button/.yalc/@contactly-ui/text"
-
-"@contactly-ui/card@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/card":
-  version "1.0.0"
-  dependencies:
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-card-1.0.0-e22e66eb-8a83-4bf8-888f-b05cf8a34df7-1622011497217/node_modules/@contactly-ui/card/.yalc/@contactly-ui/system"
-
-"@contactly-ui/checkbox@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/checkbox":
-  version "1.0.0"
-  dependencies:
-    "@contactly-ui/box" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-checkbox-1.0.0-cae6e686-5544-41d1-8673-a9fbf7b325a7-1622011497215/node_modules/@contactly-ui/checkbox/.yalc/@contactly-ui/box"
-    "@contactly-ui/flex" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-checkbox-1.0.0-cae6e686-5544-41d1-8673-a9fbf7b325a7-1622011497215/node_modules/@contactly-ui/checkbox/.yalc/@contactly-ui/flex"
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-checkbox-1.0.0-cae6e686-5544-41d1-8673-a9fbf7b325a7-1622011497215/node_modules/@contactly-ui/checkbox/.yalc/@contactly-ui/system"
-    "@contactly-ui/text" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-checkbox-1.0.0-cae6e686-5544-41d1-8673-a9fbf7b325a7-1622011497215/node_modules/@contactly-ui/checkbox/.yalc/@contactly-ui/text"
+    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-box-1.0.0-a81cba00-7bae-421d-a3e3-9b52469ad7fa-1622164845720/node_modules/@contactly-ui/box/.yalc/@contactly-ui/system"
 
 "@contactly-ui/flex@file:.yalc/@contactly-ui/flex":
   version "1.0.0"
   dependencies:
-    "@contactly-ui/box" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-flex-1.0.0-f4a016d8-2b64-4936-8465-f73aa8f29f29-1622011497260/node_modules/@contactly-ui/flex/.yalc/@contactly-ui/box"
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-flex-1.0.0-f4a016d8-2b64-4936-8465-f73aa8f29f29-1622011497260/node_modules/@contactly-ui/flex/.yalc/@contactly-ui/system"
+    "@contactly-ui/box" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-flex-1.0.0-74a62656-57ae-4b57-81a6-b8a89775bab4-1622164845710/node_modules/@contactly-ui/flex/.yalc/@contactly-ui/box"
+    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-flex-1.0.0-74a62656-57ae-4b57-81a6-b8a89775bab4-1622164845710/node_modules/@contactly-ui/flex/.yalc/@contactly-ui/system"
 
 "@contactly-ui/flex@file:.yalc/@contactly-ui/text/.yalc/@contactly-ui/flex":
   version "1.0.0"
   dependencies:
-    "@contactly-ui/box" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-flex-1.0.0-4be0a640-460c-4f5b-916d-229415d67b27-1622011497266/node_modules/@contactly-ui/flex/.yalc/@contactly-ui/box"
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-flex-1.0.0-4be0a640-460c-4f5b-916d-229415d67b27-1622011497266/node_modules/@contactly-ui/flex/.yalc/@contactly-ui/system"
-
-"@contactly-ui/flex@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/avatar/.yalc/@contactly-ui/text/.yalc/@contactly-ui/flex":
-  version "1.0.0"
-  dependencies:
-    "@contactly-ui/box" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-flex-1.0.0-6d3afec6-3b47-4271-adbc-6154bf6205b2-1622011497242/node_modules/@contactly-ui/flex/.yalc/@contactly-ui/box"
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-flex-1.0.0-6d3afec6-3b47-4271-adbc-6154bf6205b2-1622011497242/node_modules/@contactly-ui/flex/.yalc/@contactly-ui/system"
-
-"@contactly-ui/flex@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/button/.yalc/@contactly-ui/flex":
-  version "1.0.0"
-  dependencies:
-    "@contactly-ui/box" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-flex-1.0.0-597d3f81-6b15-4c94-8638-7f50e6c573e0-1622011497231/node_modules/@contactly-ui/flex/.yalc/@contactly-ui/box"
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-flex-1.0.0-597d3f81-6b15-4c94-8638-7f50e6c573e0-1622011497231/node_modules/@contactly-ui/flex/.yalc/@contactly-ui/system"
-
-"@contactly-ui/flex@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/button/.yalc/@contactly-ui/text/.yalc/@contactly-ui/flex":
-  version "1.0.0"
-  dependencies:
-    "@contactly-ui/box" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-flex-1.0.0-29ba1656-5624-46b7-b1c8-76baf7baeac3-1622011497244/node_modules/@contactly-ui/flex/.yalc/@contactly-ui/box"
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-flex-1.0.0-29ba1656-5624-46b7-b1c8-76baf7baeac3-1622011497244/node_modules/@contactly-ui/flex/.yalc/@contactly-ui/system"
-
-"@contactly-ui/flex@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/checkbox/.yalc/@contactly-ui/flex":
-  version "1.0.0"
-  dependencies:
-    "@contactly-ui/box" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-flex-1.0.0-220426b4-c65b-4983-a6c3-2622f6857a69-1622011497231/node_modules/@contactly-ui/flex/.yalc/@contactly-ui/box"
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-flex-1.0.0-220426b4-c65b-4983-a6c3-2622f6857a69-1622011497231/node_modules/@contactly-ui/flex/.yalc/@contactly-ui/system"
-
-"@contactly-ui/flex@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/checkbox/.yalc/@contactly-ui/text/.yalc/@contactly-ui/flex":
-  version "1.0.0"
-  dependencies:
-    "@contactly-ui/box" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-flex-1.0.0-b4cc92b4-882d-4368-b3c5-323c10c5f79a-1622011497242/node_modules/@contactly-ui/flex/.yalc/@contactly-ui/box"
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-flex-1.0.0-b4cc92b4-882d-4368-b3c5-323c10c5f79a-1622011497242/node_modules/@contactly-ui/flex/.yalc/@contactly-ui/system"
-
-"@contactly-ui/flex@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/flex":
-  version "1.0.0"
-  dependencies:
-    "@contactly-ui/box" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-flex-1.0.0-5b1d3248-f5b5-4ecf-bbf0-f7df90f3425e-1622011497218/node_modules/@contactly-ui/flex/.yalc/@contactly-ui/box"
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-flex-1.0.0-5b1d3248-f5b5-4ecf-bbf0-f7df90f3425e-1622011497218/node_modules/@contactly-ui/flex/.yalc/@contactly-ui/system"
-
-"@contactly-ui/flex@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/input/.yalc/@contactly-ui/flex":
-  version "1.0.0"
-  dependencies:
-    "@contactly-ui/box" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-flex-1.0.0-582cb2c2-1fe0-4429-8075-6c03f0f6f3df-1622011497235/node_modules/@contactly-ui/flex/.yalc/@contactly-ui/box"
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-flex-1.0.0-582cb2c2-1fe0-4429-8075-6c03f0f6f3df-1622011497235/node_modules/@contactly-ui/flex/.yalc/@contactly-ui/system"
-
-"@contactly-ui/flex@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/input/.yalc/@contactly-ui/text/.yalc/@contactly-ui/flex":
-  version "1.0.0"
-  dependencies:
-    "@contactly-ui/box" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-flex-1.0.0-2ba778c5-84d5-463c-a34f-c065c2978b6c-1622011497247/node_modules/@contactly-ui/flex/.yalc/@contactly-ui/box"
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-flex-1.0.0-2ba778c5-84d5-463c-a34f-c065c2978b6c-1622011497247/node_modules/@contactly-ui/flex/.yalc/@contactly-ui/system"
-
-"@contactly-ui/flex@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/text/.yalc/@contactly-ui/flex":
-  version "1.0.0"
-  dependencies:
-    "@contactly-ui/box" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-flex-1.0.0-b2f2ccbd-fef5-4e37-9329-90b4c06e9981-1622011497235/node_modules/@contactly-ui/flex/.yalc/@contactly-ui/box"
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-flex-1.0.0-b2f2ccbd-fef5-4e37-9329-90b4c06e9981-1622011497235/node_modules/@contactly-ui/flex/.yalc/@contactly-ui/system"
-
-"@contactly-ui/icon@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/icon":
-  version "1.0.0"
-  dependencies:
-    "@contactly-ui/box" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-icon-1.0.0-6d9f2901-9dd4-49f1-bb85-580b20551852-1622011497217/node_modules/@contactly-ui/icon/.yalc/@contactly-ui/box"
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-icon-1.0.0-6d9f2901-9dd4-49f1-bb85-580b20551852-1622011497217/node_modules/@contactly-ui/icon/.yalc/@contactly-ui/system"
-
-"@contactly-ui/input@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/input":
-  version "1.0.0"
-  dependencies:
-    "@contactly-ui/box" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-input-1.0.0-cdfc0dba-049e-4ff6-81dd-1e49a1b73655-1622011497219/node_modules/@contactly-ui/input/.yalc/@contactly-ui/box"
-    "@contactly-ui/flex" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-input-1.0.0-cdfc0dba-049e-4ff6-81dd-1e49a1b73655-1622011497219/node_modules/@contactly-ui/input/.yalc/@contactly-ui/flex"
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-input-1.0.0-cdfc0dba-049e-4ff6-81dd-1e49a1b73655-1622011497219/node_modules/@contactly-ui/input/.yalc/@contactly-ui/system"
-    "@contactly-ui/text" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-input-1.0.0-cdfc0dba-049e-4ff6-81dd-1e49a1b73655-1622011497219/node_modules/@contactly-ui/input/.yalc/@contactly-ui/text"
+    "@contactly-ui/box" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-flex-1.0.0-ff31b2b3-3a0e-462e-9e77-91c82c343db8-1622164845718/node_modules/@contactly-ui/flex/.yalc/@contactly-ui/box"
+    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-flex-1.0.0-ff31b2b3-3a0e-462e-9e77-91c82c343db8-1622164845718/node_modules/@contactly-ui/flex/.yalc/@contactly-ui/system"
 
 "@contactly-ui/system@file:.yalc/@contactly-ui/box/.yalc/@contactly-ui/system":
   version "1.0.0"
@@ -215,160 +50,15 @@
 "@contactly-ui/system@file:.yalc/@contactly-ui/text/.yalc/@contactly-ui/system":
   version "1.0.0"
 
-"@contactly-ui/system@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/avatar/.yalc/@contactly-ui/box/.yalc/@contactly-ui/system":
-  version "1.0.0"
-
-"@contactly-ui/system@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/avatar/.yalc/@contactly-ui/system":
-  version "1.0.0"
-
-"@contactly-ui/system@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/avatar/.yalc/@contactly-ui/text/.yalc/@contactly-ui/flex/.yalc/@contactly-ui/box/.yalc/@contactly-ui/system":
-  version "1.0.0"
-
-"@contactly-ui/system@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/avatar/.yalc/@contactly-ui/text/.yalc/@contactly-ui/flex/.yalc/@contactly-ui/system":
-  version "1.0.0"
-
-"@contactly-ui/system@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/avatar/.yalc/@contactly-ui/text/.yalc/@contactly-ui/system":
-  version "1.0.0"
-
-"@contactly-ui/system@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/box/.yalc/@contactly-ui/system":
-  version "1.0.0"
-
-"@contactly-ui/system@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/button/.yalc/@contactly-ui/flex/.yalc/@contactly-ui/box/.yalc/@contactly-ui/system":
-  version "1.0.0"
-
-"@contactly-ui/system@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/button/.yalc/@contactly-ui/flex/.yalc/@contactly-ui/system":
-  version "1.0.0"
-
-"@contactly-ui/system@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/button/.yalc/@contactly-ui/system":
-  version "1.0.0"
-
-"@contactly-ui/system@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/button/.yalc/@contactly-ui/text/.yalc/@contactly-ui/flex/.yalc/@contactly-ui/box/.yalc/@contactly-ui/system":
-  version "1.0.0"
-
-"@contactly-ui/system@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/button/.yalc/@contactly-ui/text/.yalc/@contactly-ui/flex/.yalc/@contactly-ui/system":
-  version "1.0.0"
-
-"@contactly-ui/system@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/button/.yalc/@contactly-ui/text/.yalc/@contactly-ui/system":
-  version "1.0.0"
-
-"@contactly-ui/system@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/card/.yalc/@contactly-ui/system":
-  version "1.0.0"
-
-"@contactly-ui/system@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/checkbox/.yalc/@contactly-ui/box/.yalc/@contactly-ui/system":
-  version "1.0.0"
-
-"@contactly-ui/system@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/checkbox/.yalc/@contactly-ui/flex/.yalc/@contactly-ui/box/.yalc/@contactly-ui/system":
-  version "1.0.0"
-
-"@contactly-ui/system@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/checkbox/.yalc/@contactly-ui/flex/.yalc/@contactly-ui/system":
-  version "1.0.0"
-
-"@contactly-ui/system@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/checkbox/.yalc/@contactly-ui/system":
-  version "1.0.0"
-
-"@contactly-ui/system@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/checkbox/.yalc/@contactly-ui/text/.yalc/@contactly-ui/flex/.yalc/@contactly-ui/box/.yalc/@contactly-ui/system":
-  version "1.0.0"
-
-"@contactly-ui/system@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/checkbox/.yalc/@contactly-ui/text/.yalc/@contactly-ui/flex/.yalc/@contactly-ui/system":
-  version "1.0.0"
-
-"@contactly-ui/system@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/checkbox/.yalc/@contactly-ui/text/.yalc/@contactly-ui/system":
-  version "1.0.0"
-
-"@contactly-ui/system@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/flex/.yalc/@contactly-ui/box/.yalc/@contactly-ui/system":
-  version "1.0.0"
-
-"@contactly-ui/system@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/flex/.yalc/@contactly-ui/system":
-  version "1.0.0"
-
-"@contactly-ui/system@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/icon/.yalc/@contactly-ui/box/.yalc/@contactly-ui/system":
-  version "1.0.0"
-
-"@contactly-ui/system@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/icon/.yalc/@contactly-ui/system":
-  version "1.0.0"
-
-"@contactly-ui/system@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/input/.yalc/@contactly-ui/box/.yalc/@contactly-ui/system":
-  version "1.0.0"
-
-"@contactly-ui/system@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/input/.yalc/@contactly-ui/flex/.yalc/@contactly-ui/box/.yalc/@contactly-ui/system":
-  version "1.0.0"
-
-"@contactly-ui/system@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/input/.yalc/@contactly-ui/flex/.yalc/@contactly-ui/system":
-  version "1.0.0"
-
-"@contactly-ui/system@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/input/.yalc/@contactly-ui/system":
-  version "1.0.0"
-
-"@contactly-ui/system@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/input/.yalc/@contactly-ui/text/.yalc/@contactly-ui/flex/.yalc/@contactly-ui/box/.yalc/@contactly-ui/system":
-  version "1.0.0"
-
-"@contactly-ui/system@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/input/.yalc/@contactly-ui/text/.yalc/@contactly-ui/flex/.yalc/@contactly-ui/system":
-  version "1.0.0"
-
-"@contactly-ui/system@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/input/.yalc/@contactly-ui/text/.yalc/@contactly-ui/system":
-  version "1.0.0"
-
-"@contactly-ui/system@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/system":
-  version "1.0.0"
-
-"@contactly-ui/system@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/text/.yalc/@contactly-ui/flex/.yalc/@contactly-ui/box/.yalc/@contactly-ui/system":
-  version "1.0.0"
-
-"@contactly-ui/system@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/text/.yalc/@contactly-ui/flex/.yalc/@contactly-ui/system":
-  version "1.0.0"
-
-"@contactly-ui/system@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/text/.yalc/@contactly-ui/system":
-  version "1.0.0"
-
 "@contactly-ui/text@file:.yalc/@contactly-ui/text":
   version "1.0.0"
   dependencies:
-    "@contactly-ui/flex" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-text-1.0.0-8cb7b32e-2ced-45c4-a2b7-9af3ddc73e16-1622011497264/node_modules/@contactly-ui/text/.yalc/@contactly-ui/flex"
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-text-1.0.0-8cb7b32e-2ced-45c4-a2b7-9af3ddc73e16-1622011497264/node_modules/@contactly-ui/text/.yalc/@contactly-ui/system"
-
-"@contactly-ui/text@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/avatar/.yalc/@contactly-ui/text":
-  version "1.0.0"
-  dependencies:
-    "@contactly-ui/flex" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-text-1.0.0-3c860e4e-3183-4f5b-91d4-8ced7b54379d-1622011497229/node_modules/@contactly-ui/text/.yalc/@contactly-ui/flex"
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-text-1.0.0-3c860e4e-3183-4f5b-91d4-8ced7b54379d-1622011497229/node_modules/@contactly-ui/text/.yalc/@contactly-ui/system"
-
-"@contactly-ui/text@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/button/.yalc/@contactly-ui/text":
-  version "1.0.0"
-  dependencies:
-    "@contactly-ui/flex" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-text-1.0.0-86510149-14a9-4dad-889b-d2c586de2785-1622011497232/node_modules/@contactly-ui/text/.yalc/@contactly-ui/flex"
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-text-1.0.0-86510149-14a9-4dad-889b-d2c586de2785-1622011497232/node_modules/@contactly-ui/text/.yalc/@contactly-ui/system"
-
-"@contactly-ui/text@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/checkbox/.yalc/@contactly-ui/text":
-  version "1.0.0"
-  dependencies:
-    "@contactly-ui/flex" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-text-1.0.0-7ef60bd2-3446-410f-8b58-505fd84fc147-1622011497230/node_modules/@contactly-ui/text/.yalc/@contactly-ui/flex"
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-text-1.0.0-7ef60bd2-3446-410f-8b58-505fd84fc147-1622011497230/node_modules/@contactly-ui/text/.yalc/@contactly-ui/system"
-
-"@contactly-ui/text@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/input/.yalc/@contactly-ui/text":
-  version "1.0.0"
-  dependencies:
-    "@contactly-ui/flex" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-text-1.0.0-db4fd6b6-648a-446d-8d69-b05282c0705c-1622011497235/node_modules/@contactly-ui/text/.yalc/@contactly-ui/flex"
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-text-1.0.0-db4fd6b6-648a-446d-8d69-b05282c0705c-1622011497235/node_modules/@contactly-ui/text/.yalc/@contactly-ui/system"
-
-"@contactly-ui/text@file:.yalc/@contactly-ui/theme/.yalc/@contactly-ui/text":
-  version "1.0.0"
-  dependencies:
-    "@contactly-ui/flex" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-text-1.0.0-b06829ae-4edf-423b-99a0-0ee6674d2b49-1622011497220/node_modules/@contactly-ui/text/.yalc/@contactly-ui/flex"
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-text-1.0.0-b06829ae-4edf-423b-99a0-0ee6674d2b49-1622011497220/node_modules/@contactly-ui/text/.yalc/@contactly-ui/system"
+    "@contactly-ui/flex" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-text-1.0.0-b347611f-edc7-460b-a5e9-883c5292acd6-1622164845715/node_modules/@contactly-ui/text/.yalc/@contactly-ui/flex"
+    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-text-1.0.0-b347611f-edc7-460b-a5e9-883c5292acd6-1622164845715/node_modules/@contactly-ui/text/.yalc/@contactly-ui/system"
 
 "@contactly-ui/theme@file:.yalc/@contactly-ui/theme":
   version "1.0.0"
   dependencies:
-    "@contactly-ui/avatar" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-theme-1.0.0-6ca2d900-adb3-481e-ae42-c5a11f2f5787-1622011497206/node_modules/@contactly-ui/theme/.yalc/@contactly-ui/avatar"
-    "@contactly-ui/box" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-theme-1.0.0-6ca2d900-adb3-481e-ae42-c5a11f2f5787-1622011497206/node_modules/@contactly-ui/theme/.yalc/@contactly-ui/box"
-    "@contactly-ui/button" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-theme-1.0.0-6ca2d900-adb3-481e-ae42-c5a11f2f5787-1622011497206/node_modules/@contactly-ui/theme/.yalc/@contactly-ui/button"
-    "@contactly-ui/card" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-theme-1.0.0-6ca2d900-adb3-481e-ae42-c5a11f2f5787-1622011497206/node_modules/@contactly-ui/theme/.yalc/@contactly-ui/card"
-    "@contactly-ui/checkbox" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-theme-1.0.0-6ca2d900-adb3-481e-ae42-c5a11f2f5787-1622011497206/node_modules/@contactly-ui/theme/.yalc/@contactly-ui/checkbox"
-    "@contactly-ui/flex" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-theme-1.0.0-6ca2d900-adb3-481e-ae42-c5a11f2f5787-1622011497206/node_modules/@contactly-ui/theme/.yalc/@contactly-ui/flex"
-    "@contactly-ui/icon" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-theme-1.0.0-6ca2d900-adb3-481e-ae42-c5a11f2f5787-1622011497206/node_modules/@contactly-ui/theme/.yalc/@contactly-ui/icon"
-    "@contactly-ui/input" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-theme-1.0.0-6ca2d900-adb3-481e-ae42-c5a11f2f5787-1622011497206/node_modules/@contactly-ui/theme/.yalc/@contactly-ui/input"
-    "@contactly-ui/system" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-theme-1.0.0-6ca2d900-adb3-481e-ae42-c5a11f2f5787-1622011497206/node_modules/@contactly-ui/theme/.yalc/@contactly-ui/system"
-    "@contactly-ui/text" "file:../../../Library/Caches/Yarn/v6/npm-@contactly-ui-theme-1.0.0-6ca2d900-adb3-481e-ae42-c5a11f2f5787-1622011497206/node_modules/@contactly-ui/theme/.yalc/@contactly-ui/text"
     lodash-es "^4.17.21"
 
 "@types/uuid@^8.3.0":
