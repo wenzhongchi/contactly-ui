@@ -9,8 +9,8 @@ import { Text } from "@contactly-ui/text";
 import { CheckMarkIcon } from "./CheckMarkIcon";
 
 export type CheckboxComponentProps = {
-    defaultChecked?: boolean;
-    defaultDisabled?: boolean;
+    checked?: boolean;
+    disabled?: boolean;
     label?: string;
     onChange?: (checked: boolean) => void;
 };
@@ -24,62 +24,55 @@ export type CheckboxProps = Omit<
     CheckboxComponentProps;
 
 const StyledCheckbox = styled.div<CheckboxProps>(
-    {
+    ({ disabled }) => ({
         display: "flex",
+        boxSizing: "border-box",
         justifyContent: "center",
         alignItems: "center",
         width: "16px",
         height: "16px",
         borderRadius: "4px",
         transition: "all 150ms",
-        border: 1,
-        cursor: "pointer",
-        ":hover": {
-            borderColor: "highlight.check",
-            backgroundColor: "bg.disabled",
-        },
-    },
+        border: "1px solid",
+        cursor: disabled ? "not-allowed" : "pointer",
+    }),
     composedSystem,
 );
 
 export const Checkbox: React.FC<CheckboxProps> = forwardRef<HTMLDivElement, CheckboxProps>(
-    (
-        { defaultChecked, defaultDisabled, onChange, label, m, ml, mr, mt, mb, ...restProps },
-        ref,
-    ) => {
-        const [checked, setChecked] = useState(defaultChecked ?? false);
-        const [hovered, setHovered] = useState(false);
-        const [disabled] = useState(defaultDisabled ?? false);
+    ({ checked, disabled, onChange, label, m, ml, mr, mt, mb, ...restProps }, ref) => {
+        const [isChecked, setIsChecked] = useState(checked ?? false);
+        const [isHovered, setIsHovered] = useState(false);
 
         const handleMouseOver = useCallback(() => {
             if (disabled) return;
-            setHovered(true);
+            setIsHovered(true);
         }, [disabled]);
 
         const handleMouseLeave = useCallback(() => {
             if (disabled) return;
-            setHovered(false);
+            setIsHovered(false);
         }, [disabled]);
 
         const handleChange = useCallback(() => {
             if (disabled) return;
-            if (onChange) onChange(!checked);
-            setChecked(!checked);
-        }, [onChange, checked, disabled]);
+            if (onChange) onChange(!isChecked);
+            setIsChecked(!isChecked);
+        }, [onChange, isChecked, disabled]);
 
         const getBgColor = useCallback(() => {
-            if (checked && disabled) return "checkbox.checked-disabled";
+            if (isChecked && disabled) return "checkbox.checked-disabled";
             if (disabled) return "checkbox.disabled";
-            if (checked) return "checkbox.checked";
+            if (isChecked) return "checkbox.checked";
             return "checkbox.unchecked";
-        }, [checked, disabled]);
+        }, [isChecked, disabled]);
 
         const getBorderColor = useCallback(() => {
-            if (checked && disabled) return "checkbox.border-default";
+            if (isChecked && disabled) return "checkbox.border-default";
             if (disabled) return "checkbox.border-default";
-            if (checked) return "checkbox.border-transparent";
+            if (isChecked) return "checkbox.border-transparent";
             return "checkbox.border-default";
-        }, [checked, disabled]);
+        }, [isChecked, disabled]);
 
         return (
             <Flex
@@ -92,17 +85,22 @@ export const Checkbox: React.FC<CheckboxProps> = forwardRef<HTMLDivElement, Chec
                 mb={mb}
                 m={m}
             >
-                <Box>
+                <Box
+                    bg={isHovered || isChecked ? "checkbox.border-hover" : undefined}
+                    borderRadius={4}
+                    p={2}
+                >
                     <StyledCheckbox
                         ref={ref}
                         backgroundColor={getBgColor()}
                         borderColor={getBorderColor()}
                         onClick={handleChange}
-                        {...restProps}
+                        disabled={disabled}
                         onMouseOver={handleMouseOver}
                         onMouseLeave={handleMouseLeave}
+                        {...restProps}
                     >
-                        {checked && <CheckMarkIcon />}
+                        {isChecked && <CheckMarkIcon />}
                     </StyledCheckbox>
                 </Box>
                 {label && (

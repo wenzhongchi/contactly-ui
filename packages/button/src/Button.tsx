@@ -55,7 +55,7 @@ export const Button: React.FC<ButtonProps> = forwardRef<HTMLButtonElement, Butto
         },
         ref,
     ) => {
-        const [isHovered, setHovered] = useState(false);
+        const [isHovered, setIsHovered] = useState(false);
         const {
             variant: groupVariant,
             size: groupSize,
@@ -66,12 +66,12 @@ export const Button: React.FC<ButtonProps> = forwardRef<HTMLButtonElement, Butto
         const selectedSize = groupSize ?? size;
 
         const handleMouseEnter = useCallback(() => {
-            setHovered(true);
-        }, [setHovered]);
+            setIsHovered(true);
+        }, [setIsHovered]);
 
         const handleMouseLeave = useCallback(() => {
-            setHovered(false);
-        }, [setHovered]);
+            setIsHovered(false);
+        }, [setIsHovered]);
 
         const getFontColor = useCallback(() => {
             switch (selectedVariant) {

@@ -11,6 +11,18 @@ export default {
         label: {
             type: "string",
         },
+        disabled: {
+            control: {
+                type: "select",
+                options: [true, false],
+            },
+        },
+        checked: {
+            control: {
+                type: "select",
+                options: [true, false],
+            },
+        },
         onChange: { action: "clicked" },
     },
 };
@@ -21,4 +33,6 @@ export const Default: Story<CheckboxComponentProps> = (props: CheckboxComponentP
 
 Default.args = {
     label: "checkbox text",
+    disabled: false,
+    checked: false,
 };

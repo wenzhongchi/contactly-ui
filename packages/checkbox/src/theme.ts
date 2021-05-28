@@ -6,6 +6,7 @@ export type CheckboxColors = {
     disabled: string;
     "checked-disabled": string;
     "border-default": string;
+    "border-hover": string;
     "border-transparent": string;
     "icon-white": string;
 };
@@ -22,6 +23,7 @@ export const getCheckboxColors = (colors: Colors): CheckboxTheme => ({
         disabled: colors.gray[30],
         "checked-disabled": colors.gray[60],
         "border-default": colors.gray[50],
+        "border-hover": colors.gray[30],
         "border-transparent": colors.transparent,
         "icon-white": colors.white,
     },
@@ -31,6 +33,7 @@ export const getCheckboxColors = (colors: Colors): CheckboxTheme => ({
         disabled: colors.gray[30],
         "checked-disabled": colors.gray[60],
         "border-default": colors.gray[50],
+        "border-hover": colors.gray[30],
         "border-transparent": colors.transparent,
         "icon-white": colors.white,
     },

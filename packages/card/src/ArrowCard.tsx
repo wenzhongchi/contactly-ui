@@ -58,7 +58,7 @@ const StyledArrowCard: React.FC<ArrowCardProps> = styled.div<ArrowCardProps>(
             width: 0,
             height: 0,
             border: "7px solid transparent",
-            borderRightColor: `${card.border}`,
+            borderRightColor: card["border"],
         },
         "::after": {
             content: "''",
