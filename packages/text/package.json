@@ -6,6 +6,10 @@
   "module": "dist/text.esm.js",
   "types": "dist/index.d.ts",
   "typings": "dist/index.d.ts",
+  "files": [
+    "dist/*",
+    ".yalc/*"
+  ],
   "scripts": {
     "build": "yarn clear && npx rollup -c && yarn push",
     "watch": "npx rollup -c -w",

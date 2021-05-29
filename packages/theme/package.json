@@ -6,6 +6,9 @@
   "module": "dist/theme.esm.js",
   "types": "dist/index.d.ts",
   "typings": "dist/index.d.ts",
+  "files": [
+    "dist/*"
+  ],
   "scripts": {
     "build": "yarn clear && npx rollup -c && yarn push",
     "watch": "npx rollup -c -w",
@@ -32,9 +35,7 @@
     "url": "https://github.com/wenzhongchi/contactly-ui/issues"
   },
   "dependencies": {
-    "lodash-es": "^4.17.21"
-  },
-  "devDependencies": {
+    "lodash-es": "^4.17.21",
     "@types/lodash-es": "^4.17.4"
   },
   "peerDependencies": {

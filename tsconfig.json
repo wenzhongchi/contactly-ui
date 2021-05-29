@@ -13,11 +13,9 @@
         "resolveJsonModule": true,
         "isolatedModules": true,
         "declaration": true,
-        "declarationDir": "dist/@types",
+        "declarationDir": "dist",
         "noEmit": false,
-        "jsx": "react",
-        "outDir": "dist"
+        "jsx": "react"
     },
-    "include": ["packages"],
     "exclude": ["node_modules", "dist", "rollup.config.js"]
 }

@@ -1,13 +1,13 @@
 import { Theme } from "styled-system";
 
-import { colors } from "../../system/src";
-import { getTextColors } from "../../text/src";
-import { getButtonColors } from "../../button/src";
-import { getIconColors } from "../../icon/src";
-import { getCardColors } from "../../card/src";
-import { getAvatarColors } from "../../avatar/src";
-import { getCheckboxColors } from "../../checkbox/src";
-import { getInputColors } from "../../input/src";
+import { colors } from "../../system/src/colors";
+import { getTextColors } from "../../text/src/theme";
+import { getButtonColors } from "../../button/src/theme";
+import { getIconColors } from "../../icon/src/theme";
+import { getCardColors } from "../../card/src/theme";
+import { getAvatarColors } from "../../avatar/src/theme";
+import { getCheckboxColors } from "../../checkbox/src/theme";
+import { getInputColors } from "../../input/src/theme";
 
 import { fonts, fontSizes, fontWeights, lineHeights, letterSpacings } from "./base/typography";
 import space from "./base/spaces";

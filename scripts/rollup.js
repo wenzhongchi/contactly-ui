@@ -56,6 +56,20 @@ export const getRollupConfig = (pwd, icon = false) => {
         ],
     };
 
+    const iconCjsConfig = {
+        input: [`${SOURCE_DIR}/Activity.tsx`, `${SOURCE_DIR}/Airplay.tsx`],
+        output: [
+            {
+                dir: `${SOURCE_DIR}/dist`,
+                format: "cjs",
+            },
+        ],
+        plugins: [...PLUGINS],
+        preserveModules: true,
+    };
+
+    if (icon) return [iconCjsConfig];
+
     if (process.env.WATCH_MODE) {
         return [esmConfig, cjsConfig];
     }

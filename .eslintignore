@@ -4,7 +4,8 @@ exports-template.js
 generate.js
 stories-template.js
 template.js
-rullup.js
+rollup.js
+file.js
 
 **/*.log
 **/*.env
