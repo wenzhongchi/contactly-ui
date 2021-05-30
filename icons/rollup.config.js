@@ -12,7 +12,7 @@ import { getFiles } from "../scripts/file";
 const extensions = [".js", ".ts", ".jsx", ".tsx"];
 
 export default {
-    input: ["src/index.ts", ...getFiles("src/components", extensions)],
+    input: ["src/index.ts", ...getFiles("src/icons", extensions)],
     output: {
         dir: "dist",
         format: "esm",

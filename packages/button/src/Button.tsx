@@ -98,9 +98,9 @@ export const Button: React.FC<ButtonProps> = forwardRef<HTMLButtonElement, Butto
                 case "xs":
                     return "subheading";
                 case "sm":
-                    return "body";
+                    return "body-sm";
                 case "md":
-                    return "body";
+                    return "body-md";
                 case "lg":
                     return "display-sm";
             }

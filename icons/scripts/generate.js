@@ -17,10 +17,6 @@ const colorReplacements = [
         from: /\"currentColor\"/g,
         to: "{color}",
     },
-    {
-        from: /\"#00A5EF\"/g,
-        to: '{useColor("icon.light")}',
-    },
 ];
 
 const isSvg = (() => {
@@ -88,7 +84,7 @@ const getIconTemplate = (iconData) => {
 
 const generateIcon = (cwd, iconData, outputPath) =>
     getSvgContent(iconData.filePath).then(({ content, options, svgProps }) => {
-        const outputFolderPath = outputPath;
+        const outputFolderPath = path.join(outputPath, `icons`)
         const template = getIconTemplate(iconData);
         const outputFilePath = path.join(outputFolderPath, `${template.fileName}.tsx`);
 
@@ -112,7 +108,7 @@ const generateIconsComponents = (cwd, iconsTypePath, outputPath, icons) =>
     );
 
 const generateIconsStories = (outputPath, icons) => {
-    const storyFilePath = path.join(outputPath.replace("src", "stories"), `Icons.stories.tsx`);
+    const storyFilePath = path.join(outputPath, `stories/Icons.stories.tsx`);
 
     return fs
         .writeFile(

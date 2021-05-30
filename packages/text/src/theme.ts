@@ -8,6 +8,8 @@ export type TextColors = {
     disabled: string;
     error: string;
     white: string;
+    light: string;
+    dim: string;
 };
 
 export type TextTheme = {
@@ -24,6 +26,8 @@ export const getTextColors = (colors: Colors): TextTheme => ({
         disabled: colors.gray[80],
         error: colors.red[500],
         white: colors.white,
+        light: colors.gray[10],
+        dim: colors.gray[80],
     },
     dark: {
         default: colors.gray[700],
@@ -33,5 +37,7 @@ export const getTextColors = (colors: Colors): TextTheme => ({
         disabled: colors.gray[80],
         error: colors.red[500],
         white: colors.white,
+        light: colors.gray[10],
+        dim: colors.gray[80],
     },
 });

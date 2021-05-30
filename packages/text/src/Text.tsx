@@ -12,7 +12,9 @@ export type TextVariant =
     | "heading"
     | "caption"
     | "subheading"
-    | "body";
+    | "body-lg"
+    | "body-md"
+    | "body-sm";
 
 type TextComponentProps = {
     as?: "p" | "span";
@@ -65,11 +67,23 @@ const textVariants = variant({
             lineHeight: 16,
             fontSize: 12,
         },
-        body: {
+        "body-lg": {
             fontFamily: "heading",
             fontWeight: "normal",
             lineHeight: 20,
             fontSize: 14,
+        },
+        "body-md": {
+            fontFamily: "heading",
+            fontWeight: "normal",
+            lineHeight: 16,
+            fontSize: 12,
+        },
+        "body-sm": {
+            fontFamily: "heading",
+            fontWeight: "normal",
+            lineHeight: 14,
+            fontSize: 10,
         },
     },
 });
@@ -79,7 +93,7 @@ export type TextProps = StyledComponentProps<"p", AnyObject, StyledTextProps, ne
 const StyledText = styled.p<TextProps>(textVariants, composedTextSystem);
 
 export const Text: React.FC<TextProps> = forwardRef<HTMLParagraphElement, TextProps>(
-    ({ as, children, variant = "body", color = "text.primary", ...restProps }, ref) => (
+    ({ as, children, variant = "body-md", color = "text.primary", ...restProps }, ref) => (
         <StyledText margin={0} variant={variant} color={color} ref={ref} as={as} {...restProps}>
             {children}
         </StyledText>

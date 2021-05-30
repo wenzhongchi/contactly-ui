@@ -12,12 +12,12 @@
       "replaced": "^1.0.0"
     },
     "@contactly-ui/text": {
-      "signature": "792db5f280093f94f99d2911d782309c",
+      "signature": "c8f41f3530fef2192b75e15e6b1464e7",
       "file": true,
       "replaced": "^1.0.0"
     },
     "@contactly-ui/theme": {
-      "signature": "b7cba5fe6c201d9607519b32b98dbc07",
+      "signature": "89602e5a8b0d07932232127781df4a57",
       "file": true
     },
     "@contactly-ui/system": {

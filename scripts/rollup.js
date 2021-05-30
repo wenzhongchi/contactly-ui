@@ -16,10 +16,10 @@ const PLUGINS = [
         clean: true,
         tsconfig: "tsconfig.json",
     }),
+    pluginNodeResolve(),
     pluginCommonjs({
         extensions: [".js", "jsx", ".ts", ".tsx"],
     }),
-    pluginNodeResolve(),
     pluginTerser(),
 ];
 

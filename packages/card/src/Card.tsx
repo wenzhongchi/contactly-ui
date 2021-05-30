@@ -45,6 +45,7 @@ const StyledCard: React.FC<CardProps> = styled.div<CardProps>(
     {
         boxSizing: "border-box",
         display: "flex",
+        overflow: "hidden",
     },
     styleVariants,
     composedSystem,

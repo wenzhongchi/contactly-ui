@@ -13,7 +13,6 @@ const renderSvgProps = (svgProps) =>
 module.exports = ({ fileName, componentName, content, options, svgProps }) => `
   import React, { forwardRef } from "react";
   import { BaseSvg, SvgSizeProps, SvgProps } from "../base/BaseSvg";
-  ${options.useColor ? 'import { useColor } from "@hooks/useColor";' : ""}
 
   const ${fileName} = forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement> & SvgSizeProps & SvgProps>(({size, ...restProps}, ref) => (
     <BaseSvg ${renderSvgProps(svgProps)} {...restProps} size={size} ref={ref}>

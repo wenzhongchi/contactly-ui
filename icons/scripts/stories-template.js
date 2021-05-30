@@ -6,7 +6,7 @@ module.exports = ({ icons }) => `
   import { Box } from "@contactly-ui/box";
 
   ${icons
-      .map(({ componentName }) => `import { ${componentName} } from "../src";`)
+      .map(({ componentName }) => `import { ${componentName} } from "..";`)
       .join("\n")}
 
   export default {
