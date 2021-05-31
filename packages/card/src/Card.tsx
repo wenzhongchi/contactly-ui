@@ -14,25 +14,25 @@ const styleVariants = variant({
     variants: {
         default: {
             border: 1,
-            borderColor: "card.border",
+            borderColor: "card.border-default",
             borderRadius: 4,
             boxShadow: "none",
         },
         soft: {
             border: 1,
-            borderColor: "card.border",
+            borderColor: "card.border-default",
             borderRadius: 4,
             boxShadow: "elevation1",
         },
         medium: {
             border: 1,
-            borderColor: "card.border",
+            borderColor: "card.border-default",
             borderRadius: 4,
             boxShadow: "elevation2",
         },
         strong: {
             border: 1,
-            borderColor: "card.border",
+            borderColor: "card.border-default",
             borderRadius: 4,
             boxShadow: "elevation3",
         },

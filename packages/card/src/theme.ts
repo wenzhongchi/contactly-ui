@@ -5,9 +5,11 @@ export type CardColors = {
     primary: string;
     secondary: string;
     white: string;
-    border: string;
+    "border-default": string;
+    "border-primary": string;
     success: string;
     error: string;
+    transparent: string;
 };
 
 export type CardTheme = {
@@ -21,17 +23,21 @@ export const getCardColors = (colors: Colors): CardTheme => ({
         primary: colors.blue[200],
         secondary: colors.gray[20],
         white: colors.white,
-        border: colors.gray[30],
+        "border-default": colors.gray[30],
+        "border-primary": colors.blue[200],
         success: colors.green[50],
         error: colors.red[50],
+        transparent: colors.transparent,
     },
     dark: {
         default: colors.blue[50],
         primary: colors.blue[200],
         secondary: colors.gray[20],
         white: colors.white,
-        border: colors.gray[30],
+        "border-default": colors.gray[30],
+        "border-primary": colors.blue[200],
         success: colors.green[50],
         error: colors.red[50],
+        transparent: colors.transparent,
     },
 });
