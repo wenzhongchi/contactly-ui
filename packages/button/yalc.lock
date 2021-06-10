@@ -2,17 +2,17 @@
   "version": "v1",
   "packages": {
     "@contactly-ui/system": {
-      "signature": "801fd69363dbb976a53d8f38214484ba",
+      "signature": "b7abe289b8c3e74f78eb570e4adb0578",
       "file": true,
       "replaced": "^1.0.0"
     },
     "@contactly-ui/flex": {
-      "signature": "5a4961ca4946bba824726a1e1e0d4448",
+      "signature": "5caf4af9293036ccf5e2e132687cd656",
       "file": true,
       "replaced": "^1.0.0"
     },
     "@contactly-ui/text": {
-      "signature": "c8f41f3530fef2192b75e15e6b1464e7",
+      "signature": "e918133a2ca24fc35f207fd439b1dc0b",
       "file": true,
       "replaced": "^1.0.0"
     }
