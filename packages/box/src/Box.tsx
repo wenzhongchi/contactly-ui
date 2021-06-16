@@ -5,6 +5,7 @@ import { css as customCSS, SystemStyleObject } from "@styled-system/css";
 import { AnyObject, composedSystem, StyledSystemProps } from "@contactly-ui/system";
 
 type StyledBoxProps = StyledSystemProps & {
+    as?: React.ElementType | string;
     css?: SystemStyleObject;
 };
 
@@ -19,8 +20,8 @@ const StyledBox = styled.div<BoxProps>(
 );
 
 export const Box: React.FC<BoxProps> = forwardRef<HTMLDivElement, BoxProps>(
-    ({ css, children, ...restProps }, ref) => (
-        <StyledBox ref={ref} css={css} {...restProps}>
+    ({ as = "div", css, children, ...restProps }, ref) => (
+        <StyledBox as={as} ref={ref} css={css} {...restProps}>
             {children}
         </StyledBox>
     ),

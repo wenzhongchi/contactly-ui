@@ -6,6 +6,7 @@ import { Text } from "../../text";
 
 import { Input, InputComponentProps } from "../src/Input";
 import { LabelInput, LabelInputProps } from "../src/LabelInput";
+import { IconPhone, IconLock } from "../../../icons";
 
 export default {
     title: "Components/Input",
@@ -44,6 +45,19 @@ export const Default: Story<InputComponentProps> = (props: InputComponentProps) 
 );
 
 Default.args = {
+    variant: "default",
+    inputSize: "md",
+    disabled: false,
+};
+
+export const Icon: Story<InputComponentProps> = (props: InputComponentProps) => (
+    <>
+        <Input {...props} placeholder="Enter phone" leftIcon={<IconPhone />} />
+        <Input {...props} placeholder="Enter password" rightIcon={<IconLock />} mt="8px" />
+    </>
+);
+
+Icon.args = {
     variant: "default",
     inputSize: "md",
     disabled: false,

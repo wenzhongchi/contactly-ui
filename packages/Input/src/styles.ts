@@ -87,6 +87,31 @@ export const inputVariants = variant({
     },
 });
 
+export const pinVariants = variant({
+    variants: {
+        default: {
+            ...sharedStyles,
+            ...defaultStyles,
+        },
+        success: {
+            ...sharedStyles,
+            ...successStyles,
+        },
+        error: {
+            ...sharedStyles,
+            ...errorStyles,
+        },
+        warning: {
+            ...sharedStyles,
+            ...warningStyles,
+        },
+        text: {
+            ...sharedStyles,
+            ...textStyles,
+        },
+    },
+});
+
 const smSizeStyles = {
     fontFamily: "body",
     fontSize: 12,
@@ -117,5 +142,59 @@ export const inputSizeVariants = variant({
         sm: smSizeStyles,
         md: mdSizeStyles,
         lg: lgSizeStyles,
+    },
+});
+
+const pinDefaultStyles = {
+    boxSizing: "border-box",
+    borderRadius: 4,
+    textAlign: "center",
+    padding: 0,
+    type: "text",
+    color: "input.text",
+    border: 1,
+    fontFamily: "heading",
+    fontSize: 18,
+    fontWeight: "bold",
+    lineHeight: 24,
+};
+
+export const pinInputVariants = variant({
+    variants: {
+        default: {
+            ...pinDefaultStyles,
+            borderColor: "input.border-default-default",
+            "&:focus": {
+                boxShadow,
+                borderColor: "input.border-default-focus",
+                outline: "none",
+            },
+        },
+        success: {
+            ...pinDefaultStyles,
+            borderColor: "input.border-success-default",
+            "&:focus": {
+                borderColor: "input.border-success-default",
+                outline: "none",
+            },
+        },
+        error: {
+            ...pinDefaultStyles,
+            borderColor: "input.border-error-default",
+            "&:focus": {
+                boxShadow,
+                borderColor: "input.border-error-default",
+                outline: "none",
+            },
+        },
+    },
+});
+
+export const pinInputSizeVariants = variant({
+    prop: "inputSize",
+    variants: {
+        sm: { ...smSizeStyles, width: "28px" },
+        md: { ...mdSizeStyles, width: "36px" },
+        lg: { ...lgSizeStyles, width: "44px" },
     },
 });

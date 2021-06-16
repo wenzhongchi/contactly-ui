@@ -11,10 +11,12 @@ const storybookConfig = {
         "../packages/**/Text.stories.@(js|jsx|ts|tsx)",
         "../packages/**/Button.stories.@(js|jsx|ts|tsx)",
         "../packages/**/Input.stories.@(js|jsx|ts|tsx)",
+        "../packages/**/PinInput.stories.@(js|jsx|ts|tsx)",
         "../packages/**/Hint.stories.@(js|jsx|ts|tsx)",
         "../packages/**/Card.stories.@(js|jsx|ts|tsx)",
         "../packages/**/Avatar.stories.@(js|jsx|ts|tsx)",
         "../packages/**/Checkbox.stories.@(js|jsx|ts|tsx)",
+        "../packages/**/Stack.stories.@(js|jsx|ts|tsx)",
         // "../packages/**/*.stories.@(js|jsx|ts|tsx)",
     ],
     addons: [

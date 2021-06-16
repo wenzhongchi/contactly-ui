@@ -104,7 +104,7 @@ export const Checkbox: React.FC<CheckboxProps> = forwardRef<HTMLDivElement, Chec
                     </StyledCheckbox>
                 </Box>
                 {label && (
-                    <Text variant="body" color="text.default" ml={6}>
+                    <Text variant="body-md" color="text.default" ml={6}>
                         {label}
                     </Text>
                 )}

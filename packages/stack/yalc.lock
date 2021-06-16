@@ -8,10 +8,6 @@
     "@contactly-ui/box": {
       "signature": "b98e41c18c4780a3b6ee17c6fd813eba",
       "file": true
-    },
-    "@contactly-ui/text": {
-      "signature": "9600bdbf705619af2a7bc5d17e2589f8",
-      "file": true
     }
   }
 }

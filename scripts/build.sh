@@ -12,4 +12,5 @@ yarn --cwd ./packages/hint build
 yarn --cwd ./packages/checkbox build
 yarn --cwd ./packages/button build
 yarn --cwd ./packages/input build
+yarn --cwd ./packages/stack build
 yarn --cwd ./packages/theme build
